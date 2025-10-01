@@ -26,6 +26,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.7;
@@ -197,25 +201,43 @@ body {
     margin-right: auto;
 }
 
-.hero-features {
+.hero-guide-links {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.feature-item {
-    display: flex;
+.guide-pill {
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1rem;
-    opacity: 0.95;
+    padding: 0.65rem 1.2rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--bg-white);
+    transition: var(--transition);
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
 }
 
-.feature-item i {
-    color: var(--highlight-color);
-    font-size: 1.1rem;
+.guide-pill:hover {
+    background: var(--highlight-color);
+    border-color: var(--highlight-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(233, 69, 96, 0.3);
+}
+
+.guide-pill i {
+    font-size: 1rem;
+    color: var(--bg-white);
 }
 
 .hero-stats {
@@ -223,7 +245,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 2.5rem auto;
 }
 
 .stat-item {
@@ -892,15 +914,43 @@ body {
 }
 
 /* ===========================
+   Scroll Offset for Anchors
+   =========================== */
+.tip-detailed-card {
+    scroll-margin-top: 100px;
+}
+
+/* ===========================
    Responsive Design
    =========================== */
 @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
     .logo h1 {
         font-size: 1.2rem;
     }
     
     .header-actions {
         gap: 5px;
+    }
+    
+    .btn-share-with-text {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .btn-share-with-text span {
+        display: none;
+    }
+    
+    .btn-share-with-text i {
+        margin: 0;
     }
     
     .btn-icon {
@@ -958,13 +1008,17 @@ body {
         font-size: 1rem;
     }
     
-    .hero-features {
-        flex-direction: column;
-        gap: 0.75rem;
+    .hero-guide-links {
+        gap: 0.5rem;
         margin-bottom: 2rem;
     }
     
-    .feature-item {
+    .guide-pill {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .guide-pill i {
         font-size: 0.9rem;
     }
     
