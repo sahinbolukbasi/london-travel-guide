@@ -15,7 +15,9 @@ const CATEGORIES = {
     restaurants: { color: '#f39c12', icon: 'fa-utensils' },
     attractions: { color: '#3498db', icon: 'fa-star' },
     parks: { color: '#27ae60', icon: 'fa-tree' },
-    shopping: { color: '#9b59b6', icon: 'fa-shopping-bag' }
+    shopping: { color: '#9b59b6', icon: 'fa-shopping-bag' },
+    entertainment: { color: '#e91e63', icon: 'fa-music' },
+    cafes: { color: '#795548', icon: 'fa-coffee' }
 };
 
 // Lokasyonlar - locations.json dosyasından yüklenecek
@@ -104,7 +106,9 @@ function getIconEmoji(iconClass) {
         'fa-utensils': '🍽',      // Restoranlar
         'fa-star': '⭐',          // Turistik
         'fa-tree': '🌳',          // Parklar
-        'fa-shopping-bag': '🛍'   // Alışveriş
+        'fa-shopping-bag': '🛍',  // Alışveriş
+        'fa-music': '🎵',         // Eğlence
+        'fa-coffee': '☕'          // Kahveciler
     };
     return emojiMap[iconClass] || '📍';
 }
