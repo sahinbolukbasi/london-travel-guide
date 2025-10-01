@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Londra Gezi Rehberi - Keşfedilecek en iyi yerler ve rotalar">
+    <meta name="keywords" content="londra, gezi rehberi, travel guide, london, turizm">
+    <meta name="author" content="Londra Gezi Rehberi">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Londra Gezi Rehberi">
+    <meta property="og:description" content="Londra'da gezilecek en güzel yerler ve önerilen rotalar">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Londra Gezi Rehberi">
+    
+    <title>Londra Gezi Rehberi | London Travel Guide</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); // Buraya kendi Google Analytics ID'nizi ekleyin
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h1>Londra Gezi Rehberi</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-icon" id="shareBtn" title="Paylaş">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                    <button class="btn-icon" id="printBtn" title="Yazdır">
+                        <i class="fas fa-print"></i>
+                    </button>
+                    <button class="btn-icon" id="fullscreenBtn" title="Tam Ekran">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Info Cards -->
+            <div class="info-cards">
+                <div class="info-card">
+                    <i class="fas fa-map-location-dot"></i>
+                    <h3>İnteraktif Harita</h3>
+                    <p>Londra'nın en güzel yerlerini keşfedin</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-route"></i>
+                    <h3>Önerilen Rotalar</h3>
+                    <p>Optimize edilmiş gezi rotaları</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Popüler Mekanlar</h3>
+                    <p>Mutlaka görülmesi gereken yerler</p>
+                </div>
+            </div>
+
+            <!-- Map Container -->
+            <div class="map-section">
+                <div class="map-header">
+                    <h2>
+                        <i class="fas fa-location-dot"></i>
+                        Gezi Haritası
+                    </h2>
+                    <div class="map-controls">
+                        <button class="btn-secondary" id="resetViewBtn">
+                            <i class="fas fa-redo"></i>
+                            Görünümü Sıfırla
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Map Layer Filters -->
+                <div class="map-filters">
+                    <div class="filter-info">
+                        <i class="fas fa-filter"></i>
+                        <span>Katman Filtreleri:</span>
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-layer="all">
+                            <i class="fas fa-layer-group"></i>
+                            Tümü
+                        </button>
+                        <button class="filter-btn" data-layer="museums">
+                            <i class="fas fa-landmark"></i>
+                            Müzeler
+                        </button>
+                        <button class="filter-btn" data-layer="restaurants">
+                            <i class="fas fa-utensils"></i>
+                            Restoranlar
+                        </button>
+                        <button class="filter-btn" data-layer="attractions">
+                            <i class="fas fa-star"></i>
+                            Turistik Yerler
+                        </button>
+                        <button class="filter-btn" data-layer="parks">
+                            <i class="fas fa-tree"></i>
+                            Parklar
+                        </button>
+                        <button class="filter-btn" data-layer="shopping">
+                            <i class="fas fa-shopping-bag"></i>
+                            Alışveriş
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="map-container" id="mapContainer">
+                    <!-- Google Maps iframe'inizi buraya ekleyin -->
+                    <iframe 
+                        id="mapFrame"
+                        src="https://www.google.com/maps/d/embed?mid=1jWK7KiWee-4NZNIORJcEZyEo1TV7n30&ehbc=2E312F"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    
+                    <!-- Loading Overlay -->
+                    <div class="map-loading" id="mapLoading">
+                        <div class="spinner"></div>
+                        <p>Harita yükleniyor...</p>
+                    </div>
+                </div>
+
+                <!-- Map Info -->
+                <div class="map-info">
+                    <div class="map-info-item">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Haritayı yakınlaştırıp uzaklaştırabilir, sürükleyebilirsiniz</span>
+                    </div>
+                    <div class="map-info-item">
+                        <i class="fas fa-mouse-pointer"></i>
+                        <span>İşaretlere tıklayarak detaylı bilgi alabilirsiniz</span>
+                    </div>
+                    <div class="map-info-item">
+                        <i class="fas fa-layer-group"></i>
+                        <span>Üstteki filtrelerle katmanları açıp kapatabilirsiniz</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Tips Section -->
+            <div class="tips-section">
+                <h2>
+                    <i class="fas fa-lightbulb"></i>
+                    Detaylı Gezi İpuçları ve Öneriler
+                </h2>
+                
+                <div class="tips-detailed">
+                    <!-- Tip 1 -->
+                    <div class="tip-detailed-card">
+                        <div class="tip-icon-wrapper">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h3>En İyi Ziyaret Zamanı</h3>
+                            <p><strong>İdeal Aylar:</strong> Mayıs - Eylül arası en güzel dönem. Hava ılık ve günler uzun.</p>
+                            <ul>
+                                <li><strong>Bahar (Mart-Mayıs):</strong> Çiçekler açar, parklar muhteşem görünür. Sıcaklık 10-15°C.</li>
+                                <li><strong>Yaz (Haziran-Ağustos):</strong> En sıcak dönem (20-25°C). Festival sezonu, açık hava etkinlikleri.</li>
+                                <li><strong>Sonbahar (Eylül-Kasım):</strong> Kalabalık azalır, oteller daha uygun. 10-15°C.</li>
+                                <li><strong>Kış (Aralık-Şubat):</strong> Noel pazarları, buz pateni, daha az turist. 5-10°C.</li>
+                            </ul>
+                            <p class="tip-note">💡 <strong>İpucu:</strong> Temmuz-Ağustos en kalabalık dönem. Haziran veya Eylül daha ideal.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tip 2 -->
+                    <div class="tip-detailed-card">
+                        <div class="tip-icon-wrapper">
+                            <i class="fas fa-subway"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h3>Ulaşım Rehberi</h3>
+                            <p><strong>Oyster Card:</strong> Londra'da ulaşımın anahtarı. Tek kullanımlık biletlerden %50 daha ucuz!</p>
+                            <ul>
+                                <li><strong>Oyster Card Nasıl Alınır:</strong> Havalimanı veya herhangi bir metro istasyonundan (£7 depozito + yükleme)</li>
+                                <li><strong>Günlük Tavan:</strong> Belirli bir miktardan sonra ücretsiz (Zone 1-2: £8.10)</li>
+                                <li><strong>Contactless Kart:</strong> Visa/Mastercard ile doğrudan geçiş yapabilirsiniz</li>
+                                <li><strong>Tube (Metro):</strong> En hızlı ulaşım. 05:00-00:30 arası çalışır</li>
+                                <li><strong>Otobüsler:</strong> Manzaralı yolculuk, daha ucuz (£1.75 sabit)</li>
+                                <li><strong>Night Tube:</strong> Cuma-Cumartesi geceleri bazı hatlarda 24 saat</li>
+                            </ul>
+                            <p class="tip-note">💡 <strong>İpucu:</strong> TfL Go uygulamasını indirin - gerçek zamanlı bilgi ve rota planlama.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tip 3 -->
+                    <div class="tip-detailed-card">
+                        <div class="tip-icon-wrapper">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h3>Bilet ve Tasarruf İpuçları</h3>
+                            <p><strong>Ücretsiz Müzeler:</strong> Londra'nın en büyük avantajı - çoğu müze ücretsiz!</p>
+                            <ul>
+                                <li><strong>Ücretsiz Müzeler:</strong> British Museum, National Gallery, Tate Modern, Natural History Museum, V&A Museum</li>
+                                <li><strong>London Pass:</strong> 80+ cazibe merkezi için geçerli. 1-10 günlük seçenekler (£99-£249)</li>
+                                <li><strong>2 for 1 Teklifleri:</strong> Tren bileti ile birçok yerde 2. kişi ücretsiz</li>
+                                <li><strong>Önceden Rezervasyon:</strong> Tower of London, London Eye gibi yerlerde %15-20 indirim</li>
+                                <li><strong>Matine Gösterileri:</strong> West End tiyatrolarında öğleden sonra gösterileri daha ucuz</li>
+                            </ul>
+                            <p class="tip-note">💡 <strong>İpucu:</strong> Çarşamba günleri bazı müzelerde geç saatlere kadar açık ve daha az kalabalık.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tip 4 -->
+                    <div class="tip-detailed-card">
+                        <div class="tip-icon-wrapper">
+                            <i class="fas fa-cloud-rain"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h3>Hava Durumu ve Hazırlık</h3>
+                            <p><strong>Londra'nın Meşhur Yağmuru:</strong> Her mevsim yağmur olasılığı var!</p>
+                            <ul>
+                                <li><strong>Şemsiye:</strong> Mutlaka yanınızda taşıyın. Ani sağanaklar sık görülür</li>
+                                <li><strong>Katmanlı Giyim:</strong> Sabah serin, öğlen sıcak olabilir. Çıkarılabilir katmanlar ideal</li>
+                                <li><strong>Rahat Ayakkabı:</strong> Günde ortalama 15-20 km yürüyeceksiniz!</li>
+                                <li><strong>Yağmurluk:</strong> Şemsiyeden daha pratik, rüzgarlı günlerde daha kullanışlı</li>
+                                <li><strong>Güneş Kremi:</strong> Yaz aylarında güneş sürpriz şekilde güçlü olabilir</li>
+                            </ul>
+                            <p class="tip-note">💡 <strong>İpucu:</strong> Met Office uygulamasını indirin - en doğru hava tahminleri.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tip 5 -->
+                    <div class="tip-detailed-card">
+                        <div class="tip-icon-wrapper">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h3>Yemek ve İçecek Önerileri</h3>
+                            <p><strong>Londra'nın Çeşitli Mutfak Kültürü:</strong> Dünya mutfaklarının başkenti!</p>
+                            <ul>
+                                <li><strong>İngiliz Kahvaltısı:</strong> Full English Breakfast denemelisiniz (£8-15)</li>
+                                <li><strong>Afternoon Tea:</strong> Geleneksel çay saati deneyimi (£25-50)</li>
+                                <li><strong>Borough Market:</strong> Taze ürünler ve sokak lezzetleri için ideal</li>
+                                <li><strong>Pub Yemekleri:</strong> Fish & Chips, Sunday Roast gibi klasikler (£12-18)</li>
+                                <li><strong>Curry:</strong> Brick Lane'de otantik Hint mutfağı</li>
+                                <li><strong>Street Food:</strong> Camden Market, Southbank - uygun fiyatlı seçenekler</li>
+                            </ul>
+                            <p class="tip-note">💡 <strong>İpucu:</strong> Öğle yemeği menüleri akşam yemeğinden %30-40 daha ucuz!</p>
+                        </div>
+                    </div>
+
+                    <!-- Tip 6 -->
+                    <div class="tip-detailed-card">
+                        <div class="tip-icon-wrapper">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h3>Güvenlik ve Pratik Bilgiler</h3>
+                            <p><strong>Güvenli Bir Şehir:</strong> Londra genel olarak güvenli, ancak dikkatli olun.</p>
+                            <ul>
+                                <li><strong>Yankesicilik:</strong> Kalabalık yerlerde (Oxford Street, Piccadilly) çantanıza dikkat edin</li>
+                                <li><strong>Acil Durum:</strong> 999 veya 112 (Polis, Ambulans, İtfaiye)</li>
+                                <li><strong>Elektrik:</strong> 230V, UK tipi fiş (3 pinli) - adaptör gerekli</li>
+                                <li><strong>Para Birimi:</strong> Pound Sterling (£). Kartlar her yerde geçerli</li>
+                                <li><strong>Bahşiş:</strong> Restoranlarda %10-12.5 (genelde hesaba dahil)</li>
+                                <li><strong>Su:</strong> Musluk suyu içilebilir ve ücretsiz</li>
+                                <li><strong>WiFi:</strong> Çoğu kafe, restoran ve metro istasyonlarında ücretsiz</li>
+                            </ul>
+                            <p class="tip-note">💡 <strong>İpucu:</strong> NHS (Sağlık Hizmetleri) acil durumlarda ücretsiz, ancak seyahat sigortası yaptırın.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tip 7 -->
+                    <div class="tip-detailed-card">
+                        <div class="tip-icon-wrapper">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h3>Gezi Rotası Önerileri</h3>
+                            <p><strong>Günlük Rota Planlaması:</strong> Londra'yı bölgelere ayırarak gezin.</p>
+                            <ul>
+                                <li><strong>1. Gün - Klasik Londra:</strong> Big Ben, Westminster Abbey, Buckingham Palace, Trafalgar Square</li>
+                                <li><strong>2. Gün - Müzeler:</strong> British Museum, National Gallery, Covent Garden</li>
+                                <li><strong>3. Gün - Thames Kıyısı:</strong> Tower Bridge, Tower of London, Borough Market, Tate Modern</li>
+                                <li><strong>4. Gün - Parklar ve Alışveriş:</strong> Hyde Park, Harrods, Oxford Street, Camden Market</li>
+                                <li><strong>5. Gün - Alternatif Londra:</strong> Notting Hill, Portobello Market, Shoreditch, Brick Lane</li>
+                            </ul>
+                            <p class="tip-note">💡 <strong>İpucu:</strong> Sabah erken başlayın - popüler yerler 10:00'dan sonra çok kalabalık oluyor.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tip 8 -->
+                    <div class="tip-detailed-card">
+                        <div class="tip-icon-wrapper">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h3>Faydalı Uygulamalar</h3>
+                            <p><strong>Akıllı Telefonunuzda Olması Gerekenler:</strong></p>
+                            <ul>
+                                <li><strong>Citymapper:</strong> En iyi ulaşım planlama uygulaması</li>
+                                <li><strong>TfL Go:</strong> Resmi Londra ulaşım uygulaması</li>
+                                <li><strong>Google Maps:</strong> Offline haritalar için indirin</li>
+                                <li><strong>Uber/Bolt:</strong> Taksi alternatifi, daha uygun fiyatlı</li>
+                                <li><strong>OpenTable:</strong> Restoran rezervasyonu</li>
+                                <li><strong>Time Out London:</strong> Etkinlik ve aktivite önerileri</li>
+                                <li><strong>Met Office:</strong> Hava durumu</li>
+                            </ul>
+                            <p class="tip-note">💡 <strong>İpucu:</strong> Havalimanında SIM kart alın veya eSIM kullanın - veri paketi şart!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Share Modal -->
+    <div class="modal" id="shareModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Paylaş</h3>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="share-buttons">
+                    <button class="share-btn facebook" onclick="shareOn('facebook')">
+                        <i class="fab fa-facebook"></i>
+                        Facebook
+                    </button>
+                    <button class="share-btn twitter" onclick="shareOn('twitter')">
+                        <i class="fab fa-twitter"></i>
+                        Twitter
+                    </button>
+                    <button class="share-btn whatsapp" onclick="shareOn('whatsapp')">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </button>
+                    <button class="share-btn linkedin" onclick="shareOn('linkedin')">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </button>
+                </div>
+                <div class="share-link">
+                    <input type="text" id="shareLink" readonly>
+                    <button class="btn-copy" onclick="copyLink()">
+                        <i class="fas fa-copy"></i>
+                        Kopyala
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
