@@ -29,6 +29,9 @@
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGPK0ksa9JuLRQEfkAMjG1xqk0cPkFho0&callback=initMap" async defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -40,14 +43,9 @@
                     <h1>Londra Gezi Rehberi</h1>
                 </div>
                 <div class="header-actions">
-                    <button class="btn-icon" id="shareBtn" title="Paylaş">
+                    <button class="btn-share-with-text" id="shareBtn">
                         <i class="fas fa-share-alt"></i>
-                    </button>
-                    <button class="btn-icon" id="printBtn" title="Yazdır">
-                        <i class="fas fa-print"></i>
-                    </button>
-                    <button class="btn-icon" id="fullscreenBtn" title="Tam Ekran">
-                        <i class="fas fa-expand"></i>
+                        <span>Paylaş</span>
                     </button>
                 </div>
             </div>
@@ -57,25 +55,6 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-            <!-- Info Cards -->
-            <div class="info-cards">
-                <div class="info-card">
-                    <i class="fas fa-map-location-dot"></i>
-                    <h3>İnteraktif Harita</h3>
-                    <p>Londra'nın en güzel yerlerini keşfedin</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-route"></i>
-                    <h3>Önerilen Rotalar</h3>
-                    <p>Optimize edilmiş gezi rotaları</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-star"></i>
-                    <h3>Popüler Mekanlar</h3>
-                    <p>Mutlaka görülmesi gereken yerler</p>
-                </div>
-            </div>
-
             <!-- Map Container -->
             <div class="map-section">
                 <div class="map-header">
@@ -83,89 +62,53 @@
                         <i class="fas fa-location-dot"></i>
                         Gezi Haritası
                     </h2>
-                    <div class="map-controls">
-                        <button class="btn-secondary" id="resetViewBtn">
-                            <i class="fas fa-redo"></i>
-                            Görünümü Sıfırla
+                </div>
+                
+                <!-- Map Layer Filters -->
+                <div class="map-filters">
+                    <div class="filter-title">
+                        <i class="fas fa-filter"></i>
+                        <span>Katman Filtreleri</span>
+                    </div>
+                    <div class="filter-buttons-grid">
+                        <button class="filter-btn active" data-category="all">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Tümü Göster</span>
+                        </button>
+                        <button class="filter-btn" data-category="museums">
+                            <i class="fas fa-landmark"></i>
+                            <span>Müzeler</span>
+                        </button>
+                        <button class="filter-btn" data-category="restaurants">
+                            <i class="fas fa-utensils"></i>
+                            <span>Restoranlar</span>
+                        </button>
+                        <button class="filter-btn" data-category="attractions">
+                            <i class="fas fa-star"></i>
+                            <span>Turistik Yerler</span>
+                        </button>
+                        <button class="filter-btn" data-category="parks">
+                            <i class="fas fa-tree"></i>
+                            <span>Parklar</span>
+                        </button>
+                        <button class="filter-btn" data-category="shopping">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Alışveriş</span>
                         </button>
                     </div>
                 </div>
                 
-                <!-- Map Layer Filters Info -->
-                <div class="map-filters-info">
-                    <div class="filter-instruction">
-                        <i class="fas fa-info-circle"></i>
-                        <div class="instruction-content">
-                            <strong>Katman Filtreleme Nasıl Yapılır:</strong>
-                            <p>Haritanın <strong>sol tarafındaki menüden</strong> katmanları açıp kapatabilirsiniz. Her katmanın yanındaki onay kutusuna tıklayarak o kategoriyi göster/gizle yapabilirsiniz.</p>
-                        </div>
-                    </div>
-                    <div class="layer-legend">
-                        <div class="legend-title">
-                            <i class="fas fa-layer-group"></i>
-                            <span>Harita Katmanları:</span>
-                        </div>
-                        <div class="legend-items">
-                            <div class="legend-item">
-                                <i class="fas fa-landmark" style="color: #e74c3c;"></i>
-                                <span>Müzeler & Kültür</span>
-                            </div>
-                            <div class="legend-item">
-                                <i class="fas fa-utensils" style="color: #f39c12;"></i>
-                                <span>Restoranlar & Kafeler</span>
-                            </div>
-                            <div class="legend-item">
-                                <i class="fas fa-star" style="color: #3498db;"></i>
-                                <span>Turistik Yerler</span>
-                            </div>
-                            <div class="legend-item">
-                                <i class="fas fa-tree" style="color: #27ae60;"></i>
-                                <span>Parklar & Doğa</span>
-                            </div>
-                            <div class="legend-item">
-                                <i class="fas fa-shopping-bag" style="color: #9b59b6;"></i>
-                                <span>Alışveriş Merkezleri</span>
-                            </div>
-                            <div class="legend-item">
-                                <i class="fas fa-subway" style="color: #34495e;"></i>
-                                <span>Ulaşım Noktaları</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="map-container" id="map">
+                    <!-- Google Maps buraya yüklenecek -->
                 </div>
                 
-                <div class="map-container" id="mapContainer">
-                    <!-- Google Maps iframe'inizi buraya ekleyin -->
-                    <iframe 
-                        id="mapFrame"
-                        src="https://www.google.com/maps/d/embed?mid=1jWK7KiWee-4NZNIORJcEZyEo1TV7n30&ehbc=2E312F"
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    
-                    <!-- Loading Overlay -->
-                    <div class="map-loading" id="mapLoading">
-                        <div class="spinner"></div>
-                        <p>Harita yükleniyor...</p>
+                <!-- Map Loading -->
+                <div class="map-loading" id="mapLoading">
+                    <div class="spinner"></div>
+                    <p>Harita yükleniyor...</p>
                     </div>
                 </div>
 
-                <!-- Map Info -->
-                <div class="map-info">
-                    <div class="map-info-item">
-                        <i class="fas fa-info-circle"></i>
-                        <span>Haritayı yakınlaştırıp uzaklaştırabilir, sürükleyebilirsiniz</span>
-                    </div>
-                    <div class="map-info-item">
-                        <i class="fas fa-mouse-pointer"></i>
-                        <span>İşaretlere tıklayarak detaylı bilgi alabilirsiniz</span>
-                    </div>
-                    <div class="map-info-item">
-                        <i class="fas fa-layer-group"></i>
-                        <span>Üstteki filtrelerle katmanları açıp kapatabilirsiniz</span>
-                    </div>
-                </div>
             </div>
 
             <!-- Detailed Tips Section -->
@@ -376,6 +319,14 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>Designed by <strong>Şahin Bölükbaşı</strong></p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
+    <script src="map.js"></script>
 </body>
 </html>

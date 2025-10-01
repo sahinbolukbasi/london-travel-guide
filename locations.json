@@ -1,0 +1,235 @@
+{
+  "locations": [
+    {
+      "name": "British Museum",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 51.5194,
+        "lng": -0.1270
+      },
+      "description": "Dünyanın en ünlü müzelerinden biri. Ücretsiz giriş.",
+      "info": "📍 Great Russell St<br>🎫 Ücretsiz<br>⏰ 10:00-17:00"
+    },
+    {
+      "name": "Natural History Museum",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 51.4967,
+        "lng": -0.1764
+      },
+      "description": "Doğa tarihi müzesi. Dinozor iskeletleri ve interaktif sergiler.",
+      "info": "📍 Cromwell Rd<br>🎫 Ücretsiz<br>⏰ 10:00-17:50"
+    },
+    {
+      "name": "Tate Modern",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 51.5076,
+        "lng": -0.0994
+      },
+      "description": "Modern sanat müzesi. Thames kıyısında.",
+      "info": "📍 Bankside<br>🎫 Ücretsiz<br>⏰ 10:00-18:00"
+    },
+    {
+      "name": "Victoria and Albert Museum",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 51.4966,
+        "lng": -0.1722
+      },
+      "description": "Sanat ve tasarım müzesi. Dünya'nın en büyük koleksiyonu.",
+      "info": "📍 Cromwell Rd<br>🎫 Ücretsiz<br>⏰ 10:00-17:45"
+    },
+    {
+      "name": "Dishoom Covent Garden",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5123,
+        "lng": -0.1232
+      },
+      "description": "Hint mutfağı. Bombay tarzı cafe.",
+      "info": "📍 Covent Garden<br>💰 ££<br>⏰ 08:00-23:00"
+    },
+    {
+      "name": "Borough Market",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5055,
+        "lng": -0.0909
+      },
+      "description": "Londra'nın en eski gıda pazarı. Sokak yemekleri.",
+      "info": "📍 Southwark<br>💰 £-££<br>⏰ 10:00-17:00"
+    },
+    {
+      "name": "Sketch",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5138,
+        "lng": -0.1407
+      },
+      "description": "Ünlü afternoon tea mekanı. Instagram'lık pembe iç mekan.",
+      "info": "📍 Mayfair<br>💰 £££<br>⏰ 09:00-02:00"
+    },
+    {
+      "name": "Flat Iron Steak",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5142,
+        "lng": -0.1270
+      },
+      "description": "Uygun fiyatlı kaliteli biftek restoranı.",
+      "info": "📍 Covent Garden<br>💰 ££<br>⏰ 12:00-23:00"
+    },
+    {
+      "name": "Big Ben",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5007,
+        "lng": -0.1246
+      },
+      "description": "Londra'nın simgesi. Westminster Sarayı'nın saat kulesi.",
+      "info": "📍 Westminster<br>🎫 Dış mekan ücretsiz<br>📸 Fotoğraf için ideal"
+    },
+    {
+      "name": "Tower Bridge",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5055,
+        "lng": -0.0754
+      },
+      "description": "İkonik asma köprü. Üstten Thames manzarası.",
+      "info": "📍 Tower Bridge Rd<br>🎫 £11.40<br>⏰ 09:30-18:00"
+    },
+    {
+      "name": "London Eye",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5033,
+        "lng": -0.1195
+      },
+      "description": "Dev dönme dolap. 360 derece Londra manzarası.",
+      "info": "📍 South Bank<br>🎫 £30+<br>⏰ 11:00-18:00"
+    },
+    {
+      "name": "Buckingham Palace",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5014,
+        "lng": -0.1419
+      },
+      "description": "Kraliçe'nin resmi ikametgahı. Nöbet değişimi töreni.",
+      "info": "📍 Westminster<br>🎫 Dış mekan ücretsiz<br>⏰ Nöbet: 11:00"
+    },
+    {
+      "name": "Tower of London",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5081,
+        "lng": -0.0759
+      },
+      "description": "Tarihi kale. Kraliyet mücevherleri.",
+      "info": "📍 Tower Hill<br>🎫 £29.90<br>⏰ 09:00-17:30"
+    },
+    {
+      "name": "Hyde Park",
+      "category": "parks",
+      "icon": "fa-tree",
+      "position": {
+        "lat": 51.5073,
+        "lng": -0.1657
+      },
+      "description": "Londra'nın en büyük parklarından. Serpentine Gölü.",
+      "info": "📍 Central London<br>🎫 Ücretsiz<br>⏰ 05:00-00:00"
+    },
+    {
+      "name": "Regent's Park",
+      "category": "parks",
+      "icon": "fa-tree",
+      "position": {
+        "lat": 51.5313,
+        "lng": -0.1563
+      },
+      "description": "Güzel bahçeler ve açık hava tiyatrosu.",
+      "info": "📍 Marylebone<br>🎫 Ücretsiz<br>⏰ 05:00-21:00"
+    },
+    {
+      "name": "Greenwich Park",
+      "category": "parks",
+      "icon": "fa-tree",
+      "position": {
+        "lat": 51.4769,
+        "lng": -0.0005
+      },
+      "description": "Sıfır meridyeni. Muhteşem şehir manzarası.",
+      "info": "📍 Greenwich<br>🎫 Ücretsiz<br>⏰ 06:00-21:00"
+    },
+    {
+      "name": "St. James's Park",
+      "category": "parks",
+      "icon": "fa-tree",
+      "position": {
+        "lat": 51.5045,
+        "lng": -0.1339
+      },
+      "description": "Buckingham Palace yakınında. Pelikanlar ve gölet.",
+      "info": "📍 Westminster<br>🎫 Ücretsiz<br>⏰ 05:00-00:00"
+    },
+    {
+      "name": "Harrods",
+      "category": "shopping",
+      "icon": "fa-shopping-bag",
+      "position": {
+        "lat": 51.4994,
+        "lng": -0.1634
+      },
+      "description": "Lüks alışveriş merkezi. İkonik yeşil bina.",
+      "info": "📍 Knightsbridge<br>💰 £££<br>⏰ 10:00-21:00"
+    },
+    {
+      "name": "Oxford Street",
+      "category": "shopping",
+      "icon": "fa-shopping-bag",
+      "position": {
+        "lat": 51.5152,
+        "lng": -0.1419
+      },
+      "description": "Londra'nın ana alışveriş caddesi. 300+ mağaza.",
+      "info": "📍 West End<br>💰 £-£££<br>⏰ Mağazaya göre değişir"
+    },
+    {
+      "name": "Covent Garden Market",
+      "category": "shopping",
+      "icon": "fa-shopping-bag",
+      "position": {
+        "lat": 51.5118,
+        "lng": -0.1226
+      },
+      "description": "Tarihi pazar. Sokak sanatçıları ve butik mağazalar.",
+      "info": "📍 Covent Garden<br>💰 ££<br>⏰ 10:00-20:00"
+    },
+    {
+      "name": "Camden Market",
+      "category": "shopping",
+      "icon": "fa-shopping-bag",
+      "position": {
+        "lat": 51.5417,
+        "lng": -0.1461
+      },
+      "description": "Alternatif pazar. Vintage kıyafetler ve sokak yemekleri.",
+      "info": "📍 Camden Town<br>💰 £-££<br>⏰ 10:00-18:00"
+    }
+  ]
+}
