@@ -36,7 +36,7 @@ body {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 0 30px;
 }
@@ -190,9 +190,8 @@ body {
    Map Section
    =========================== */
 .map-section {
-    background: var(--bg-white);
     border-radius: 0;
-    padding: 4rem 1.5%;
+    padding: 6rem 0.5%;
     box-shadow: none;
     margin-bottom: 0;
     max-width: 100%;
@@ -203,12 +202,12 @@ body {
 
 .map-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     flex-wrap: wrap;
     gap: 1rem;
-    max-width: 98%;
+    max-width: 99%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -253,8 +252,8 @@ body {
 
 .map-container {
     position: relative;
-    width: 98%;
-    height: 750px;
+    width: 99%;
+    height: 800px;
     border-radius: 0;
     overflow: hidden;
     border: 2px solid var(--border-color);
@@ -409,9 +408,9 @@ body {
    =========================== */
 .map-filters {
     margin: 2rem auto;
-    max-width: 98%;
+    max-width: 99%;
     background: var(--bg-light);
-    padding: 2rem;
+    padding: 2.5rem;
     border: 2px solid var(--border-color);
 }
 

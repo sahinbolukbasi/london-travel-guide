@@ -79,32 +79,34 @@ async function loadLocations() {
 // ===========================
 
 function createCustomMarkerIcon(iconClass, color) {
-    // SVG marker with Font Awesome icon
+    // Basit SVG pin marker
     const svg = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="50" viewBox="0 0 40 50">
-            <!-- Marker shape -->
-            <path d="M20 0 C9 0 0 9 0 20 C0 35 20 50 20 50 S40 35 40 20 C40 9 31 0 20 0 Z" 
-                  fill="${color}" stroke="#ffffff" stroke-width="2"/>
-            <!-- Icon placeholder (will be replaced with Font Awesome) -->
-            <text x="20" y="24" font-family="'Font Awesome 6 Free'" font-size="16" 
-                  font-weight="900" fill="#ffffff" text-anchor="middle" 
-                  dominant-baseline="middle">&#x${getFontAwesomeUnicode(iconClass)};</text>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="44" viewBox="0 0 32 44">
+            <!-- Pin gölgesi -->
+            <ellipse cx="16" cy="42" rx="6" ry="2" fill="rgba(0,0,0,0.2)"/>
+            <!-- Pin gövdesi -->
+            <path d="M16 0 C7.2 0 0 7.2 0 16 C0 28 16 44 16 44 S32 28 32 16 C32 7.2 24.8 0 16 0 Z" 
+                  fill="${color}" stroke="#ffffff" stroke-width="2.5"/>
+            <!-- İç daire (ikon için arka plan) -->
+            <circle cx="16" cy="14" r="9" fill="rgba(255,255,255,0.9)"/>
+            <!-- İkon emoji -->
+            <text x="16" y="19" font-size="12" text-anchor="middle" fill="${color}">${getIconEmoji(iconClass)}</text>
         </svg>
     `;
     
     return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
 }
 
-// Font Awesome icon unicode mapping
-function getFontAwesomeUnicode(iconClass) {
-    const iconMap = {
-        'fa-landmark': 'f66f',      // 🏛️
-        'fa-utensils': 'f2e7',      // 🍽️
-        'fa-star': 'f005',          // ⭐
-        'fa-tree': 'f1bb',          // 🌳
-        'fa-shopping-bag': 'f290'   // 🛍️
+// İkon emoji mapping
+function getIconEmoji(iconClass) {
+    const emojiMap = {
+        'fa-landmark': '🏛',      // Müzeler
+        'fa-utensils': '🍽',      // Restoranlar
+        'fa-star': '⭐',          // Turistik
+        'fa-tree': '🌳',          // Parklar
+        'fa-shopping-bag': '🛍'   // Alışveriş
     };
-    return iconMap[iconClass] || 'f3c5'; // Default: map-marker-alt
+    return emojiMap[iconClass] || '📍';
 }
 
 // ===========================
@@ -126,10 +128,11 @@ function createMarkers() {
             category: location.category,
             icon: {
                 url: iconUrl,
-                scaledSize: new google.maps.Size(40, 40),
-                anchor: new google.maps.Point(20, 40)
+                scaledSize: new google.maps.Size(32, 44),
+                anchor: new google.maps.Point(16, 44)
             },
-            animation: google.maps.Animation.DROP
+            animation: google.maps.Animation.DROP,
+            optimized: false
         });
 
         // Info window
