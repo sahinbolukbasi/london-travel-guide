@@ -24,17 +24,33 @@ const CATEGORIES = {
 let locations = [];
 
 // ===========================
+// Loading Message Update
+// ===========================
+
+function updateLoadingMessage(message) {
+    const loadingText = document.getElementById('loadingText');
+    if (loadingText) {
+        loadingText.textContent = message;
+    }
+}
+
+// ===========================
 // Map Initialization
 // ===========================
 
 async function initMap() {
+    updateLoadingMessage('Lokasyonlar yükleniyor...');
+    
     // Lokasyonları JSON'dan yükle
     await loadLocations();
 
+    // Loading mesajını güncelle
+    updateLoadingMessage('Harita oluşturuluyor...');
+    
     // Harita oluştur
     map = new google.maps.Map(document.getElementById('map'), {
         center: LONDON_CENTER,
-        zoom: 12,
+        zoom: 11,
         styles: getMapStyles(),
         mapTypeControl: false,
         streetViewControl: false,
@@ -42,21 +58,47 @@ async function initMap() {
         zoomControl: true,
         zoomControlOptions: {
             position: google.maps.ControlPosition.RIGHT_CENTER
-        }
+        },
+        gestureHandling: 'greedy'
     });
 
+    // Loading mesajını güncelle
+    updateLoadingMessage('Marker\'lar ekleniyor...');
+    
     // Marker'ları ekle
     createMarkers();
 
-    // Loading overlay'i gizle
+    // Filter butonlarını dinle (DOM hazır olduktan sonra)
     setTimeout(() => {
-        document.getElementById('mapLoading').style.display = 'none';
+        initFilterButtons();
     }, 1000);
 
-    // Filter butonlarını dinle
-    initFilterButtons();
+    // Loading overlay'i hemen gizle (harita hazır olduğunda)
+    const loadingOverlay = document.getElementById('mapLoading');
+    if (loadingOverlay) {
+        updateLoadingMessage('Harita tamamlanıyor...');
+        
+        // Harita tiles yüklenene kadar bekle
+        google.maps.event.addListenerOnce(map, 'tilesloaded', () => {
+            loadingOverlay.classList.add('hidden');
+            setTimeout(() => {
+                loadingOverlay.style.display = 'none';
+            }, 300);
+        });
+        
+        // Maksimum 3 saniye bekle, sonra zorla gizle
+        setTimeout(() => {
+            if (loadingOverlay.style.display !== 'none') {
+                loadingOverlay.classList.add('hidden');
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 300);
+            }
+        }, 3000);
+    }
 
     trackEvent('Map', 'loaded', 'Custom map loaded successfully');
+    console.log('✅ Harita başarıyla yüklendi. Filtreler başlatılıyor...');
 }
 
 // ===========================
@@ -65,12 +107,14 @@ async function initMap() {
 
 async function loadLocations() {
     try {
-        const response = await fetch('locations.json');
+        const response = await fetch('locations.json', {
+            cache: 'force-cache'
+        });
         const data = await response.json();
         locations = data.locations;
-        console.log(`${locations.length} lokasyon yüklendi`);
+        console.log(`✅ ${locations.length} lokasyon yüklendi`);
     } catch (error) {
-        console.error('Lokasyonlar yüklenirken hata:', error);
+        console.error('❌ Lokasyonlar yüklenirken hata:', error);
         // Hata durumunda boş array kullan
         locations = [];
     }
@@ -118,7 +162,7 @@ function getIconEmoji(iconClass) {
 // ===========================
 
 function createMarkers() {
-    locations.forEach(location => {
+    locations.forEach((location, index) => {
         // Font Awesome ikonu ile özel marker oluştur
         const iconUrl = createCustomMarkerIcon(
             CATEGORIES[location.category].icon,
@@ -129,15 +173,16 @@ function createMarkers() {
             position: location.position,
             map: map,
             title: location.name,
-            category: location.category,
             icon: {
                 url: iconUrl,
                 scaledSize: new google.maps.Size(32, 44),
                 anchor: new google.maps.Point(16, 44)
             },
-            animation: google.maps.Animation.DROP,
-            optimized: false
+            optimized: true
         });
+
+        // Category'yi marker'a özel property olarak ekle
+        marker.category = location.category;
 
         // Info window
         const infoWindow = new google.maps.InfoWindow({
@@ -178,10 +223,12 @@ function createMarkers() {
 
 function initFilterButtons() {
     const filterButtons = document.querySelectorAll('.filter-btn');
+    console.log(`🎛️ ${filterButtons.length} filtre butonu bulundu ve bağlanıyor...`);
     
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             const category = button.getAttribute('data-category');
+            console.log(`🖱️ Butona tıklandı: ${category}`);
             
             // Aktif butonu güncelle
             filterButtons.forEach(btn => btn.classList.remove('active'));
@@ -193,18 +240,42 @@ function initFilterButtons() {
             trackEvent('Map', 'filter', category);
         });
     });
+    
+    console.log('✅ Tüm filtre butonları event listener ile bağlandı');
 }
 
 function filterMarkers(category) {
+    console.log(`🔍 Filtreleme başladı: ${category}`);
+    console.log(`📊 Toplam marker sayısı: ${markers.length}`);
+    
     activeCategory = category;
     
-    markers.forEach(marker => {
+    let visibleCount = 0;
+    let hiddenCount = 0;
+    
+    markers.forEach((marker, index) => {
         if (category === 'all') {
             marker.setVisible(true);
+            visibleCount++;
         } else {
-            marker.setVisible(marker.category === category);
+            const markerCategory = marker.category;
+            const isVisible = markerCategory === category;
+            marker.setVisible(isVisible);
+            
+            if (isVisible) {
+                visibleCount++;
+            } else {
+                hiddenCount++;
+            }
+            
+            // İlk 3 marker için debug
+            if (index < 3) {
+                console.log(`  Marker ${index}: ${marker.title} - Kategori: ${markerCategory} - Görünür: ${isVisible}`);
+            }
         }
     });
+    
+    console.log(`✅ Sonuç: ${visibleCount} görünür, ${hiddenCount} gizli`);
 }
 
 // ===========================
@@ -214,44 +285,9 @@ function filterMarkers(category) {
 function getMapStyles() {
     return [
         {
-            "featureType": "all",
-            "elementType": "geometry",
-            "stylers": [{ "color": "#f5f5f5" }]
-        },
-        {
-            "featureType": "all",
-            "elementType": "labels.text.fill",
-            "stylers": [{ "color": "#616161" }]
-        },
-        {
-            "featureType": "all",
-            "elementType": "labels.text.stroke",
-            "stylers": [{ "color": "#f5f5f5" }]
-        },
-        {
             "featureType": "water",
             "elementType": "geometry",
             "stylers": [{ "color": "#c9e6f2" }]
-        },
-        {
-            "featureType": "water",
-            "elementType": "labels.text.fill",
-            "stylers": [{ "color": "#9e9e9e" }]
-        },
-        {
-            "featureType": "road",
-            "elementType": "geometry",
-            "stylers": [{ "color": "#ffffff" }]
-        },
-        {
-            "featureType": "road.arterial",
-            "elementType": "labels.text.fill",
-            "stylers": [{ "color": "#757575" }]
-        },
-        {
-            "featureType": "poi",
-            "elementType": "geometry",
-            "stylers": [{ "color": "#eeeeee" }]
         },
         {
             "featureType": "poi.park",

@@ -76,14 +76,14 @@
                         <div class="stat-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="stat-content">
-                                <span class="stat-number">20+</span>
+                                <span class="stat-number">70+</span>
                                 <span class="stat-label">Lokasyon</span>
                             </div>
                         </div>
                         <div class="stat-item">
                             <i class="fas fa-layer-group"></i>
                             <div class="stat-content">
-                                <span class="stat-number">5</span>
+                                <span class="stat-number">7</span>
                                 <span class="stat-label">Kategori</span>
                             </div>
                         </div>
@@ -188,13 +188,18 @@
                 
                 <div class="map-container" id="map">
                     <!-- Google Maps buraya yüklenecek -->
-                </div>
-                
-                <!-- Map Loading -->
-                <div class="map-loading" id="mapLoading">
-                    <div class="spinner"></div>
-                    <p>Harita yükleniyor...</p>
+                    <!-- Map Loading -->
+                    <div class="map-loading" id="mapLoading">
+                        <div class="loading-content">
+                            <div class="spinner"></div>
+                            <p id="loadingText">Harita başlatılıyor...</p>
+                            <div class="loading-progress">
+                                <div class="progress-bar" id="progressBar"></div>
+                            </div>
+                            <small>72 lokasyon yükleniyor</small>
+                        </div>
                     </div>
+                </div>
                 </div>
 
             </div>
