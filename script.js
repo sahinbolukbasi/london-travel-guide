@@ -52,16 +52,6 @@ function trackEvent(category, action, label) {
 // Map Functionality
 // ===========================
 
-// Map layer URLs - Google My Maps'te her katman için ayrı URL oluşturabilirsiniz
-const mapLayers = {
-    all: "https://www.google.com/maps/d/embed?mid=1jWK7KiWee-4NZNIORJcEZyEo1TV7n30&ehbc=2E312F",
-    museums: "https://www.google.com/maps/d/embed?mid=1jWK7KiWee-4NZNIORJcEZyEo1TV7n30&ehbc=2E312F&ll=51.5194,-0.1270&z=12",
-    restaurants: "https://www.google.com/maps/d/embed?mid=1jWK7KiWee-4NZNIORJcEZyEo1TV7n30&ehbc=2E312F&ll=51.5074,-0.1278&z=13",
-    attractions: "https://www.google.com/maps/d/embed?mid=1jWK7KiWee-4NZNIORJcEZyEo1TV7n30&ehbc=2E312F&ll=51.5014,-0.1419&z=14",
-    parks: "https://www.google.com/maps/d/embed?mid=1jWK7KiWee-4NZNIORJcEZyEo1TV7n30&ehbc=2E312F&ll=51.5073,-0.1657&z=13",
-    shopping: "https://www.google.com/maps/d/embed?mid=1jWK7KiWee-4NZNIORJcEZyEo1TV7n30&ehbc=2E312F&ll=51.5152,-0.1419&z=14"
-};
-
 // Hide map loading overlay when iframe loads
 document.addEventListener('DOMContentLoaded', function() {
     const mapFrame = document.getElementById('mapFrame');
@@ -78,35 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Track page view
     trackPageView();
-    
-    // Initialize map layer filters
-    initializeMapFilters();
 });
-
-// Initialize map layer filters
-function initializeMapFilters() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const mapFrame = document.getElementById('mapFrame');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
-            this.classList.add('active');
-            
-            // Get selected layer
-            const layer = this.getAttribute('data-layer');
-            
-            // Update map URL
-            if (mapLayers[layer]) {
-                mapFrame.src = mapLayers[layer];
-                trackEvent('Map', 'filter_change', `Filter changed to: ${layer}`);
-            }
-        });
-    });
-}
 
 // Reset map view
 document.getElementById('resetViewBtn')?.addEventListener('click', function() {
