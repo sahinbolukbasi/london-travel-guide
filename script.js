@@ -2,19 +2,35 @@
 // Analytics & Visitor Tracking
 // ===========================
 
-// Simple visitor counter using localStorage
+// Enhanced visitor counter with session management
 function updateVisitorCount() {
-    let visits = localStorage.getItem('visitCount');
-    if (!visits) {
-        visits = 0;
-    }
-    visits = parseInt(visits) + 1;
-    localStorage.setItem('visitCount', visits);
-    
-    // Display visitor count
-    const visitorCountElement = document.getElementById('visitorCount');
-    if (visitorCountElement) {
-        visitorCountElement.textContent = visits.toLocaleString('tr-TR');
+    try {
+        let visits = localStorage.getItem('visitCount');
+        let lastVisit = localStorage.getItem('lastVisit');
+        const now = new Date().getTime();
+        const oneDay = 24 * 60 * 60 * 1000; // 24 saat
+        
+        if (!visits) {
+            visits = 0;
+        }
+        
+        // Eğer son ziyaret 24 saatten eskiyse veya hiç ziyaret yoksa sayacı artır
+        if (!lastVisit || (now - parseInt(lastVisit)) > oneDay) {
+            visits = parseInt(visits) + 1;
+            localStorage.setItem('visitCount', visits);
+            localStorage.setItem('lastVisit', now.toString());
+        }
+        
+        // Display visitor count
+        const visitorCountElement = document.getElementById('visitorCount');
+        if (visitorCountElement) {
+            visitorCountElement.textContent = visits.toLocaleString('tr-TR');
+        }
+        
+        return visits;
+    } catch (error) {
+        console.warn('LocalStorage erişim hatası:', error);
+        return 1;
     }
 }
 
@@ -52,8 +68,12 @@ function trackEvent(category, action, label) {
 // Map Functionality
 // ===========================
 
-// Hide map loading overlay when iframe loads
+// Enhanced DOM ready handler
 document.addEventListener('DOMContentLoaded', function() {
+    // Cache temizleme
+    CacheManager.clearOldCache();
+    
+    // Map loading handling
     const mapFrame = document.getElementById('mapFrame');
     const mapLoading = document.getElementById('mapLoading');
     
@@ -325,9 +345,59 @@ window.addEventListener('error', function(e) {
 });
 
 // ===========================
+// Enhanced Cache Management
+// ===========================
+
+// Cache yönetimi için yardımcı fonksiyonlar
+const CacheManager = {
+    // Cache temizleme
+    clearOldCache: () => {
+        try {
+            // Eski cache verilerini temizle
+            const keys = Object.keys(localStorage);
+            keys.forEach(key => {
+                if (key.startsWith('cache_') || key.startsWith('temp_')) {
+                    const item = localStorage.getItem(key);
+                    try {
+                        const data = JSON.parse(item);
+                        const now = Date.now();
+                        // 1 saatten eski cache'leri temizle
+                        if (data.timestamp && (now - data.timestamp) > 3600000) {
+                            localStorage.removeItem(key);
+                        }
+                    } catch (e) {
+                        localStorage.removeItem(key);
+                    }
+                }
+            });
+        } catch (error) {
+            console.warn('Cache temizleme hatası:', error);
+        }
+    },
+    
+    // Browser cache'ini temizle
+    forceCacheRefresh: () => {
+        if ('caches' in window) {
+            caches.keys().then(names => {
+                names.forEach(name => {
+                    caches.delete(name);
+                });
+            });
+        }
+    },
+    
+    // Sayfa yenileme ile cache temizleme
+    refreshWithCacheClear: () => {
+        CacheManager.forceCacheRefresh();
+        window.location.reload(true);
+    }
+};
+
+// ===========================
 // Console Welcome Message
 // ===========================
 
 console.log('%c🗺️ Londra Gezi Rehberi', 'font-size: 20px; font-weight: bold; color: #3498db;');
 console.log('%cHoş geldiniz! Bu site GitHub Pages üzerinde yayınlanmaktadır.', 'font-size: 12px; color: #7f8c8d;');
 console.log('%cAnalytics aktif - Ziyaretçi hareketleri takip ediliyor.', 'font-size: 12px; color: #27ae60;');
+console.log('%cGelişmiş cache yönetimi ve hata kontrolü aktif.', 'font-size: 12px; color: #9b59b6;');
