@@ -12,7 +12,7 @@ Modern ve kullanıcı dostu bir Londra gezi rehberi web sitesi. Google Maps ente
 - 🗺️ **Google Maps Entegrasyonu**: İnteraktif harita ile kolay navigasyon
 - 📊 **Analytics**: Google Analytics ile ziyaretçi takibi
 - 🖨️ **Yazdırma Desteği**: Haritayı ve bilgileri yazdırabilme
-- 🔗 **Sosyal Medya Paylaşımı**: Facebook, Twitter, WhatsApp, LinkedIn
+- 🔗 **Sosyal Medya Paylaşımı**: Facebook, X, WhatsApp, LinkedIn
 - 🖥️ **Tam Ekran Modu**: Haritayı tam ekranda görüntüleme
 - ⚡ **Hızlı Yükleme**: Optimize edilmiş performans
 - 🎯 **SEO Uyumlu**: Arama motorları için optimize edilmiş
