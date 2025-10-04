@@ -397,6 +397,149 @@ const CacheManager = {
 // Console Welcome Message
 // ===========================
 
+// ===========================
+// Email Favorites Modal
+// ===========================
+
+function openEmailModal() {
+    const modal = document.createElement('div');
+    modal.className = 'email-modal';
+    modal.innerHTML = `
+        <div class="email-modal-content">
+            <div class="email-modal-header">
+                <h3>
+                    <i class="fas fa-envelope"></i>
+                    Favorileri E-posta ile Gönder
+                </h3>
+                <button class="email-modal-close" onclick="closeEmailModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="email-modal-body">
+                <p>Favori lokasyonlarınızı e-posta adresinize göndermek için aşağıdaki formu doldurun:</p>
+                
+                <form class="email-form" id="emailForm">
+                    <div class="form-group">
+                        <label for="userEmail">E-posta Adresiniz</label>
+                        <input type="email" id="userEmail" name="email" placeholder="ornek@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emailSubject">Konu (Opsiyonel)</label>
+                        <input type="text" id="emailSubject" name="subject" placeholder="Londra Favori Lokasyonlarım" value="Londra Favori Lokasyonlarım">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emailMessage">Ek Mesaj (Opsiyonel)</label>
+                        <textarea id="emailMessage" name="message" rows="3" placeholder="Favori lokasyonlarımı paylaşıyorum..."></textarea>
+                    </div>
+                    
+                    <div class="email-actions">
+                        <button type="button" class="btn-secondary" onclick="closeEmailModal()">İptal</button>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Gönder
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn 0.3s ease;
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Handle form submission
+    document.getElementById('emailForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        sendFavoritesEmail();
+    });
+}
+
+function closeEmailModal() {
+    const modal = document.querySelector('.email-modal');
+    if (modal) {
+        modal.style.animation = 'fadeIn 0.3s ease reverse';
+        setTimeout(() => {
+            if (modal.parentNode) {
+                document.body.removeChild(modal);
+            }
+        }, 300);
+    }
+}
+
+function sendFavoritesEmail() {
+    const userPrefs = SessionManager.loadUserPreferences();
+    const favorites = userPrefs.favoriteLocations || [];
+    const email = document.getElementById('userEmail').value;
+    const subject = document.getElementById('emailSubject').value || 'Londra Favori Lokasyonlarım';
+    const message = document.getElementById('emailMessage').value;
+    
+    // Create email content
+    let emailBody = `Merhaba!\n\n`;
+    if (message) {
+        emailBody += `${message}\n\n`;
+    }
+    emailBody += `Londra'da favori lokasyonlarım:\n\n`;
+    
+    favorites.forEach((favName, index) => {
+        const location = locations.find(loc => loc.name === favName);
+        if (location) {
+            emailBody += `${index + 1}. ${location.name}\n`;
+            emailBody += `   Kategori: ${getCategoryName(location.category)}\n`;
+            emailBody += `   Açıklama: ${location.description}\n`;
+            emailBody += `   Google Maps: https://www.google.com/maps/place/${location.position.lat},${location.position.lng}\n\n`;
+        }
+    });
+    
+    emailBody += `Bu liste Londra Gezi Rehberi (${window.location.href}) kullanılarak oluşturulmuştur.\n\n`;
+    emailBody += `İyi geziler! 🗺️`;
+    
+    // Create mailto link
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    showFavoriteNotification('E-posta uygulamanız açıldı!', 'added');
+    
+    // Close modal
+    closeEmailModal();
+    
+    trackEvent('Favorites', 'email_sent', favorites.length);
+}
+
+function getCategoryName(category) {
+    const categoryNames = {
+        'museums': 'Müze',
+        'restaurants': 'Restoran',
+        'attractions': 'Turistik Yer',
+        'parks': 'Park',
+        'shopping': 'Alışveriş Merkezi',
+        'entertainment': 'Eğlence Merkezi',
+        'cafes': 'Kafe'
+    };
+    return categoryNames[category] || category;
+}
+
+// Make functions globally accessible
+window.openEmailModal = openEmailModal;
+window.closeEmailModal = closeEmailModal;
+
 console.log('%c🗺️ Londra Gezi Rehberi', 'font-size: 20px; font-weight: bold; color: #3498db;');
 console.log('%cHoş geldiniz! Bu site GitHub Pages üzerinde yayınlanmaktadır.', 'font-size: 12px; color: #7f8c8d;');
 console.log('%cAnalytics aktif - Ziyaretçi hareketleri takip ediliyor.', 'font-size: 12px; color: #27ae60;');
