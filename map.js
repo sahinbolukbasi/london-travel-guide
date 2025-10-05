@@ -362,55 +362,53 @@ function createEnhancedInfoWindow(location) {
                 </button>
             </div>
             
-            <div class="info-content-wrapper">
-                <div class="info-content">
-                    <p class="location-description">${location.description}</p>
-                    
-                    <div class="info-details">
-                        ${address ? `
-                            <div class="detail-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>${address}</span>
-                            </div>
-                        ` : ''}
-                        
-                        ${price ? `
-                            <div class="detail-item">
-                                <i class="fas fa-ticket-alt"></i>
-                                <span>${price}</span>
-                            </div>
-                        ` : ''}
-                        
-                        ${hours ? `
-                            <div class="detail-item">
-                                <i class="fas fa-clock"></i>
-                                <span>${hours}</span>
-                            </div>
-                        ` : ''}
-                        
-                        ${transport ? `
-                            <div class="detail-item">
-                                <i class="fas fa-subway"></i>
-                                <span>${transport}</span>
-                            </div>
-                        ` : ''}
-                    </div>
-                </div>
+            <div class="info-content">
+                <p class="location-description">${location.description}</p>
                 
-                <div class="info-actions">
-                    <button class="action-btn directions-btn" id="directionsBtn">
-                        <i class="fas fa-route"></i>
-                        Yol Tarifi
-                    </button>
-                    <button class="action-btn share-btn" id="shareBtn">
-                        <i class="fas fa-share-alt"></i>
-                        Paylaş
-                    </button>
-                    <button class="action-btn favorite-btn" id="favoriteBtn">
-                        <i class="fas fa-heart"></i>
-                        ${getFavoriteButtonText(location.name)}
-                    </button>
+                <div class="info-details">
+                    ${address ? `
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>${address}</span>
+                        </div>
+                    ` : ''}
+                    
+                    ${price ? `
+                        <div class="detail-item">
+                            <i class="fas fa-ticket-alt"></i>
+                            <span>${price}</span>
+                        </div>
+                    ` : ''}
+                    
+                    ${hours ? `
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>${hours}</span>
+                        </div>
+                    ` : ''}
+                    
+                    ${transport ? `
+                        <div class="detail-item">
+                            <i class="fas fa-subway"></i>
+                            <span>${transport}</span>
+                        </div>
+                    ` : ''}
                 </div>
+            </div>
+            
+            <div class="info-actions">
+                <button class="action-btn directions-btn" id="directionsBtn">
+                    <i class="fas fa-route"></i>
+                    Yol Tarifi
+                </button>
+                <button class="action-btn share-btn" id="shareBtn">
+                    <i class="fas fa-share-alt"></i>
+                    Paylaş
+                </button>
+                <button class="action-btn favorite-btn" id="favoriteBtn">
+                    <i class="fas fa-heart"></i>
+                    ${getFavoriteButtonText(location.name)}
+                </button>
             </div>
         </div>
     `;

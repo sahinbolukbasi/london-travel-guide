@@ -1846,11 +1846,13 @@ body {
     .gm-style .gm-style-iw-c {
         max-width: min(280px, 75vw) !important;
         padding: 0 !important;
+        max-height: 70vh !important;
     }
     
     .gm-style .gm-style-iw-d {
         max-width: min(280px, 75vw) !important;
-        overflow: visible !important;
+        overflow: hidden !important;
+        max-height: 70vh !important;
     }
     
     .enhanced-info-window {
@@ -1891,50 +1893,41 @@ body {
         font-size: 0.75rem;
     }
     
-    /* Scrollable container for entire popup content */
+    /* Scrollable popup */
     .enhanced-info-window {
-        display: flex !important;
-        flex-direction: column !important;
-        max-height: 65vh !important;
-        overflow: hidden !important;
+        max-height: 60vh !important;
     }
     
     .info-header {
-        flex-shrink: 0 !important;
-    }
-    
-    /* Wrapper for scrollable content + actions */
-    .info-content-wrapper {
-        display: flex;
-        flex-direction: column;
-        overflow-y: auto;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: thin;
-        scrollbar-color: #cbd5e0 #f7fafc;
-        max-height: 100%;
-    }
-    
-    .info-content {
-        padding: 10px;
         flex-shrink: 0;
     }
     
-    .info-content-wrapper::-webkit-scrollbar {
+    .info-content {
+        padding: 8px 10px;
+        max-height: 30vh;
+        overflow-y: scroll !important;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: #a0aec0 #f0f0f0;
+    }
+    
+    .info-content::-webkit-scrollbar {
         width: 5px;
     }
     
-    .info-content-wrapper::-webkit-scrollbar-track {
+    .info-content::-webkit-scrollbar-track {
         background: #f0f0f0;
+        border-radius: 2px;
     }
     
-    .info-content-wrapper::-webkit-scrollbar-thumb {
-        background: #cbd5e0;
-        border-radius: 3px;
-    }
-    
-    .info-content-wrapper::-webkit-scrollbar-thumb:hover {
+    .info-content::-webkit-scrollbar-thumb {
         background: #a0aec0;
+        border-radius: 2px;
+    }
+    
+    .info-content::-webkit-scrollbar-thumb:active {
+        background: #718096;
     }
     
     .location-description {
@@ -1964,14 +1957,8 @@ body {
         padding: 8px;
         background: #f8f9fa;
         border-top: 2px solid #e9ecef;
-        flex-shrink: 0;
+        flex-shrink: 0 !important;
         margin-top: 0;
-    }
-    
-    .info-content-wrapper {
-        flex: 1 !important;
-        overflow-y: auto !important;
-        min-height: 0 !important;
     }
     
     /* Ensure info window is above location list panel */
@@ -2024,23 +2011,38 @@ body {
         color: white;
     }
 }
-
 /* Extra small screens */
 @media (max-width: 480px) {
     .gm-style .gm-style-iw-c {
         max-width: min(260px, 85vw) !important;
+        max-height: 55vh !important;
     }
     
     .gm-style .gm-style-iw-d {
         max-width: min(260px, 85vw) !important;
+        max-height: 55vh !important;
     }
     
     .enhanced-info-window {
         max-width: min(260px, 85vw) !important;
+        max-height: 55vh !important;
+    }
+    
+    .info-content {
+        max-height: 22vh;
+        padding: 6px 8px;
     }
     
     .location-title {
         font-size: 0.85rem !important;
+    }
+    
+    .location-description {
+        font-size: 0.75rem;
+    }
+    
+    .detail-item {
+        font-size: 0.7rem;
     }
     
     .action-btn {
