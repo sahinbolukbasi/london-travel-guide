@@ -1,0 +1,281 @@
+{
+  "tips": [
+    {
+      "id": "tip-1",
+      "icon": "fa-calendar-alt",
+      "title": "En İyi Ziyaret Zamanı",
+      "description": "İdeal Aylar: Mayıs - Eylül arası en güzel dönem. Hava ılık ve günler uzun.",
+      "content": [
+        {
+          "season": "Bahar (Mart-Mayıs)",
+          "description": "Çiçekler açar, parklar muhteşem görünür. Sıcaklık 10-15°C."
+        },
+        {
+          "season": "Yaz (Haziran-Ağustos)",
+          "description": "En sıcak dönem (20-25°C). Festival sezonu, açık hava etkinlikleri."
+        },
+        {
+          "season": "Sonbahar (Eylül-Kasım)",
+          "description": "Kalabalık azalır, oteller daha uygun. 10-15°C."
+        },
+        {
+          "season": "Kış (Aralık-Şubat)",
+          "description": "Noel pazarları, buz pateni, daha az turist. 5-10°C."
+        }
+      ],
+      "tip": "Temmuz-Ağustos en kalabalık dönem. Haziran veya Eylül daha ideal."
+    },
+    {
+      "id": "tip-2",
+      "icon": "fa-subway",
+      "title": "Ulaşım Rehberi",
+      "description": "Oyster Card: Londra'da ulaşımın anahtarı. Tek kullanımlık biletlerden %50 daha ucuz!",
+      "content": [
+        {
+          "item": "Oyster Card Nasıl Alınır",
+          "description": "Havalimanı veya herhangi bir metro istasyonundan (£7 depozito + yükleme)"
+        },
+        {
+          "item": "Günlük Tavan",
+          "description": "Belirli bir miktardan sonra ücretsiz (Zone 1-2: £8.10)"
+        },
+        {
+          "item": "Contactless Kart",
+          "description": "Visa/Mastercard ile doğrudan geçiş yapabilirsiniz"
+        },
+        {
+          "item": "Tube (Metro)",
+          "description": "En hızlı ulaşım. 05:00-00:30 arası çalışır"
+        },
+        {
+          "item": "Otobüsler",
+          "description": "Manzaralı yolculuk, daha ucuz (£1.75 sabit)"
+        },
+        {
+          "item": "Night Tube",
+          "description": "Cuma-Cumartesi geceleri bazı hatlarda 24 saat"
+        }
+      ],
+      "tip": "TfL Go uygulamasını indirin - gerçek zamanlı bilgi ve rota planlama."
+    },
+    {
+      "id": "tip-3",
+      "icon": "fa-ticket-alt",
+      "title": "Bilet ve Tasarruf İpuçları",
+      "description": "Ücretsiz Müzeler: Londra'nın en büyük avantajı - çoğu müze ücretsiz!",
+      "content": [
+        {
+          "item": "Ücretsiz Müzeler",
+          "description": "British Museum, National Gallery, Tate Modern, Natural History Museum, V&A Museum"
+        },
+        {
+          "item": "London Pass",
+          "description": "80+ cazibe merkezi için geçerli. 1-10 günlük seçenekler (£99-£249)"
+        },
+        {
+          "item": "2 for 1 Teklifleri",
+          "description": "Tren bileti ile birçok yerde 2. kişi ücretsiz"
+        },
+        {
+          "item": "Önceden Rezervasyon",
+          "description": "Tower of London, London Eye gibi yerlerde %15-20 indirim"
+        },
+        {
+          "item": "Matine Gösterileri",
+          "description": "West End tiyatrolarında öğleden sonra gösterileri daha ucuz"
+        }
+      ],
+      "tip": "Çarşamba günleri bazı müzelerde geç saatlere kadar açık ve daha az kalabalık."
+    },
+    {
+      "id": "tip-4",
+      "icon": "fa-cloud-rain",
+      "title": "Hava Durumu ve Hazırlık",
+      "description": "Londra'nın Meşhur Yağmuru: Her mevsim yağmur olasılığı var!",
+      "content": [
+        {
+          "item": "Şemsiye",
+          "description": "Mutlaka yanınızda taşıyın. Ani sağanaklar sık görülür"
+        },
+        {
+          "item": "Katmanlı Giyim",
+          "description": "Sabah serin, öğlen sıcak olabilir. Çıkarılabilir katmanlar ideal"
+        },
+        {
+          "item": "Rahat Ayakkabı",
+          "description": "Günde ortalama 15-20 km yürüyeceksiniz!"
+        },
+        {
+          "item": "Yağmurluk",
+          "description": "Şemsiyeden daha pratik, rüzgarlı günlerde daha kullanışlı"
+        },
+        {
+          "item": "Güneş Kremi",
+          "description": "Yaz aylarında güneş sürpriz şekilde güçlü olabilir"
+        }
+      ],
+      "tip": "Met Office uygulamasını indirin - en doğru hava tahminleri."
+    },
+    {
+      "id": "tip-5",
+      "icon": "fa-utensils",
+      "title": "Yemek ve İçecek Önerileri",
+      "description": "Londra'nın Çeşitli Mutfak Kültürü: Dünya mutfaklarının başkenti!",
+      "content": [
+        {
+          "item": "İngiliz Kahvaltısı",
+          "description": "Full English Breakfast denemelisiniz (£8-15)"
+        },
+        {
+          "item": "Afternoon Tea",
+          "description": "Geleneksel çay saati deneyimi (£25-50)"
+        },
+        {
+          "item": "Borough Market",
+          "description": "Taze ürünler ve sokak lezzetleri için ideal"
+        },
+        {
+          "item": "Pub Yemekleri",
+          "description": "Fish & Chips, Sunday Roast gibi klasikler (£12-18)"
+        },
+        {
+          "item": "Curry",
+          "description": "Brick Lane'de otantik Hint mutfağı"
+        },
+        {
+          "item": "Street Food",
+          "description": "Camden Market, Southbank - uygun fiyatlı seçenekler"
+        }
+      ],
+      "tip": "Öğle yemeği menüleri akşam yemeğinden %30-40 daha ucuz!"
+    },
+    {
+      "id": "tip-6",
+      "icon": "fa-shield-alt",
+      "title": "Güvenlik ve Pratik Bilgiler",
+      "description": "Güvenli Bir Şehir: Londra genel olarak güvenli, ancak dikkatli olun.",
+      "content": [
+        {
+          "item": "Yankesicilik",
+          "description": "Kalabalık yerlerde (Oxford Street, Piccadilly) çantanıza dikkat edin"
+        },
+        {
+          "item": "Acil Durum",
+          "description": "999 veya 112 (Polis, Ambulans, İtfaiye)"
+        },
+        {
+          "item": "Elektrik",
+          "description": "230V, UK tipi fiş (3 pinli) - adaptör gerekli"
+        },
+        {
+          "item": "Para Birimi",
+          "description": "Pound Sterling (£). Kartlar her yerde geçerli"
+        },
+        {
+          "item": "Bahşiş",
+          "description": "Restoranlarda %10-12.5 (genelde hesaba dahil)"
+        },
+        {
+          "item": "Su",
+          "description": "Musluk suyu içilebilir ve ücretsiz"
+        },
+        {
+          "item": "WiFi",
+          "description": "Çoğu kafe, restoran ve metro istasyonlarında ücretsiz"
+        }
+      ],
+      "tip": "NHS (Sağlık Hizmetleri) acil durumlarda ücretsiz, ancak seyahat sigortası yaptırın."
+    },
+    {
+      "id": "tip-7",
+      "icon": "fa-map-marked-alt",
+      "title": "Gezi Rotası Önerileri",
+      "description": "Günlük Rota Planlaması: Londra'yı bölgelere ayırarak gezin.",
+      "content": [
+        {
+          "day": "1. Gün - Klasik Londra",
+          "description": "Big Ben, Westminster Abbey, Buckingham Palace, Trafalgar Square"
+        },
+        {
+          "day": "2. Gün - Müzeler",
+          "description": "British Museum, National Gallery, Covent Garden"
+        },
+        {
+          "day": "3. Gün - Thames Kıyısı",
+          "description": "Tower Bridge, Tower of London, Borough Market, Tate Modern"
+        },
+        {
+          "day": "4. Gün - Parklar ve Alışveriş",
+          "description": "Hyde Park, Harrods, Oxford Street, Camden Market"
+        },
+        {
+          "day": "5. Gün - Alternatif Londra",
+          "description": "Notting Hill, Portobello Market, Shoreditch, Brick Lane"
+        }
+      ],
+      "tip": "Sabah erken başlayın - popüler yerler 10:00'dan sonra çok kalabalık oluyor."
+    },
+    {
+      "id": "tip-8",
+      "icon": "fa-mobile-alt",
+      "title": "Faydalı Uygulamalar",
+      "description": "Akıllı Telefonunuzda Olması Gerekenler:",
+      "content": [
+        {
+          "app": "Citymapper",
+          "description": "En iyi ulaşım planlama uygulaması"
+        },
+        {
+          "app": "TfL Go",
+          "description": "Resmi Londra ulaşım uygulaması"
+        },
+        {
+          "app": "Google Maps",
+          "description": "Offline haritalar için indirin"
+        },
+        {
+          "app": "Uber/Bolt",
+          "description": "Taksi alternatifi, daha uygun fiyatlı"
+        },
+        {
+          "app": "OpenTable",
+          "description": "Restoran rezervasyonu"
+        },
+        {
+          "app": "Time Out London",
+          "description": "Etkinlik ve aktivite önerileri"
+        },
+        {
+          "app": "Met Office",
+          "description": "Hava durumu"
+        }
+      ],
+      "tip": "Havalimanında SIM kart alın veya eSIM kullanın - veri paketi şart!!"
+    },
+    {
+      "id": "tip-9",
+      "icon": "fa-camera",
+      "title": "Fotoğraf Çekimi İpuçları",
+      "description": "Londra'da en iyi fotoğraf noktaları ve çekim zamanları:",
+      "content": [
+        {
+          "item": "Tower Bridge",
+          "description": "Gün doğumu veya gün batımında muhteşem görünüm"
+        },
+        {
+          "item": "Big Ben",
+          "description": "Westminster Bridge'den en iyi açı"
+        },
+        {
+          "item": "London Eye",
+          "description": "Akşam ışıkları için ideal"
+        },
+        {
+          "item": "Millennium Bridge",
+          "description": "St. Paul's Cathedral ile birlikte"
+        }
+      ],
+      "tip": "Altın saat (golden hour) en iyi ışık için ideal - gün doğumundan 1 saat sonra ve gün batımından 1 saat önce."
+    }
+  ]
+}

@@ -60,22 +60,24 @@ self.addEventListener('fetch', (event) => {
     const url = new URL(event.request.url);
     
     // locations.json için özel handling - her zaman fresh data
-    if (url.pathname.includes('locations.json')) {
+    if (url.pathname.includes('locations.json') || url.pathname.includes('tips.json')) {
         event.respondWith(
             fetch(event.request)
                 .then((response) => {
                     // Başarılı response'u cache'le (kısa süreliğine)
-                    if (response.status === 200) {
+                    if (response && response.status === 200) {
                         const responseClone = response.clone();
                         caches.open(CACHE_NAME).then((cache) => {
-                            cache.put(event.request, responseClone);
+                            cache.put(event.request, responseClone).catch((err) => {
+                                console.warn('⚠️ Cache put hatası:', err);
+                            });
                         });
                     }
                     return response;
                 })
                 .catch(() => {
                     // Network hatası durumunda cache'den döndür
-                    console.log('📡 Network hatası, cache\'den locations.json döndürülüyor');
+                    console.log('📡 Network hatası, cache\'den JSON döndürülüyor');
                     return caches.match(event.request);
                 })
         );
@@ -90,9 +92,12 @@ self.addEventListener('fetch', (event) => {
                 if (cachedResponse) {
                     // Arka planda güncellenmiş versiyonu kontrol et
                     fetch(event.request).then((response) => {
-                        if (response.status === 200) {
+                        if (response && response.status === 200) {
+                            const responseClone = response.clone();
                             caches.open(CACHE_NAME).then((cache) => {
-                                cache.put(event.request, response);
+                                cache.put(event.request, responseClone).catch((err) => {
+                                    console.warn('⚠️ Background cache update hatası:', err);
+                                });
                             });
                         }
                     }).catch(() => {
@@ -106,10 +111,12 @@ self.addEventListener('fetch', (event) => {
                 return fetch(event.request)
                     .then((response) => {
                         // Başarılı response'u cache'le
-                        if (response.status === 200) {
+                        if (response && response.status === 200) {
                             const responseClone = response.clone();
                             caches.open(CACHE_NAME).then((cache) => {
-                                cache.put(event.request, responseClone);
+                                cache.put(event.request, responseClone).catch((err) => {
+                                    console.warn('⚠️ Cache put hatası:', err);
+                                });
                             });
                         }
                         return response;

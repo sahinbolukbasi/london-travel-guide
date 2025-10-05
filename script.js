@@ -86,6 +86,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Load tips from JSON
+    loadTipsFromJSON();
+    
+    // Remove static tips if JSON loads successfully
+    setTimeout(() => {
+        const staticTips = document.querySelectorAll('.tips-detailed .tip-detailed-card');
+        if (staticTips.length > 0) {
+            console.log('🔄 Replacing static tips with JSON data...');
+        }
+    }, 1000);
+    
     // Track page view
     trackPageView();
 });
@@ -392,6 +403,104 @@ const CacheManager = {
         window.location.reload(true);
     }
 };
+
+// ===========================
+// Tips Loading from JSON
+// ===========================
+
+async function loadTipsFromJSON() {
+    try {
+        console.log('🔄 Loading tips from JSON...');
+        
+        // Cache busting için timestamp ekle
+        const timestamp = new Date().getTime();
+        const response = await fetch(`tips.json?v=${timestamp}`, {
+            cache: 'no-cache',
+            headers: {
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                'Pragma': 'no-cache',
+                'Expires': '0'
+            }
+        });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        
+        if (!data.tips || !Array.isArray(data.tips)) {
+            throw new Error('Invalid tips data format');
+        }
+        
+        renderTips(data.tips);
+        console.log(`✅ ${data.tips.length} tips loaded successfully`);
+        
+    } catch (error) {
+        console.error('❌ Error loading tips:', error);
+        // Keep existing static tips if JSON loading fails
+        console.log('📝 Using fallback static tips');
+    }
+}
+
+function renderTips(tips) {
+    const tipsContainer = document.querySelector('.tips-detailed');
+    if (!tipsContainer) {
+        console.warn('Tips container not found');
+        return;
+    }
+    
+    // Clear existing tips (including static HTML)
+    tipsContainer.innerHTML = '';
+    
+    tips.forEach(tip => {
+        const tipElement = createTipElement(tip);
+        tipsContainer.appendChild(tipElement);
+    });
+    
+    console.log(`✅ Rendered ${tips.length} tips from JSON successfully`);
+}
+
+function createTipElement(tip) {
+    const tipDiv = document.createElement('div');
+    tipDiv.className = 'tip-detailed-card';
+    tipDiv.id = tip.id;
+    
+    let contentHTML = '';
+    
+    // Generate content based on tip structure
+    if (tip.content) {
+        contentHTML = '<ul>';
+        tip.content.forEach(item => {
+            let itemText = '';
+            if (item.season) {
+                itemText = `<strong>${item.season}:</strong> ${item.description}`;
+            } else if (item.item) {
+                itemText = `<strong>${item.item}:</strong> ${item.description}`;
+            } else if (item.day) {
+                itemText = `<strong>${item.day}:</strong> ${item.description}`;
+            } else if (item.app) {
+                itemText = `<strong>${item.app}:</strong> ${item.description}`;
+            }
+            contentHTML += `<li>${itemText}</li>`;
+        });
+        contentHTML += '</ul>';
+    }
+    
+    tipDiv.innerHTML = `
+        <div class="tip-icon-wrapper">
+            <i class="fas ${tip.icon}"></i>
+        </div>
+        <div class="tip-content">
+            <h3>${tip.title}</h3>
+            <p><strong>${tip.description}</strong></p>
+            ${contentHTML}
+            ${tip.tip ? `<p class="tip-note"><strong>İpucu:</strong> ${tip.tip}</p>` : ''}
+        </div>
+    `;
+    
+    return tipDiv;
+}
 
 // ===========================
 // Console Welcome Message

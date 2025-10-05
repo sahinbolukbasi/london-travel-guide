@@ -357,54 +357,56 @@ function createEnhancedInfoWindow(location) {
                     </div>
                     <h3 class="location-title">${location.name}</h3>
                 </div>
-                <button class="custom-close-btn" onclick="window.closeCurrentInfoWindow()" aria-label="Kapat">
+                <button class="custom-close-btn" id="closeInfoWindowBtn" aria-label="Kapat">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             
-            <div class="info-content">
-                <p class="location-description">${location.description}</p>
-                
-                <div class="info-details">
-                    ${address ? `
-                        <div class="detail-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>${address}</span>
-                        </div>
-                    ` : ''}
+            <div class="info-content-wrapper">
+                <div class="info-content">
+                    <p class="location-description">${location.description}</p>
                     
-                    ${price ? `
-                        <div class="detail-item">
-                            <i class="fas fa-ticket-alt"></i>
-                            <span>${price}</span>
-                        </div>
-                    ` : ''}
-                    
-                    ${hours ? `
-                        <div class="detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>${hours}</span>
-                        </div>
-                    ` : ''}
-                    
-                    ${transport ? `
-                        <div class="detail-item">
-                            <i class="fas fa-subway"></i>
-                            <span>${transport}</span>
-                        </div>
-                    ` : ''}
+                    <div class="info-details">
+                        ${address ? `
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>${address}</span>
+                            </div>
+                        ` : ''}
+                        
+                        ${price ? `
+                            <div class="detail-item">
+                                <i class="fas fa-ticket-alt"></i>
+                                <span>${price}</span>
+                            </div>
+                        ` : ''}
+                        
+                        ${hours ? `
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>${hours}</span>
+                            </div>
+                        ` : ''}
+                        
+                        ${transport ? `
+                            <div class="detail-item">
+                                <i class="fas fa-subway"></i>
+                                <span>${transport}</span>
+                            </div>
+                        ` : ''}
+                    </div>
                 </div>
                 
                 <div class="info-actions">
-                    <button class="action-btn directions-btn" onclick="getDirections('${location.name}', ${location.position.lat}, ${location.position.lng})">
+                    <button class="action-btn directions-btn" id="directionsBtn">
                         <i class="fas fa-route"></i>
                         Yol Tarifi
                     </button>
-                    <button class="action-btn share-btn" onclick="shareLocation('${location.name}', ${location.position.lat}, ${location.position.lng})">
+                    <button class="action-btn share-btn" id="shareBtn">
                         <i class="fas fa-share-alt"></i>
                         Paylaş
                     </button>
-                    <button class="action-btn favorite-btn" onclick="toggleFavorite('${location.name}')" id="favoriteBtn-${location.name.replace(/\s+/g, '-')}">
+                    <button class="action-btn favorite-btn" id="favoriteBtn">
                         <i class="fas fa-heart"></i>
                         ${getFavoriteButtonText(location.name)}
                     </button>
@@ -513,20 +515,65 @@ function removeMapClickListener() {
     }
 }
 
-// Add event listeners to info window elements
-function addInfoWindowEventListeners() {
-    // Wait a bit for the info window to be fully rendered
-    setTimeout(() => {
-        const closeBtn = document.querySelector('.custom-close-btn');
-        if (closeBtn) {
-            closeBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                closeCurrentInfoWindow();
-            });
-            console.log('✅ Close button event listener added');
-        }
-    }, 200);
+// Attach button events to info window - called when DOM is ready
+function attachInfoWindowButtonEvents(location, infoWindow) {
+    console.log('🔧 Attaching button events for:', location.name);
+    
+    // Close button - by ID
+    const closeBtn = document.getElementById('closeInfoWindowBtn');
+    if (closeBtn) {
+        closeBtn.onclick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('🔴 Close button clicked - closing info window');
+            if (infoWindow) {
+                infoWindow.close();
+                currentInfoWindow = null;
+                removeMapClickListener();
+            }
+        };
+        console.log('✅ Close button attached');
+    } else {
+        console.warn('❌ Close button not found in DOM');
+    }
+    
+    // Directions button - by ID
+    const directionsBtn = document.getElementById('directionsBtn');
+    if (directionsBtn) {
+        directionsBtn.onclick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('🗺️ Opening directions for:', location.name);
+            getDirections(location.name, location.position.lat, location.position.lng);
+        };
+        console.log('✅ Directions button attached');
+    }
+    
+    // Share button - by ID
+    const shareBtn = document.getElementById('shareBtn');
+    if (shareBtn) {
+        shareBtn.onclick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('📤 Sharing location:', location.name);
+            shareLocation(location.name, location.position.lat, location.position.lng);
+        };
+        console.log('✅ Share button attached');
+    }
+    
+    // Favorite button - by ID
+    const favoriteBtn = document.getElementById('favoriteBtn');
+    if (favoriteBtn) {
+        favoriteBtn.onclick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('❤️ Toggling favorite:', location.name);
+            toggleFavorite(location.name);
+        };
+        console.log('✅ Favorite button attached');
+    }
+    
+    console.log('✅ All button events attached successfully for:', location.name);
 }
 
 // Favorites management functions
@@ -735,12 +782,16 @@ function updateMapAfterFavoriteRemoval() {
     updateLocationListOnFilter();
 }
 
-// Make functions globally accessible
-window.getDirections = getDirections;
-window.shareLocation = shareLocation;
-window.toggleFavorite = toggleFavorite;
-window.closeCurrentInfoWindow = closeCurrentInfoWindow;
-window.showFavoritesOnly = showFavoritesOnly;
+// Make functions globally accessible for info window buttons
+if (typeof window !== 'undefined') {
+    window.getDirections = getDirections;
+    window.shareLocation = shareLocation;
+    window.toggleFavorite = toggleFavorite;
+    window.closeCurrentInfoWindow = closeCurrentInfoWindow;
+    window.showFavoritesOnly = showFavoritesOnly;
+    
+    console.log('✅ Global functions registered for info window');
+}
 
 // Ensure close function is available immediately
 if (typeof window.closeCurrentInfoWindow === 'undefined') {
@@ -781,10 +832,22 @@ function createMarkers() {
         marker.category = location.category;
 
         // Info window with enhanced design
+        // Dynamic width based on screen size
+        const screenWidth = window.innerWidth;
+        let maxWidth = 350;
+        
+        if (screenWidth <= 480) {
+            // Very small screens: max 260px or 80% of screen
+            maxWidth = Math.min(260, Math.floor(screenWidth * 0.8));
+        } else if (screenWidth <= 768) {
+            // Mobile screens: max 280px or 75% of screen
+            maxWidth = Math.min(280, Math.floor(screenWidth * 0.75));
+        }
+        
         const infoWindow = new google.maps.InfoWindow({
             content: createEnhancedInfoWindow(location),
             disableAutoPan: false,
-            maxWidth: 350,
+            maxWidth: maxWidth,
             pixelOffset: new google.maps.Size(0, -10)
         });
 
@@ -792,6 +855,11 @@ function createMarkers() {
         infoWindow.addListener('closeclick', () => {
             currentInfoWindow = null;
             removeMapClickListener();
+        });
+        
+        // Add domready listener to attach button events
+        infoWindow.addListener('domready', () => {
+            attachInfoWindowButtonEvents(location, infoWindow);
         });
 
         marker.addListener('click', () => {
@@ -806,7 +874,6 @@ function createMarkers() {
             // Add click listener to map to close info window when clicking outside
             setTimeout(() => {
                 addMapClickListener();
-                addInfoWindowEventListeners();
             }, 100);
             
             // Update location list selection
@@ -1251,6 +1318,13 @@ function selectLocation(location, itemElement) {
         setTimeout(() => {
             if (marker.infoWindow) {
                 marker.infoWindow.open(map, marker);
+                currentInfoWindow = marker.infoWindow;
+                
+                // Add event listeners after opening
+                setTimeout(() => {
+                    attachInfoWindowButtonEvents(location, marker.infoWindow);
+                    addMapClickListener();
+                }, 200);
             }
         }, 500);
         
