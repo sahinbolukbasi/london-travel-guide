@@ -1748,10 +1748,10 @@ body {
 
 .info-actions {
     display: flex;
-    gap: 8px;
-    margin-top: 16px;
+    gap: 10px;
+    margin: 16px 0 12px 0;
+    padding: 12px 16px;
     border-top: 1px solid var(--border-color);
-    padding-top: 12px;
 }
 
 .action-btn {
