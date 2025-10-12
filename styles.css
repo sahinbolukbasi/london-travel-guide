@@ -653,9 +653,8 @@ body {
    Detailed Tips Section
    =========================== */
 .tips-detailed {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    column-count: 2;
+    column-gap: 2rem;
     max-width: 98%;
     margin: 0 auto;
 }
@@ -663,14 +662,16 @@ body {
 .tip-detailed-card {
     background: var(--bg-cream);
     border-radius: 0;
-    padding: 3rem;
+    padding: 2rem;
     box-shadow: none;
     border: 2px solid var(--border-color);
-    display: flex;
-    gap: 2.5rem;
+    display: block;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 2rem;
 }
 
 .tip-detailed-card::before {
@@ -694,19 +695,21 @@ body {
 }
 
 .tip-icon-wrapper {
-    flex-shrink: 0;
-    width: 70px;
-    height: 70px;
+    width: 55px;
+    height: 55px;
     background: var(--primary-color);
     border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--highlight-color);
-    font-size: 2rem;
+    font-size: 1.6rem;
     box-shadow: none;
     transition: var(--transition);
     border: 2px solid var(--highlight-color);
+    float: left;
+    margin-right: 1.2rem;
+    margin-bottom: 0.8rem;
 }
 
 .tip-detailed-card:hover .tip-icon-wrapper {
@@ -716,18 +719,20 @@ body {
 }
 
 .tip-content {
-    flex: 1;
+    overflow: hidden;
+    margin-left: 67px;
 }
 
 .tip-content h3 {
-    font-size: 1.75rem;
-    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
     color: var(--text-dark);
     font-weight: 700;
     position: relative;
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
     font-family: 'Space Grotesk', sans-serif;
     letter-spacing: -0.5px;
+    line-height: 1.3;
 }
 
 .tip-content h3::after {
@@ -742,34 +747,30 @@ body {
 
 .tip-content p {
     color: var(--text-dark);
-    margin-bottom: 1.2rem;
-    line-height: 1.8;
-    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    font-size: 0.92rem;
+    text-align: justify;
 }
 
 .tip-content ul {
     list-style: none;
-    margin: 1rem 0;
+    margin: 0.6rem 0;
     padding-left: 0;
 }
 
 .tip-content ul li {
-    padding: 0.7rem 0;
-    padding-left: 2rem;
+    padding: 0.7rem 1rem;
     position: relative;
     color: var(--text-dark);
-    line-height: 1.7;
-    font-size: 0.95rem;
+    line-height: 1.5;
+    font-size: 0.88rem;
+    margin-bottom: 0.5rem;
+    background: transparent;
 }
 
 .tip-content ul li:before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--highlight-color);
-    font-weight: bold;
-    font-size: 1.5rem;
-    top: 0.4rem;
+    display: none;
 }
 
 .tip-content strong {
@@ -779,15 +780,15 @@ body {
 .tip-note {
     background: var(--bg-white);
     border: 2px solid var(--highlight-color);
-    padding: 1.2rem 1.5rem;
-    margin-top: 1.5rem;
+    padding: 0.8rem 1rem;
+    margin-top: 1rem;
     border-radius: 0;
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     color: var(--text-dark);
     box-shadow: none;
     position: relative;
-    padding-left: 1.5rem;
     font-family: 'Space Mono', monospace;
+    line-height: 1.5;
 }
 
 .tip-note::before {
@@ -1150,8 +1151,8 @@ body {
     }
     
     .tips-detailed {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        column-count: 1;
+        column-gap: 0;
         max-width: 100%;
     }
     
@@ -1167,18 +1168,40 @@ body {
     }
     
     .tip-detailed-card {
-        flex-direction: column;
-        padding: 1.5rem;
+        padding: 1.8rem;
     }
     
     .tip-icon-wrapper {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+        margin-right: 1rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .tip-content {
+        margin-left: 58px;
     }
     
     .tip-content h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .tip-content p {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .tip-content ul li {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .tip-note {
+        font-size: 0.85rem;
+        padding: 0.8rem 1rem;
     }
     
     .tips-grid {
@@ -1202,6 +1225,44 @@ body {
     
     .info-card {
         padding: 1.5rem;
+    }
+    
+    .tip-detailed-card {
+        padding: 1.3rem;
+    }
+    
+    .tip-icon-wrapper {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+        margin-right: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .tip-content {
+        margin-left: 50px;
+    }
+    
+    .tip-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .tip-content p {
+        font-size: 0.85rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .tip-content ul li {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.8rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .tip-note {
+        font-size: 0.8rem;
+        padding: 0.6rem 0.8rem;
+        margin-top: 1rem;
     }
 }
 

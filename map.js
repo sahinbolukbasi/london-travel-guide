@@ -2,6 +2,21 @@
 // Google Maps Configuration
 // ===========================
 
+// Google Maps API hata yakalayıcı
+window.gm_authFailure = function() {
+    console.error('❌ Google Maps API Authentication Failed!');
+    console.error('API Key sorunu: Lütfen Google Cloud Console\'da kontrol edin');
+    updateLoadingMessage('❌ API Key hatası! Google Cloud Console\'da API Key\'inizi kontrol edin.');
+};
+
+// Global hata yakalayıcı
+window.addEventListener('error', function(e) {
+    if (e.message && e.message.includes('google')) {
+        console.error('❌ Google Maps hatası:', e.message);
+        updateLoadingMessage('Google Maps yükleme hatası: ' + e.message);
+    }
+});
+
 let map;
 let markers = [];
 let activeCategory = 'all';
@@ -100,6 +115,17 @@ function updateLoadingMessage(message) {
 // ===========================
 
 async function initMap() {
+    console.log('🗺️ initMap fonksiyonu başlatıldı');
+    
+    // Google Maps API'nin yüklenip yüklenmediğini kontrol et
+    if (typeof google === 'undefined' || !google.maps) {
+        console.error('❌ Google Maps API yüklenmedi!');
+        updateLoadingMessage('❌ Google Maps API yüklenemedi. API Key\'inizi kontrol edin.');
+        return;
+    }
+    
+    console.log('✅ Google Maps API başarıyla yüklendi');
+    
     try {
         // Kullanıcı tercihlerini yükle
         const userPrefs = SessionManager.loadUserPreferences();
@@ -116,11 +142,13 @@ async function initMap() {
         // Loading mesajını güncelle
         updateLoadingMessage('Harita oluşturuluyor...');
         
-        // Harita oluştur - kullanıcı tercihlerini kullan
+        // Harita oluştur - Map ID ile özel stil kullan
+        console.log('🗺️ Map ID ile harita oluşturuluyor: 318fd832020e738d25f62e55');
+        
         map = new google.maps.Map(document.getElementById('map'), {
             center: userPrefs.mapCenter || LONDON_CENTER,
             zoom: userPrefs.mapZoom || 11,
-            styles: getMapStyles(),
+            mapId: '318fd832020e738d25f62e55', // Özel Map ID
             mapTypeControl: false,
             streetViewControl: false,
             fullscreenControl: true,
@@ -129,6 +157,11 @@ async function initMap() {
                 position: google.maps.ControlPosition.RIGHT_CENTER
             },
             gestureHandling: 'greedy'
+        });
+        
+        // Map ID yükleme durumunu kontrol et
+        map.addListener('idle', () => {
+            console.log('✅ Harita başarıyla yüklendi - Map ID aktif');
         });
         
         // Harita değişikliklerini dinle ve kaydet
