@@ -1,0 +1,84 @@
+{
+  "countries": [
+    {
+      "id": "uk",
+      "name": "İngiltere",
+      "slug": "london",
+      "flag": "🇬🇧",
+      "city": "Londra",
+      "position": { "lat": 51.5074, "lng": -0.1278 },
+      "mapCenter": { "lat": 51.5074, "lng": -0.1278 },
+      "zoom": 11,
+      "color": "#e94560",
+      "active": true,
+      "description": "Tarihi mekanlar, müzeler ve kültürel zenginlikler",
+      "name_en": "United Kingdom",
+      "description_en": "Historic places, museums, and cultural richness",
+      "stats": {
+        "locations": "70+",
+        "categories": "7",
+        "free": "100%"
+      }
+    },
+    {
+      "id": "bosnia",
+      "name": "Bosna Hersek",
+      "slug": "sarajevo",
+      "flag": "🇧🇦",
+      "city": "Saraybosna",
+      "position": { "lat": 43.8563, "lng": 18.4131 },
+      "mapCenter": { "lat": 43.8563, "lng": 18.4131 },
+      "zoom": 13,
+      "color": "#3498db",
+      "active": true,
+      "description": "Doğu ile Batı'nın buluştuğu tarihi başkent",
+      "name_en": "Bosnia and Herzegovina",
+      "description_en": "Historic capital where East meets West",
+      "stats": {
+        "locations": "15+",
+        "categories": "5",
+        "free": "100%"
+      }
+    },
+    {
+      "id": "japan",
+      "name": "Japonya",
+      "slug": "tokyo",
+      "flag": "🇯🇵",
+      "city": "Tokyo",
+      "position": { "lat": 35.6762, "lng": 139.6503 },
+      "mapCenter": { "lat": 35.6762, "lng": 139.6503 },
+      "zoom": 12,
+      "color": "#f39c12",
+      "active": true,
+      "description": "Geleneksel tapınakların ve devasa gökdelenlerin bir arada olduğu neon ışıklı metropol",
+      "name_en": "Japan",
+      "description_en": "Neon-lit metropolis blending traditional temples and massive skyscrapers",
+      "stats": {
+        "locations": "20+",
+        "categories": "6",
+        "free": "100%"
+      }
+    },
+    {
+      "id": "serbia",
+      "name": "Sırbistan",
+      "slug": "belgrade",
+      "flag": "🇷🇸",
+      "city": "Belgrad",
+      "position": { "lat": 44.8125, "lng": 20.4612 },
+      "mapCenter": { "lat": 44.8125, "lng": 20.4612 },
+      "zoom": 13,
+      "color": "#9b59b6",
+      "active": true,
+      "description": "Tuna ve Sava nehirlerinin buluştuğu canlı ve tarihi Balkan şehri",
+      "name_en": "Serbia",
+      "description_en": "Vibrant and historic Balkan city where the Danube and Sava rivers meet",
+      "stats": {
+        "locations": "15+",
+        "categories": "5",
+        "free": "100%"
+      }
+    }
+  ]
+}

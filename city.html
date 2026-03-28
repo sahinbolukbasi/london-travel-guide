@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gezi Rehberi - Keşfedilecek en iyi yerler ve rotalar">
+    <meta name="keywords" content="gezi rehberi, travel guide, turizm">
+    <meta name="author" content="Dünya Gezi Rehberi">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gezi Rehberi">
+    <meta property="og:description" content="Gezilecek en güzel yerler ve önerilen rotalar">
+    
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Gezi Rehberi">
+    
+    <title>Gezi Rehberi</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🗺️</text></svg>">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQH4RXGTLQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FQH4RXGTLQ');
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4r584loMnJFiql0GDV5Bh6WysnBwT0a4&map_ids=318fd832020e738d25f62e55&callback=initMap" async defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" class="back-to-world" title="Dünya Haritasına Dön">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h1 id="cityTitle">Gezi Rehberi</h1>
+                </div>
+                <div class="header-actions" id="headerActions">
+                    <div class="lang-switcher" id="langSwitcher">
+                        <button data-lang="tr" class="active">TR</button>
+                        <button data-lang="en">EN</button>
+                    </div>
+                    <button class="btn-action-header" id="analyticsBtn">
+                        <i class="fas fa-chart-pie"></i>
+                        <span data-i18n="analytics_btn">Seyahat Rehberim</span>
+                    </button>
+                    <button class="btn-action-header" id="suggestHeaderBtn">
+                        <i class="fas fa-lightbulb"></i>
+                        <span data-i18n="suggest_btn">Öneri</span>
+                    </button>
+                    <button class="btn-share-with-text" id="shareBtn">
+                        <i class="fas fa-share-alt"></i>
+                        <span data-i18n="share_plan_btn">Planı Paylaş</span>
+                    </button>
+                </div>
+                <button class="burger-btn" id="burgerBtn" aria-label="Menü">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>İnteraktif Gezi Rehberi</span>
+                    </div>
+                    <h1 id="heroTitle">Şehri Keşfedin</h1>
+                    <p class="hero-description" id="heroDescription">
+                        İnteraktif haritamız ile şehrin en popüler yerlerini keşfedin.
+                    </p>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="stat-content">
+                                <span class="stat-number" id="statLocations">0</span>
+                                <span class="stat-label">Lokasyon</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-layer-group"></i>
+                            <div class="stat-content">
+                                <span class="stat-number" id="statCategories">0</span>
+                                <span class="stat-label">Kategori</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-star"></i>
+                            <div class="stat-content">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Ücretsiz</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-guide-links" id="heroGuideLinks">
+                        <!-- Guide pills will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Map Container -->
+            <div class="map-section">
+                <div class="map-header">
+                    <h2>
+                        <i class="fas fa-location-dot"></i>
+                        İnteraktif Harita
+                    </h2>
+                </div>
+                
+                <!-- Map Layer Filters -->
+                <div class="map-filters" style="display: flex; flex-direction: column; gap: 15px;">
+                    <div class="filter-title" style="margin-bottom: 0;">
+                        <i class="fas fa-filter"></i>
+                        <span data-i18n="layer_filters">Katman Filtreleri</span>
+                    </div>
+                    <div class="filter-buttons-grid" id="filterButtonsGrid">
+                        <button class="filter-btn active" data-category="all">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Tümü Göster</span>
+                        </button>
+                        <button class="filter-btn favorites-btn" data-category="favorites" id="favoritesBtn">
+                            <i class="fas fa-heart"></i>
+                            <span>Favorilerim</span>
+                            <span class="favorites-count" id="favoritesCount">0</span>
+                        </button>
+                        <!-- Dynamic filter buttons will be added here -->
+                    </div>
+                    
+                    <div class="day-filter-container" id="dayFilterContainer" style="display: none; margin-top: 15px; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 15px;">
+                        <div class="filter-title" style="margin-bottom: 8px; font-size: 0.85rem; color: var(--text-dark);">
+                            <i class="fas fa-calendar-day"></i> <span data-i18n="day_plan">Güne Göre Filtrele</span>
+                        </div>
+                        
+                        <div class="custom-dropdown" id="dayFilterCustom">
+                            <div class="custom-dropdown-selected" id="dayFilterSelected">
+                                Tüm Günler
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="custom-dropdown-options" id="dayFilterOptions">
+                                <div class="custom-dropdown-option active" data-value="all">Tüm Günler</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container" id="map">
+                    <div class="map-loading" id="mapLoading">
+                        <div class="loading-content">
+                            <div class="spinner"></div>
+                            <p id="loadingText">Harita başlatılıyor...</p>
+                            <div class="loading-progress">
+                                <div class="progress-bar" id="progressBar"></div>
+                            </div>
+                            <small id="loadingSmall">Lokasyonlar yükleniyor</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Location List Panel -->
+                <div class="location-list-panel" id="locationListPanel">
+                    <div class="location-list-header" id="locationListToggle">
+                        <div class="location-list-title">
+                            <i class="fas fa-list"></i>
+                            <span>Lokasyonlar</span>
+                            <span class="location-count" id="locationCount">0</span>
+                        </div>
+                        <div class="location-list-toggle-icon">
+                            <i class="fas fa-chevron-up" id="toggleIcon"></i>
+                        </div>
+                    </div>
+                    <div class="location-list-content" id="locationListContent">
+                        <div class="location-list-search">
+                            <input type="text" id="locationSearch" placeholder="Lokasyon ara...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="location-list-items" id="locationListItems">
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+
+            <!-- Detailed Tips Section -->
+            <div class="tips-section" id="tips-section">
+                <h2>
+                    <i class="fas fa-lightbulb"></i>
+                    Detaylı Gezi İpuçları ve Öneriler
+                </h2>
+                
+                <div class="tips-detailed">
+                    <div class="tips-loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Gezi ipuçları yükleniyor...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Share Modal -->
+    <div class="modal" id="shareModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Paylaş</h3>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="share-buttons">
+                    <button class="share-btn facebook" onclick="shareOn('facebook')">
+                        <i class="fab fa-facebook"></i>
+                        Facebook
+                    </button>
+                    <button class="share-btn twitter" onclick="shareOn('twitter')">
+                        <i class="fab fa-x-twitter"></i>
+                        X
+                    </button>
+                    <button class="share-btn whatsapp" onclick="shareOn('whatsapp')">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </button>
+                    <button class="share-btn linkedin" onclick="shareOn('linkedin')">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </button>
+                </div>
+                <div class="share-link">
+                    <input type="text" id="shareLink" readonly>
+                    <button class="btn-copy" onclick="copyLink()">
+                        <i class="fas fa-copy"></i>
+                        Kopyala
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Analytics Modal -->
+    <div class="modal" id="analyticsModal">
+        <div class="modal-content analytics-content">
+            <div class="modal-header">
+                <h3 data-i18n="analytics_title">Seyahat Analitiği</h3>
+                <button class="modal-close" id="closeAnalyticsModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="trip-settings">
+                    <label for="tripDaysInput" data-i18n="trip_duration_label">Seyahat Süresi (Gün):</label>
+                    <div class="trip-days-control">
+                        <button type="button" id="decreaseDaysBtn"><i class="fas fa-minus"></i></button>
+                        <input type="number" id="tripDaysInput" min="1" max="30" value="3" readonly>
+                        <button type="button" id="increaseDaysBtn"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="analytics-summary">
+                    <div class="analytics-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="analytics-val" id="analyticsTotal">0</div>
+                        <div class="analytics-label" data-i18n="analytics_total">Planlanan Yer</div>
+                    </div>
+                    <div class="analytics-card">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="analytics-val" id="analyticsVisited">0</div>
+                        <div class="analytics-label" data-i18n="analytics_visited">Gidilen</div>
+                    </div>
+                </div>
+                
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span data-i18n="analytics_progress">Tamamlanma Oranı</span>
+                        <span id="analyticsProgressText">0%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" id="analyticsProgressBar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="daily-breakdown">
+                    <h4 data-i18n="analytics_daily">Günlük Plan Dağılımı</h4>
+                    <div class="daily-list" id="analyticsDailyList">
+                        <!-- Populated via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback / Suggestion Modal -->
+    <div class="modal" id="feedbackModal">
+        <div class="modal-content" style="max-width: 500px;">
+            <div class="modal-header">
+                <h3 data-i18n="feedback_title">Öneri & Geri Bildirim</h3>
+                <button class="modal-close" id="closeFeedbackModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p style="margin-bottom: 1rem; color: var(--text-light); font-size: 0.95rem;" data-i18n="feedback_desc">Site veya lokasyonlar hakkında düşüncelerinizi, önerilerinizi bizimle paylaşın.</p>
+                <form id="feedbackForm" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 5px;">
+                        <label for="feedbackType" data-i18n="feedback_type" style="font-weight: 600; font-size: 0.9rem;">Konu</label>
+                        <select id="feedbackType" style="width: 100%; padding: 0.8rem; border-radius: 6px; border: 1px solid var(--border-color); font-family: inherit;">
+                            <option value="location" data-i18n="feedback_opt_loc">Yeni Bir Lokasyon Önerisi</option>
+                            <option value="site" data-i18n="feedback_opt_site">Site İyileştirmesi / Hata Bildirimi</option>
+                            <option value="other" data-i18n="feedback_opt_other">Diğer</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 5px;">
+                        <label for="feedbackMessage" data-i18n="feedback_msg" style="font-weight: 600; font-size: 0.9rem;">Mesajınız</label>
+                        <textarea id="feedbackMessage" rows="5" required style="width: 100%; padding: 0.8rem; border-radius: 6px; border: 1px solid var(--border-color); font-family: inherit; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="padding: 1rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; background: var(--secondary-color); color: white; transition: 0.3s;" data-i18n="feedback_submit">Gönder</button>
+                    <div id="feedbackSuccessMsg" style="display: none; color: #27ae60; font-weight: bold; text-align: center; margin-top: 0.5rem;" data-i18n="feedback_success">Teşekkürler! Geri bildiriminiz alındı.</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>Designed by <strong>Şahin Bölükbaşı</strong></p>
+        </div>
+    </footer>
+
+    <script src="city-script.js"></script>
+    <script src="city-map.js"></script>
+</body>
+</html>

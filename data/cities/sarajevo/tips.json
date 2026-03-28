@@ -1,0 +1,133 @@
+{
+  "tips": [
+    {
+      "id": "tip-1",
+      "icon": "fa-calendar-alt",
+      "title": "En İyi Ziyaret Zamanı",
+      "description": "Saraybosna dört mevsim farklı güzelliklere sahip. Kışları karlı ve soğuk, yazları sıcak ve canlı bir şehir.",
+      "content": [
+        {
+          "season": "🌸 Bahar (Nisan - Haziran)",
+          "description": "<strong>Doğanın canlanışı ve festivaller.</strong><br>Hava ılıman (15-22°C), parklar yeşil ve çiçeklerle dolu. Saraybosna Film Festivali bu dönemde. Turist sayısı az, fiyatlar uygun."
+        },
+        {
+          "season": "☀️ Yaz (Temmuz - Ağustos)",
+          "description": "<strong>Festival sezonu ve açık hava etkinlikleri.</strong><br>Sıcaklık 25-35°C arası. Jazz festivali, tiyatro festivalleri ve açık hava konserlerle dolu. En yoğun turist sezonu."
+        },
+        {
+          "season": "🍂 Sonbahar (Eylül - Kasım)",
+          "description": "<strong>Altın yapraklar ve sakin şehir.</strong><br>Hava serinler (8-18°C), ağaçlar sarı-turuncu renk tonlarına bürünür. Trebević Dağı'nda yürüyüş için ideal."
+        },
+        {
+          "season": "❄️ Kış (Aralık - Mart)",
+          "description": "<strong>Karlı Saraybosna ve kayak sezonu.</strong><br>1984 Kış Olimpiyatları şehri! Jahorina ve Bjelašnica kayak merkezleri şehre 30 dk mesafede. Sıcak Boşnak kahvesi ile kış keyfi."
+        }
+      ],
+      "tip": "<strong>Gezgin önerisi:</strong> Mayıs veya Eylül ayları ideal. Hem hava güzel hem de kalabalıklar az. Kışta kayak planı yapıyorsanız Ocak-Şubat en iyi kar koşullarını sunar."
+    },
+    {
+      "id": "tip-2",
+      "icon": "fa-subway",
+      "title": "Ulaşım Rehberi",
+      "description": "Saraybosna kompakt bir şehir; çoğu tarihi yere yürüyerek ulaşabilirsiniz. Tramvay sistemi şehrin ana ulaşım aracıdır.",
+      "content": [
+        {
+          "item": "Tramvay",
+          "description": "🚃 Şehrin ana ulaşım aracı. Tek bilet 1.80 KM (~€1). Baščaršija'dan Ilidža'ya kadar uzanır. Sık sefer vardır."
+        },
+        {
+          "item": "Yürüyüş",
+          "description": "🚶 Eski şehir tamamen yürünebilir. Baščaršija'dan Ferhadija caddesine, oradan Latin Köprüsü'ne 10 dakika."
+        },
+        {
+          "item": "Taksi",
+          "description": "🚕 Çok uygun fiyatlı. Şehir içi mesafeler 5-10 KM (~€3-5). Uber yok, yerel taksi uygulaması kullanılır."
+        },
+        {
+          "item": "Havalimanı Ulaşımı",
+          "description": "✈️ Saraybosna Havalimanı şehir merkezine 12 km. Taksi ile 15-20 dk, 15-20 KM (~€8-10). Otobüs seçeneği de mevcut."
+        }
+      ],
+      "tip": "📱 Saraybosna küçük bir şehir, Google Maps yürüyüş rotaları çok iyi çalışıyor. Rahat ayakkabı şart; sokaklar taş döşemeli ve bazen yokuşlu."
+    },
+    {
+      "id": "tip-3",
+      "icon": "fa-utensils",
+      "title": "Yemek Önerileri",
+      "description": "Boşnak mutfağı Osmanlı, Akdeniz ve Balkan lezzetlerinin muhteşem birleşimi. Ćevapi, burek ve Boşnak kahvesi mutlaka denenmeli.",
+      "content": [
+        {
+          "item": "🥩 Ćevapi (Çevapçiçi)",
+          "description": "Saraybosna'nın simge yemeği. Somun ekmeği içinde soğan ve kaymak ile servis edilir. 5-10 KM arası. Zeljo en meşhur mekan."
+        },
+        {
+          "item": "🥧 Burek / Börek",
+          "description": "El açması yufka ile hazırlanan böreklerin en lezzetlisi. Kıymalı (burek), peynirli (sirnica), ıspanaklı (zeljanica). Sabah kahvaltısı olarak yenir."
+        },
+        {
+          "item": "☕ Bosanska Kava (Boşnak Kahvesi)",
+          "description": "Türk kahvesine benzer ama farklı bir ritüel. Džezva (cezve) ile gelir, fildžan (fincan) ve lokum eşliğinde içilir. 2-3 KM."
+        },
+        {
+          "item": "🍯 Tufahije",
+          "description": "Geleneksel Boşnak tatlısı. Ceviz dolgulu haşlanmış elma üzerine krema. Baščaršija'daki lokantalarda bulunur."
+        },
+        {
+          "item": "🍲 Begova Čorba",
+          "description": "Kremamsı tavuk çorbası. Osmanlı saray mutfağından kalan lezzet. Kışın muhteşem ısıtıcı."
+        }
+      ],
+      "tip": "🍽️ Saraybosna'da yemek çok uygun. İki kişilik doyurucu bir öğün 20-30 KM (~€10-15). Baščaršija'daki yerel lokantalari tercih edin."
+    },
+    {
+      "id": "tip-4",
+      "icon": "fa-shield-alt",
+      "title": "Güvenlik ve Pratik Bilgiler",
+      "description": "Saraybosna oldukça güvenli bir şehir. Turistlere karşı sıcakkanlı ve yardımsever insanlar.",
+      "content": [
+        {
+          "item": "Güvenlik",
+          "description": "Genel olarak çok güvenli. Gece geç saatlerde bile rahatça dolaşabilirsiniz."
+        },
+        {
+          "item": "Para Birimi",
+          "description": "Konvertibilna Marka (KM/BAM). 1 EUR ≈ 1.96 KM. Euro bazı yerlerde kabul edilir ama KM tercih edin."
+        },
+        {
+          "item": "Dil",
+          "description": "Boşnakça. Turistik bölgelerde İngilizce yaygın. Türkçe bilen kişilerle karşılaşabilirsiniz."
+        },
+        {
+          "item": "Su",
+          "description": "Musluk suyu içilebilir ve kalitelidir. Çeşmelerden de rahatlıkla su içebilirsiniz."
+        },
+        {
+          "item": "Mayınlar",
+          "description": "⚠️ Şehir içinde tehlike yok ama kırsal alanlarda ve dağ yollarında işaretlenmiş patikalardan ayrılmayın."
+        }
+      ],
+      "tip": "Boşnak insanları misafirperver. 'Hvala' (Teşekkürler) ve 'Molim' (Rica ederim) kelimelerini öğrenin, güler yüzle karşılanırsınız."
+    },
+    {
+      "id": "tip-5",
+      "icon": "fa-map-marked-alt",
+      "title": "Gezi Rotası Önerisi",
+      "description": "Saraybosna'yı 2-3 günde rahatça gezebilirsiniz. İşte önerilen rota:",
+      "content": [
+        {
+          "day": "1. Gün - Tarihi Merkez",
+          "description": "🕌 Baščaršija'da Sebilj Çeşmesi'nden başla.<br>☕ Morica Han'da Boşnak kahvesi iç.<br>🕌 Gazi Hüsrev Bey Camii'ni ziyaret et.<br>🥩 Zeljo'da ćevapi ye.<br>🌅 Akşam Žuta Tabija'da gün batımını izle."
+        },
+        {
+          "day": "2. Gün - Savaş ve Tarih",
+          "description": "🏛️ Vijećnica (Ulusal Kütüphane) ile güne başla.<br>🌉 Latin Köprüsü ve suikast müzesini gez.<br>🏛️ Savaş Çocukluğu Müzesi'ni ziyaret et.<br>🌹 Saraybosna Güllerini ara.<br>🚡 Trebević Teleferik ile dağa çık."
+        },
+        {
+          "day": "3. Gün - Doğa ve Çevre",
+          "description": "🚇 Saraybosna Tüneli Müzesi'ni ziyaret et.<br>🌿 Vrelo Bosne (Bosna Nehri Kaynağı) parkında yürü.<br>🏰 Bijela Tabija'dan panoramik manzara.<br>🥧 Burek kahvaltısı + alışveriş ile bitir."
+        }
+      ],
+      "tip": "⏰ Sabah erken kalkın, Saraybosna'da turistik yerler kalabalık olmuyor ama sabah ışığı fotoğraflar için mükemmel."
+    }
+  ]
+}

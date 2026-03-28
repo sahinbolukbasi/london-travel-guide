@@ -1,0 +1,305 @@
+{
+  "locations": [
+    {
+      "id": "sar-1",
+      "name": "Baščaršija",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 43.8598,
+        "lng": 18.4313
+      },
+      "description": "Saraybosna'nın kalbi. 15. yüzyılda Osmanlılar tarafından kurulan tarihi çarşı. Bakırcılar çarşısı, geleneksel el sanatları dükkanları ve otantik Boşnak kahvecileri ile dolu. Sebilj çeşmesi sembolü.",
+      "info": "📍 Baščaršija, Stari Grad<br>🎫 Ücretsiz<br>⏰ Her zaman açık (dükkanlar 09:00-20:00)<br>🚃 Tramvay: Baščaršija durağı",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-2",
+      "name": "Sebilj Çeşmesi",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 43.8594,
+        "lng": 18.431
+      },
+      "description": "Saraybosna'nın en ikonik simgesi. 1891'de inşa edilen ahşap Osmanlı tarzı çeşme. Efsaneye göre suyundan içen Saraybosna'ya tekrar döner. Güvercinleriyle meşhur meydan.",
+      "info": "📍 Baščaršija Meydanı<br>🎫 Ücretsiz<br>⏰ Her zaman açık<br>🚃 Tramvay: Baščaršija",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-3",
+      "name": "Gazi Hüsrev Bey Camii",
+      "category": "attractions",
+      "icon": "fa-mosque",
+      "position": {
+        "lat": 43.8596,
+        "lng": 18.4289
+      },
+      "description": "1531'de inşa edilen Balkanlar'ın en önemli Osmanlı camilerinden biri. Mimar Sinan'ın öğrencisi tarafından tasarlandı. Kubbesi ve minaresiyle muhteşem Osmanlı mimarisi. Ziyarete açık.",
+      "info": "📍 Sarači, Stari Grad<br>🎫 Ücretsiz (bağış kabul edilir)<br>⏰ Namaz saatleri dışında ziyarete açık<br>🚃 Tramvay: Baščaršija",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-4",
+      "name": "Latin Köprüsü",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 43.8574,
+        "lng": 18.4286
+      },
+      "description": "I. Dünya Savaşı'nı başlatan suikastin gerçekleştiği yerdir. Avusturya-Macaristan Veliaht Prensi Franz Ferdinand 28 Haziran 1914'te burada öldürüldü. Yanındaki müze suikastı anlatır.",
+      "info": "📍 Obala Kulina bana<br>🎫 Müze: 3 KM<br>⏰ Köprü her zaman, müze 10:00-18:00<br>🚃 Tramvay: Latinska ćuprija",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-5",
+      "name": "Saraybosna Tüneli Müzesi",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 43.8311,
+        "lng": 18.3747
+      },
+      "description": "1992-96 kuşatması sırasında inşa edilen 800 metrelik yeraltı tüneli. Şehrin hayat damarıydı; yiyecek, silah ve insanlar bu tünelden geçirildi. 25 metresi ziyarete açık.",
+      "info": "📍 Tuneli 1, Ilidža<br>🎫 10 KM (~€5)<br>⏰ 09:00-17:00 (Nisan-Ekim 09:00-18:00)<br>🚃 Tramvay + Yürüyüş",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-6",
+      "name": "Vijećnica (Vijecnica Kütüphanesi)",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": { "lat": 43.8585, "lng": 18.4341 },
+      "description": "Neo-Moor tarzında inşa edilen eski Belediye Binası ve Ulusal Kütüphane. 1992'de kuşatma sırasında bombalanarak yıkıldı, 2014'te restore edildi. Muhteşem iç mekan ve renkli vitraylar.",
+      "info": "📍 Obala Kulina bana 38<br>🎫 10 KM (~€5)<br>⏰ 10:00-18:00<br>🚃 Tramvay: Vijećnica",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-7",
+      "name": "Savaş Çocukluğu Müzesi",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": { "lat": 43.858, "lng": 18.4262 },
+      "description": "Saraybosna kuşatmasını çocukların gözünden anlatan benzersiz müze. Savaş sırasında büyüyen çocukların eşyaları ve hikayeleri. Duygusal ve etkili bir deneyim.",
+      "info": "📍 Logavina 32<br>🎫 10 KM (~€5)<br>⏰ 10:00-18:00 (Pazartesi kapalı)<br>🚃 Yürüyüş ile",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-8",
+      "name": "Katedrala Srca Isusova (Kutsal Kalp Katedrali)",
+      "category": "attractions",
+      "icon": "fa-church",
+      "position": { "lat": 43.8589, "lng": 18.4245 },
+      "description": "1889'da inşa edilen neo-gotik Katolik katedrali. Saraybosna'nın çok kültürlülüğünün simgesi. Aynı caddede cami, kilise ve sinagog bir arada.",
+      "info": "📍 Trg Fra Grge Martića 2<br>🎫 Ücretsiz<br>⏰ 08:00-18:00<br>🚃 Tramvay: Katedrala",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-9",
+      "name": "Saraybosna Gül Bahçesi (Sarajevo Roses)",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": { "lat": 43.8565, "lng": 18.4227 },
+      "description": "Savaş sırasında havan topu çarpan yerlerdeki çukurlar kırmızı reçine ile doldurulmuş. 'Saraybosna Gülleri' olarak bilinen bu izler savaşın acı hatırasını yaşatıyor.",
+      "info": "📍 Ferhadija caddesi üzerinde<br>🎫 Ücretsiz<br>⏰ Her zaman açık<br>🚃 Yürüyüş ile",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-10",
+      "name": "Sarı Kale (Žuta Tabija)",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": { "lat": 43.8632, "lng": 18.4345 },
+      "description": "Şehrin en güzel panoramik manzara noktası. Eski Osmanlı kalesi kalıntıları üzerinde, özellikle gün batımında Saraybosna'nın muhteşem manzarası. Fotoğraf tutkunları için ideal.",
+      "info": "📍 Jekovac<br>🎫 Ücretsiz<br>⏰ Her zaman açık<br>🚃 Yürüyüş (dik yokuş)",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-11",
+      "name": "Ćevabdžinica Željo",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": { "lat": 43.8592, "lng": 18.4308 },
+      "description": "Saraybosna'nın en meşhur ćevap restoranı. 1887'den beri aynı lezzetle hizmet veriyor. Somun ekmeği içinde servis edilen ćevaplar mutlaka denenmeli.",
+      "info": "📍 Kundurdžiluk 19, Baščaršija<br>💰 8-15 KM (~€4-8)<br>⏰ 08:00-22:00<br>🚃 Tramvay: Baščaršija",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-12",
+      "name": "Petica Ferhadija",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": { "lat": 43.8576, "lng": 18.424 },
+      "description": "Kaliteli Boşnak mutfağı sunan popüler restoran. Ćevapi, burek, börek ve geleneksel Boşnak yemekleri. Uygun fiyatlı ve lezzetli.",
+      "info": "📍 Ferhadija<br>💰 10-20 KM (~€5-10)<br>⏰ 09:00-23:00<br>🚃 Tramvay: Ferhadija",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-13",
+      "name": "Buregdžinica Bosna",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": { "lat": 43.8596, "lng": 18.4298 },
+      "description": "Saraybosna'nın en ünlü börekçisi. 1965'ten beri el açması yufka ile hazırlanan burek (kıymalı), sirnica (peynirli), zeljanica (ıspanaklı) servis edilir.",
+      "info": "📍 Bravadžiluk 11, Baščaršija<br>💰 3-8 KM (~€2-4)<br>⏰ 06:00-22:00<br>🚃 Tramvay: Baščaršija",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-14",
+      "name": "Morica Han",
+      "category": "cafes",
+      "icon": "fa-coffee",
+      "position": { "lat": 43.8593, "lng": 18.4295 },
+      "description": "16. yüzyıldan kalma Osmanlı hanı. Şimdi geleneksel Boşnak kahvesi servisi yapıyor. Bakır cezve (džezva) ile servis edilen kahve ve lokum ile otantik deneyim.",
+      "info": "📍 Sarači 77, Baščaršija<br>💰 3-6 KM (~€2-3)<br>⏰ 08:00-22:00<br>🚃 Tramvay: Baščaršija",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-15",
+      "name": "Trebević Teleferik",
+      "category": "attractions",
+      "icon": "fa-cable-car",
+      "position": { "lat": 43.847, "lng": 18.429 },
+      "description": "1984 Kış Olimpiyatları için inşa edilen, savaşta tahrip olduktan sonra 2018'de yeniden açılan teleferik. Trebević Dağı'na çıkarak şehrin panoramik manzarasını izleyin.",
+      "info": "📍 Bistrik<br>🎫 20 KM (~€10) gidiş-dönüş<br>⏰ 10:00-18:00 (yaz 20:00'ye kadar)<br>🚃 Tramvay + Yürüyüş",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-16",
+      "name": "Vrelo Bosne (Bosna Nehri Kaynağı)",
+      "category": "parks",
+      "icon": "fa-tree",
+      "position": { "lat": 43.8188, "lng": 18.2679 },
+      "description": "Bosna Nehri'nin doğduğu doğal park alanı. At arabası ile ulaşabileceğiniz muhteşem yeşil alan. Berrak su kaynakları, kuğular ve doğa yürüyüşü.",
+      "info": "📍 Ilidža<br>🎫 Ücretsiz<br>⏰ Her zaman açık<br>🚃 Tramvay: Ilidža + At arabası",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-17",
+      "name": "Beyaz Kale (Bijela Tabija)",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": { "lat": 43.865, "lng": 18.4381 },
+      "description": "Şehrin doğu tarafında yer alan tarihi kale. Sarı Kale'den daha sakin ve otantik bir manzara noktası. Yerel gençlerin buluşma yeri, gün batımı için ideal.",
+      "info": "📍 Vratnik<br>🎫 Ücretsiz<br>⏰ Her zaman açık<br>🚃 Yürüyüş (dik yokuş)",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-18",
+      "name": "Svrzo'nun Evi",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": { "lat": 43.8624, "lng": 18.4293 },
+      "description": "18. yüzyıl Osmanlı sivil mimarisinin Bosna'daki en iyi korunmuş örneği. Selamlık ve haremlik bölümleriyle aristokrat bir ailenin yaşamını sergiler.",
+      "info": "📍 Glođina 8<br>🎫 3 KM<br>⏰ 10:00-18:00 (Kışın 16:00)<br>🚃 Baščaršija durağına 450m",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-19",
+      "name": "Despić Evi",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": { "lat": 43.8572, "lng": 18.4277 },
+      "description": "Saraybosna'nın en zengin Sırp tüccar ailelerinden birinin evi. Şehirdeki ilk tiyatro performanslarının sergilendiği, kültürel bir dönüm noktasıdır.",
+      "info": "📍 Despićeva 2<br>🎫 3 KM<br>⏰ 10:00-18:00<br>🚃 Latin Köprüsü yakınında",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-20",
+      "name": "Inat Kuća (İnat Evi)",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": { "lat": 43.8585, "lng": 18.4342 },
+      "description": "Avusturya-Macaristan yönetimine karşı 'Boşnak inadının' simgesi. Nehrin karşı tarafına taşınan bu tarihi evde geleneksel Bosanski Lonac mutlaka denenmeli.",
+      "info": "📍 Veliki Alifakovac 1<br>💰 15-30 KM<br>⏰ 09:00-23:00<br>🚃 Vijećnica karşısı",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-21",
+      "name": "Avaz Twist Tower",
+      "category": "attractions",
+      "icon": "fa-building",
+      "position": { "lat": 43.8601, "lng": 18.4013 },
+      "description": "Balkanlar'ın en yüksek binası (175m). 36. kattaki seyir terasından şehrin ve Dinar Alpleri'nin 360 derece panoramik manzarasını sunar.",
+      "info": "📍 Tešanjska 24a<br>🎫 5 KM (Bozuk para turnikesi)<br>⏰ 07:00-23:00<br>🚃 Tren İstasyonu yanı",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-22",
+      "name": "Terk Edilmiş Olimpiyat Pisti",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": { "lat": 43.8401, "lng": 18.4457 },
+      "description": "1984 Kış Olimpiyatları'ndan kalan bobsled pisti. Savaşta savunma hattı olan pist, bugün grafiti sanatçılarının açık hava galerisine dönüşmüş durumdadır.",
+      "info": "📍 Trebević Dağı<br>🎫 Ücretsiz<br>⏰ 24 saat açık<br>🚠 Teleferik üst istasyonundan 10 dk yürüyüş",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-23",
+      "name": "Aščinica ASDŽ",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": { "lat": 43.8593, "lng": 18.4304 },
+      "description": "Geleneksel ev yemekleri sunan en iyi aščinica'lardan biri. Sogan dolma, Begova çorbası ve Bosanski Lonac sahanlarda servis edilir.",
+      "info": "📍 Ćurčiluk mali 3<br>💰 10-20 KM<br>⏰ 08:00-19:00<br>🚃 Baščaršija içinde",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-24",
+      "name": "Zlatna Ribica",
+      "category": "cafes",
+      "icon": "fa-glass-martini",
+      "position": { "lat": 43.8592, "lng": 18.4219 },
+      "description": "Şehrin en gizemli ve eklektik barı. 'Organize kaos' dekorasyonu, antika eşyaları ve masalsı atmosferiyle Saraybosna'nın en özgün gece duraklarından biridir.",
+      "info": "📍 Kaptol 5<br>💰 Orta segment<br>⏰ 16:00-00:00 (Pazar kapalı)<br>🚶 Vječna Vatra yakınında",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-25",
+      "name": "Eski Ortodoks Kilisesi",
+      "category": "attractions",
+      "icon": "fa-church",
+      "position": { "lat": 43.8603, "lng": 18.4298 },
+      "description": "16. yüzyıldan kalma tarihi yapı. İçindeki müze, dünyanın en değerli Ortodoks ikon koleksiyonlarından birine ev sahipliği yapmaktadır.",
+      "info": "📍 Mula Mustafe Bašeskije 59<br>🎫 2 KM<br>⏰ 08:00-18:00<br>🚃 Baščaršija durağı",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "sar-26",
+      "name": "Saraybosna Haggadah'ı (Ulusal Müze)",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": { "lat": 43.855, "lng": 18.4025 },
+      "description": "Dünyanın en değerli el yazması eserlerinden biri. 14. yüzyıl Sefarad Yahudi mirasıdır. Savaşlarda kütüphaneciler tarafından Nazilerden saklanarak korunmuştur.",
+      "info": "📍 Zmaja od Bosne 3<br>🎫 20 KM<br>⏰ Haggadah görme: Salı/Perşembe 12:00-13:00<br>🚃 Tramvay: Tehnička škola",
+      "isVisited": false,
+      "plannedDay": 0
+    }
+  ]
+}

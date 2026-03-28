@@ -1,0 +1,73 @@
+{
+  "places": [
+    {
+      "id": "b1",
+      "name": "Kalemegdan Parkı ve Belgrad Kalesi",
+      "description": "Sava ve Tuna nehirlerinin birleştiği yerde bulunan bu tarihi kale ve park, şehrin en güzel manzaralarını sunuyor.",
+      "category": "historic",
+      "coordinates": {
+        "lat": 44.8239,
+        "lng": 20.4503
+      },
+      "tags": ["Tarihi", "Park", "Manzara", "Ücretsiz", "Kale"],
+      "mustSee": true
+    },
+    {
+      "id": "b2",
+      "name": "Knez Mihailova Caddesi",
+      "description": "Belgrad'ın kalbi niteliğinde olan; mağazalar, kafeler ve tarihi yapılarla dolu yaya caddesi.",
+      "category": "shopping",
+      "coordinates": {
+        "lat": 44.8175,
+        "lng": 20.4578
+      },
+      "tags": ["Yürüyüş", "Alışveriş", "Mimari", "Ücretsiz"],
+      "mustSee": true
+    },
+    {
+      "id": "b3",
+      "name": "Aziz Sava Katedrali",
+      "description": "Balkanların en büyük, dünyanın ise en büyük Ortodoks kiliselerinden biri. Muhteşem mimarisi ile göz kamaştırıcı.",
+      "category": "historic",
+      "coordinates": {
+        "lat": 44.7984,
+        "lng": 20.4682
+      },
+      "tags": ["Tarihi", "Mimari", "Dini", "Ücretsiz", "İkonik"],
+      "mustSee": true
+    },
+    {
+      "id": "b4",
+      "name": "Skadarlija (Bohem Mahallesi)",
+      "description": "Belgrad'ın Montmartre'ı olarak da bilinen bu tarihi sokak, geleneksel Türk ve Sırp mutfağı restoranları, canlı müzik ve arnavut kaldırımı taşlarıyla meşhur.",
+      "category": "food",
+      "coordinates": {
+        "lat": 44.8177,
+        "lng": 20.4646
+      },
+      "tags": ["Kültür", "Yiyecek", "Eğlence", "Mekan"],
+      "mustSee": true
+    },
+    {
+      "id": "b5",
+      "name": "Nikola Tesla Müzesi",
+      "description": "Ünlü bilim insanı Nikola Tesla'nın hayatını ve icatlarını inceleyebileceğiniz özel bir müze.",
+      "category": "museum",
+      "coordinates": {
+        "lat": 44.8051,
+        "lng": 20.4707
+      },
+      "tags": ["Müze", "Bilim", "Eğitim", "Tarihi"],
+      "mustSee": false
+    }
+  ],
+  "categories": {
+    "historic": "Tarihi Mekanlar",
+    "museum": "Müzeler ve Galeriler",
+    "park": "Parklar ve Doğal Alanlar",
+    "shopping": "Alışveriş ve Sokaklar",
+    "entertainment": "Eğlence ve Kültür",
+    "food": "Yeme İçme",
+    "attraction": "Turistik Yerler"
+  }
+}

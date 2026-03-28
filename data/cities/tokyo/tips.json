@@ -1,0 +1,55 @@
+{
+  "tips": [
+    {
+      "id": "tip-1",
+      "icon": "fa-subway",
+      "title": "Toplu Taşıma",
+      "description": "Tokyo'da ulaşım yoğun olarak metro ve tren ağlarıyla sağlanır.",
+      "content": [
+        {
+          "item": "Metro Kartları",
+          "description": "'Suica' veya 'Pasmo' isimli kartlardan birini alarak her yere kolayca ulaşabilirsiniz. Telefonunuza Apple Pay/Google Pay ile ekleyebilirsiniz."
+        },
+        {
+          "item": "Google Haritalar",
+          "description": "Kapsamlı tren ağında yönünüzü bulmak için en iyi dostunuz. Hangi perondan, hangi trene bineceğinizi detaylı gösterir."
+        }
+      ],
+      "tip": "JR Pass (Japonya Demiryolu Pasosu) sadece şehirlerarası hızlı trenlerde (Shinkansen) işe yarar, Tokyo içi metroda geçmez."
+    },
+    {
+      "id": "tip-2",
+      "icon": "fa-volume-mute",
+      "title": "Tren Adabı",
+      "description": "Japonya'da toplu taşımada dikkat edilmesi gereken kesin kurallar vardır.",
+      "content": [
+        {
+          "item": "Sessizlik",
+          "description": "Trenlerde veya metrolarda yüksek sesle konuşmak ve telefonla görüşmek hoş karşılanmaz."
+        },
+        {
+          "item": "Sırt Çantası",
+          "description": "Kalabalık trenlerde sırt çantanızı sırtınızdan çıkarıp önünüze alarak veya yere koyarak başkalarına yer açmalısınız."
+        }
+      ],
+      "tip": "Sıraya girmek (kuyruk kültürü) Japonya'da çok önemlidir, tren binerken yerdeki çizgilere uygun şekilde sıraya girin."
+    },
+    {
+      "id": "tip-3",
+      "icon": "fa-yen-sign",
+      "title": "Nakit Taşıyın",
+      "description": "Teknoloji devi olsa da Japonya geleneksel olarak nakit odaklı bir toplumdur.",
+      "content": [
+        {
+          "item": "Japon Yeni (JPY)",
+          "description": "Son yıllarda kredi kartı kullanımı artsa da, pek çok küçük işletme, tapınak ve sokak satıcısı sadece nakit kabul eder."
+        },
+        {
+          "item": "Bozuk Paralar",
+          "description": "Japonya'da bozuk para çok kullanılır. Bozuk para cüzdanı edinmek isteyebilirsiniz."
+        }
+      ],
+      "tip": "7-Eleven mağazalarındaki ATM'ler genellikle uluslararası kartlardan sorunsuzca nakit çekmenize olanak tanır."
+    }
+  ]
+}

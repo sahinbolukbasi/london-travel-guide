@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Londra Gezi Rehberi - Keşfedilecek en iyi yerler ve rotalar">
-    <meta name="keywords" content="londra, gezi rehberi, travel guide, london, turizm">
-    <meta name="author" content="Londra Gezi Rehberi">
+    <meta name="description" content="Dünya Gezi Rehberi - Dünyanın en güzel şehirlerini interaktif 3D harita ile keşfedin">
+    <meta name="keywords" content="gezi rehberi, travel guide, dünya, world, turizm, seyahat">
+    <meta name="author" content="Dünya Gezi Rehberi">
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Londra Gezi Rehberi">
-    <meta property="og:description" content="Londra'da gezilecek en güzel yerler ve önerilen rotalar">
-    
-    <!-- X (formerly Twitter) -->
+    <meta property="og:title" content="Dünya Gezi Rehberi">
+    <meta property="og:description" content="Dünyanın en güzel şehirlerini interaktif haritalarla keşfedin">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Londra Gezi Rehberi">
+    <meta property="twitter:title" content="Dünya Gezi Rehberi">
     
-    <title>Londra Gezi Rehberi | London Travel Guide</title>
+    <title>Dünya Gezi Rehberi | World Travel Guide</title>
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🗺️</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌍</text></svg>">
     
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQH4RXGTLQ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -32,271 +27,103 @@
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Maps API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4r584loMnJFiql0GDV5Bh6WysnBwT0a4&map_ids=318fd832020e738d25f62e55&callback=initMap" async defer></script>
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <h1>Londra Gezi Rehberi</h1>
+<body class="world-page">
+
+    <!-- Full-screen globe experience -->
+    <div class="globe-scene" id="globeScene">
+        
+        <!-- Ambient particles -->
+        <div class="particles" id="particles"></div>
+        
+        <!-- Top bar -->
+        <nav class="globe-nav">
+            <div class="globe-nav-logo">
+                <i class="fas fa-globe-americas"></i>
+                <span data-i18n="world_title">Dünya Gezi Rehberi</span>
+            </div>
+            <div class="globe-nav-actions" id="globeNavActions">
+                <div class="lang-switcher" id="langSwitcher" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2);">
+                    <button data-lang="tr" class="active" style="color: white;">TR</button>
+                    <button data-lang="en" style="color: white;">EN</button>
                 </div>
-                <div class="header-actions">
-                    <button class="btn-share-with-text" id="shareBtn">
-                        <i class="fas fa-share-alt"></i>
-                        <span>Paylaş</span>
-                    </button>
+                <button class="nav-btn" id="shareBtn" title="Paylaş" data-i18n-title="share_btn_title">
+                    <i class="fas fa-share-alt"></i>
+                </button>
+            </div>
+            <button class="burger-btn" id="burgerBtn" aria-label="Menü">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Hero text overlay -->
+        <div class="globe-hero-text" id="heroText">
+            <div class="hero-eyebrow">
+                <div class="eyebrow-line"></div>
+                <span data-i18n="hero_eyebrow">İNTERAKTİF GEZİ REHBERİ</span>
+                <div class="eyebrow-line"></div>
+            </div>
+            <h1>
+                <span class="hero-word" style="--i:0" data-i18n="hero_word1">Dünyayı</span>
+                <span class="hero-word hero-gradient" style="--i:1" data-i18n="hero_word2">Keşfedin</span>
+            </h1>
+            <p class="hero-sub" data-i18n="hero_sub">Küreyi döndürün, bir şehir seçin, maceraya başlayın.</p>
+            <div class="scroll-hint" id="scrollHint">
+                <span data-i18n="scroll_hint">Küreyi sürükleyin</span>
+                <i class="fas fa-hand-pointer"></i>
+            </div>
+        </div>
+
+        <!-- 3D Globe Canvas -->
+        <div class="globe-container" id="globeContainer">
+            <canvas id="globeCanvas"></canvas>
+            <!-- City label popup -->
+            <div class="city-label" id="cityLabel">
+                <div class="city-label-inner">
+                    <span class="city-label-flag" id="cityLabelFlag"></span>
+                    <div class="city-label-text">
+                        <strong id="cityLabelName"></strong>
+                        <small id="cityLabelCountry"></small>
+                    </div>
+                    <i class="fas fa-arrow-right city-label-arrow"></i>
                 </div>
             </div>
         </div>
-    </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <span>İnteraktif Gezi Rehberi</span>
-                    </div>
-                    <h1>Londra'yı Keşfedin</h1>
-                    <p class="hero-description">
-                        İnteraktif haritamız ile Londra'nın en popüler yerlerini keşfedin. 
-                        Müzelerden restoranlara, parklardan alışveriş merkezlerine kadar tüm lokasyonlar 
-                        tek bir haritada. Filtreleme yapın, detayları görün, gezinizi planlayın.
-                    </p>
-
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="stat-content">
-                                <span class="stat-number">70+</span>
-                                <span class="stat-label">Lokasyon</span>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-layer-group"></i>
-                            <div class="stat-content">
-                                <span class="stat-number">7</span>
-                                <span class="stat-label">Kategori</span>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-star"></i>
-                            <div class="stat-content">
-                                <span class="stat-number">100%</span>
-                                <span class="stat-label">Ücretsiz</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="hero-guide-links">
-                        <a href="#tip-1" class="guide-pill">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>En İyi Ziyaret Zamanı</span>
-                        </a>
-                        <a href="#tip-2" class="guide-pill">
-                            <i class="fas fa-subway"></i>
-                            <span>Ulaşım Rehberi</span>
-                        </a>
-                        <a href="#tip-3" class="guide-pill">
-                            <i class="fas fa-ticket-alt"></i>
-                            <span>Bilet & Tasarruf</span>
-                        </a>
-                        <a href="#tip-4" class="guide-pill">
-                            <i class="fas fa-cloud-rain"></i>
-                            <span>Hava Durumu</span>
-                        </a>
-                        <a href="#tip-5" class="guide-pill">
-                            <i class="fas fa-utensils"></i>
-                            <span>Yemek Önerileri</span>
-                        </a>
-                        <a href="#tip-6" class="guide-pill">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Güvenlik & Pratik</span>
-                        </a>
-                        <a href="#tip-7" class="guide-pill">
-                            <i class="fas fa-map-marked-alt"></i>
-                            <span>Gezi Rotaları</span>
-                        </a>
-                        <a href="#tip-8" class="guide-pill">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>Faydalı Uygulamalar</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="container">
-            <!-- Map Container -->
-            <div class="map-section">
-                <div class="map-header">
-                    <h2>
-                        <i class="fas fa-location-dot"></i>
-                        İnteraktif Harita
-                    </h2>
-                </div>
-                
-                <!-- Map Layer Filters -->
-                <div class="map-filters">
-                    <div class="filter-title">
-                        <i class="fas fa-filter"></i>
-                        <span>Katman Filtreleri</span>
-                    </div>
-                    <div class="filter-buttons-grid">
-                        <button class="filter-btn active" data-category="all">
-                            <i class="fas fa-layer-group"></i>
-                            <span>Tümü Göster</span>
-                        </button>
-                        <button class="filter-btn favorites-btn" data-category="favorites" id="favoritesBtn">
-                            <i class="fas fa-heart"></i>
-                            <span>Favorilerim</span>
-                            <span class="favorites-count" id="favoritesCount">0</span>
-                        </button>
-                        <button class="filter-btn" data-category="museums">
-                            <i class="fas fa-landmark"></i>
-                            <span>Müzeler</span>
-                        </button>
-                        <button class="filter-btn" data-category="restaurants">
-                            <i class="fas fa-utensils"></i>
-                            <span>Restoranlar</span>
-                        </button>
-                        <button class="filter-btn" data-category="attractions">
-                            <i class="fas fa-star"></i>
-                            <span>Turistik Yerler</span>
-                        </button>
-                        <button class="filter-btn" data-category="parks">
-                            <i class="fas fa-tree"></i>
-                            <span>Parklar</span>
-                        </button>
-                        <button class="filter-btn" data-category="shopping">
-                            <i class="fas fa-shopping-bag"></i>
-                            <span>Alışveriş</span>
-                        </button>
-                        <button class="filter-btn" data-category="entertainment">
-                            <i class="fas fa-music"></i>
-                            <span>Eğlence Mekanları</span>
-                        </button>
-                        <button class="filter-btn" data-category="cafes">
-                            <i class="fas fa-coffee"></i>
-                            <span>Kahveciler</span>
-                        </button>
-                    </div>
-                </div>
-                
-                <div class="map-container" id="map">
-                    <!-- Google Maps buraya yüklenecek -->
-                    <!-- Map Loading -->
-                    <div class="map-loading" id="mapLoading">
-                        <div class="loading-content">
-                            <div class="spinner"></div>
-                            <p id="loadingText">Harita başlatılıyor...</p>
-                            <div class="loading-progress">
-                                <div class="progress-bar" id="progressBar"></div>
-                            </div>
-                            <small>72 lokasyon yükleniyor</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Location List Panel -->
-                <div class="location-list-panel" id="locationListPanel">
-                    <div class="location-list-header" id="locationListToggle">
-                        <div class="location-list-title">
-                            <i class="fas fa-list"></i>
-                            <span>Lokasyonlar</span>
-                            <span class="location-count" id="locationCount">0</span>
-                        </div>
-                        <div class="location-list-toggle-icon">
-                            <i class="fas fa-chevron-up" id="toggleIcon"></i>
-                        </div>
-                    </div>
-                    <div class="location-list-content" id="locationListContent">
-                        <div class="location-list-search">
-                            <input type="text" id="locationSearch" placeholder="Lokasyon ara...">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <div class="location-list-items" id="locationListItems">
-                            <!-- Lokasyonlar buraya dinamik olarak eklenecek -->
-                        </div>
-                    </div>
-                </div>
-                </div>
-
-            </div>
-
-            <!-- Detailed Tips Section -->
-            <div class="tips-section" id="tips-section">
-                <h2>
-                    <i class="fas fa-lightbulb"></i>
-                    Detaylı Gezi İpuçları ve Öneriler
-                </h2>
-                
-                <div class="tips-detailed">
-                    <!-- Tips will be loaded dynamically from tips.json -->
-                    <div class="tips-loading">
-                        <i class="fas fa-spinner fa-spin"></i>
-                        <p>Gezi ipuçları yükleniyor...</p>
-                    </div>
-                </div>
+        <!-- Bottom country selector pills -->
+        <div class="globe-bottom-bar" id="bottomBar">
+            <div class="bottom-bar-inner" id="countryPills">
+                <!-- Rendered by JS -->
             </div>
         </div>
-    </main>
+    </div>
 
     <!-- Share Modal -->
     <div class="modal" id="shareModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Paylaş</h3>
-                <button class="modal-close" id="closeModal">
-                    <i class="fas fa-times"></i>
-                </button>
+                <h3 data-i18n="share_modal_title">Paylaş</h3>
+                <button class="modal-close" id="closeModal"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
                 <div class="share-buttons">
-                    <button class="share-btn facebook" onclick="shareOn('facebook')">
-                        <i class="fab fa-facebook"></i>
-                        Facebook
-                    </button>
-                    <button class="share-btn twitter" onclick="shareOn('twitter')">
-                        <i class="fab fa-x-twitter"></i>
-                        X
-                    </button>
-                    <button class="share-btn whatsapp" onclick="shareOn('whatsapp')">
-                        <i class="fab fa-whatsapp"></i>
-                        WhatsApp
-                    </button>
-                    <button class="share-btn linkedin" onclick="shareOn('linkedin')">
-                        <i class="fab fa-linkedin"></i>
-                        LinkedIn
-                    </button>
+                    <button class="share-btn facebook" onclick="shareOn('facebook')"><i class="fab fa-facebook"></i> Facebook</button>
+                    <button class="share-btn twitter" onclick="shareOn('twitter')"><i class="fab fa-x-twitter"></i> X</button>
+                    <button class="share-btn whatsapp" onclick="shareOn('whatsapp')"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+                    <button class="share-btn linkedin" onclick="shareOn('linkedin')"><i class="fab fa-linkedin"></i> LinkedIn</button>
                 </div>
                 <div class="share-link">
                     <input type="text" id="shareLink" readonly>
-                    <button class="btn-copy" onclick="copyLink()">
-                        <i class="fas fa-copy"></i>
-                        Kopyala
-                    </button>
+                    <button class="btn-copy" onclick="copyLink()"><i class="fas fa-copy"></i> <span data-i18n="copy_btn">Kopyala</span></button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p>Designed by <strong>Şahin Bölükbaşı</strong></p>
-        </div>
+    <footer class="globe-footer">
+        <p><span data-i18n="footer_designed">Designed by</span> <strong>Şahin Bölükbaşı</strong></p>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="map.js"></script>
+    <script src="world-map.js"></script>
 </body>
 </html>

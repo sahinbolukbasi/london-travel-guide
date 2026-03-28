@@ -1,0 +1,34 @@
+{
+  "general": [
+    {
+      "id": "g1",
+      "title": "Para Birimi ve Hesap",
+      "content": "Belgrad'da para birimi Sırp Dinarıdır (RSD). İhtiyacınız olan pek çok hizmet ve mekanda fiyatlar oldukça uygundur, ancak kur çevrimlerine dikkat etmekte fayda var.",
+      "icon": "fas fa-coins"
+    },
+    {
+      "id": "g2",
+      "title": "Toplu Taşıma",
+      "content": "Şehir içinde tramvay ve otobüsler ile ulaşım sağlanıyor. Çoğu turistik mekana sadece yürüyerek de ulaşmak mümkündür, zira şehir yapısı oldukça yürüme dostudur.",
+      "icon": "fas fa-bus"
+    },
+    {
+      "id": "g3",
+      "title": "Kahve Kültürü",
+      "content": "Belgrad insanları kahve saatlerine çok değer verirler. Kafanalar (geleneksel tavernalar) ve popüler modern kafeler her sokağın köşesinde sizi beklemektedir.",
+      "icon": "fas fa-coffee"
+    }
+  ],
+  "areas": [
+    {
+      "id": "a1",
+      "title": "Stari Grad (Eski Şehir)",
+      "content": "Turistik mekanların, müzelerin ve Kalemegdan'ın bulunduğu en canlı bölge. Yürüyüş için birebir."
+    },
+    {
+      "id": "a2",
+      "title": "Zemun Bölgesi",
+      "content": "Tuna nehri kıyısında daha sakin, Avusturya-Macaristan tarzı mimari dokusuna sahip sevimli bir yerleşim yeridir. Balık restoranlarıyla ünlüdür."
+    }
+  ]
+}

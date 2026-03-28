@@ -1,0 +1,319 @@
+{
+  "tips": [
+    {
+      "id": "tip-1",
+      "icon": "fa-calendar-alt",
+      "title": "En İyi Ziyaret Zamanı",
+      "description": "Londra yılın her dönemi kendine özgü bir karaktere sahip, ancak deneyiminiz mevsime göre tamamen değişiyor. Işığın, yağmurun ve etkinliklerin ritmine göre plan yapmak şehri çok daha keyifli hale getirir.",
+      "content": [
+        {
+          "season": "🌸 Bahar (Mart - Mayıs)",
+          "description": "<strong>Çiçekler, taze hava ve parkların canlanışı.</strong><br>Londra baharda adeta renk cümbüşüne döner. Hyde Park, Regent’s Park ve Kew Gardens bu dönemde çiçeklerle doludur. Hava genellikle 10-15°C civarında, ara sıra hafif yağmurlu olur. Kalabalıklar yaz kadar yoğun değildir; bu da şehirde daha rahat gezmenizi sağlar."
+        },
+        {
+          "season": "☀️ Yaz (Haziran - Ağustos)",
+          "description": "<strong>Festival sezonu ve uzun günler.</strong><br>Şehrin her köşesi canlı müzik, sokak festivalleri ve açık hava etkinlikleriyle doludur. Thames Nehri kenarında yürüyüş yapmak veya parkta piknik yapmak bu dönemde vazgeçilmezdir. Ortalama sıcaklık 20-25°C civarındadır ama nemli hava zaman zaman bunaltıcı olabilir. Otel fiyatları ve kalabalıklar en yüksek seviyededir."
+        },
+        {
+          "season": "🍂 Sonbahar (Eylül - Kasım)",
+          "description": "<strong>Huzurlu, fotojenik ve sakin Londra.</strong><br>Parklardaki yaprakların sararmasıyla şehir pastel tonlara bürünür. Bu dönem fotoğraf tutkunları için mükemmeldir. Hava serindir (10-15°C) ve turist sayısı belirgin şekilde azalır. Ayrıca otel fiyatları düşer, müzeler ve restoranlar daha sakin olur."
+        },
+        {
+          "season": "❄️ Kış (Aralık - Şubat)",
+          "description": "<strong>Noel ruhu ve sıcak bir kahveyle ısınan şehir.</strong><br>Londra kışın büyüleyici bir atmosfere sahip olur. Christmas Market’ler, Oxford Street ışıkları ve Hyde Park’taki Winter Wonderland görülmeye değerdir. Hava soğuktur (5-10°C) ve günler kısadır, ancak şehirdeki enerji hiç eksilmez. Müzeler, tiyatrolar ve kafeler bu dönemde daha fazla vakit geçirme fırsatı sunar."
+        }
+      ],
+      "tip": "<strong>Gezgin önerisi:</strong> Temmuz ve Ağustos aylarında oteller dolup taşar. Kalabalıklardan kaçmak istiyorsanız <strong>Haziran</strong> veya <strong>Eylül</strong> aylarını tercih edin. Hem hava güzeldir hem de şehir daha sakindir."
+    },
+    
+    {
+      "id": "tip-10",
+      "icon": "fa-plane",
+      "title": "Londra Havalimanlarından Şehir Merkezine Ulaşım",
+      "description": "Londra'daki başlıca havalimanlarından (Heathrow, Gatwick, Stansted, Luton, London City) şehir merkezine ulaşım yöntemleri, süreleri ve ortalama ücret bilgileri:",
+      "content": [
+        {
+          "item": "Heathrow Havalimanı",
+          "description": "<p>Londra'nın en büyük havalimanıdır ve şehir merkezine ulaşım için çok sayıda seçenek sunar.</p><p>💂‍♀️ <strong>Heathrow Express:</strong> Paddington'a 15-20 dakikada ulaşır. Hızlı ama pahalıdır, ortalama £25-£28 civarındadır.</p><p>🚇 <strong>London Underground (Piccadilly Line):</strong> En ekonomik seçenektir, yaklaşık 45-60 dakika sürer ve £6 civarındadır.</p><p>🚌 <strong>Otobüs (National Express):</strong> 1-1.5 saat sürer, ücret £7-£10 arasıdır.</p><p>🚖 <strong>Taksi / Özel Transfer:</strong> Ortalama 45-70 dakika, £70-£100 arasıdır. Konforlu ancak maliyetlidir.</p>",
+          "tip": "Heathrow Express en hızlı, metro ise en ekonomik seçenektir. Gündüz saatlerinde metro tercih etmek hem pratik hem uygun fiyatlıdır."
+        },
+        {
+          "item": "Gatwick Havalimanı",
+          "description": "<p>Güney Londra yönündedir ve şehir merkezine tren bağlantısı sayesinde kolay ulaşım sağlar.</p><p>🚄 <strong>Gatwick Express:</strong> Victoria Station'a 30 dakikada ulaşır, £20-£25 arasıdır.</p><p>🚆 <strong>Southern / Thameslink Trenleri:</strong> 35-45 dakika sürer, £12-£18 civarındadır.</p><p>🚌 <strong>Otobüs (National Express):</strong> 1.5 saat sürer, £10-£12 civarındadır.</p><p>🚖 <strong>Taksi / Özel Transfer:</strong> 60-90 dakika, £90-£120 arasıdır.</p>",
+          "tip": "Tren seferleri sık olduğu için sabah ve akşam yoğun saatlerde bile rahat ulaşım sağlar."
+        },
+        {
+          "item": "Stansted Havalimanı",
+          "description": "<p>Kuzeydoğuda yer alır ve genellikle düşük bütçeli havayolları tarafından kullanılır.</p><p>🚄 <strong>Stansted Express:</strong> Liverpool Street'e 45 dakikada ulaşır, £22-£25 civarındadır.</p><p>🚌 <strong>Otobüs (National Express, Terravision):</strong> Yaklaşık 1 saat 20 dakika sürer, £10-£15 arasıdır.</p><p>🚖 <strong>Taksi / Özel Transfer:</strong> 75-90 dakika, £100-£130 civarındadır.</p>",
+          "tip": "Stansted Express en hızlı ulaşım yoludur. Biletleri önceden almak indirim sağlar."
+        },
+        {
+          "item": "Luton Havalimanı",
+          "description": "<p>Kuzey Londra yönündedir ve Avrupa içi uçuşlarda sık tercih edilir.</p><p>🚆 <strong>Luton DART + Tren:</strong> Luton Parkway'den Thameslink veya East Midlands trenleriyle 40-50 dakikada merkeze ulaşılır, £16-£20 arasıdır.</p><p>🚌 <strong>Otobüs / Coach (National Express, Green Line):</strong> Victoria Coach Station'a direkt servisler vardır, 1-1.5 saat sürer ve £10-£15 civarındadır.</p><p>🚖 <strong>Taksi / Özel Transfer:</strong> Ortalama 60-80 dakika, £80-£110 civarındadır. Gece uçuşları için en pratik seçenektir.</p>",
+          "tip": "Tren seçeneği genellikle en hızlı ve konforlu olandır; DART bağlantısı süreyi ciddi ölçüde kısaltır."
+        },
+        {
+          "item": "London City Havalimanı",
+          "description": "<p>Şehir merkezine en yakın havalimanıdır ve genellikle iş seyahatlerinde tercih edilir.</p><p>🚇 <strong>DLR (Docklands Light Railway):</strong> Bank veya Stratford'a 20-30 dakikada ulaşılır, £4-£6 civarındadır.</p><p>🚖 <strong>Taksi / Özel Transfer:</strong> Ortalama 25-40 dakika sürer, £35-£50 arasıdır.</p>",
+          "tip": "London City Havalimanı, toplu taşımayla şehir merkezine en kısa sürede ulaşılabilen havalimanıdır."
+        }
+      ],
+      "tip": "Tüm havalimanlarında ödeme için kredi kartı, temassız (contactless) kart ve Oyster kart geçerlidir."
+    },
+    {
+      "id": "tip-2",
+      "icon": "fa-subway",
+      "title": "Londra Ulaşım Rehberi",
+      "description": "Londra’da ulaşım, şehir hayatının kalbidir. Oyster Card, Contactless kartlar, metro, otobüs ve tren ağlarıyla şehirde istediğin yere dakikalar içinde ulaşabilirsin. Ancak sistemi bilmeden başlamak hem pahalıya hem de vakit kaybına yol açabilir. İşte Londra’nın karmaşık gibi görünen ama aslında oldukça pratik ulaşım sistemini anlamanı sağlayacak rehber.",
+      "content": [
+        {
+          "item": "Oyster Card Nasıl Alınır?",
+          "description": "💳 Oyster Card, Londra’da toplu taşıma için en pratik araçtır. Havalimanlarında, büyük metro istasyonlarında veya küçük bilet makinelerinde kolayca alınabilir. İlk alımda £7 depozito ödersin, bunu kartı iade ettiğinde geri alabilirsin. Kartı aldıktan sonra, dokunmatik ekranlı makinelerden veya TfL uygulamasından bakiye yükleyebilirsin. <br><br>💡 <b>İpucu:</b> Londra’da neredeyse herkes Oyster veya Contactless kullanıyor. Tek kullanımlık bilet almak hem daha pahalı hem de zahmetli."
+        },
+        {
+          "item": "Günlük Tavan (Daily Cap)",
+          "description": "🕐 Londra ulaşımında bir <b>‘günlük tavan’</b> sistemi var. Yani belirli bir limite ulaştığında o günün geri kalanı ücretsiz. Zone 1-2 arasında seyahat ediyorsan, bu sınır genellikle £8.10 civarındadır. <br><br>Örneğin sabah metro, öğlen otobüs, akşam tren kullansan bile bu limiti geçtiğinde sistem otomatik olarak seni durdurmaz; sadece ek ücret almaz. <br><br>💡 <b>İpucu:</b> Aynı kartla temassız (Contactless) ödeme yapıyorsan, bu özellik senin için de geçerlidir."
+        },
+        {
+          "item": "Contactless Kart Kullanımı",
+          "description": "💳 Eğer Visa veya Mastercard temassız kartın varsa Oyster Card alman şart değil. Turnikelerde aynı şekilde dokunarak geçebilirsin. Ücretlendirme aynıdır, sistem kartını Oyster gibi işler. <br><br>💡 <b>Dikkat:</b> Girişte ve çıkışta aynı kartı okutmalısın; farklı kart okutursan sistem seni iki kez ücretlendirir. <br><br>💡 <b>Ek Bilgi:</b> Apple Pay ve Google Pay de sorunsuz çalışıyor."
+        },
+        {
+          "item": "Tube (Metro) Deneyimi",
+          "description": "🚇 Londra metrosu (Tube), dünyanın en eski metro sistemidir ve şehirdeki en hızlı ulaşım yoludur. 05:00 ile 00:30 arası çalışır, istasyonlar oldukça sık yer alır. <br><br>💡 <b>İpucu:</b> Yoğun saatlerde (07:30-09:30 ve 17:00-18:30) trenler çok kalabalık olur. Haritaya bakarken hatların renklerine dikkat et: Piccadilly (mavi) Heathrow’a, Central (kırmızı) Oxford Circus’a gider."
+        },
+        {
+          "item": "Otobüsler (Buses)",
+          "description": "🚌 Londra’nın ikonik kırmızı çift katlı otobüsleri sadece ulaşım aracı değil, aynı zamanda harika bir şehir turu fırsatıdır. Tek biniş £1.75’tir ve 1 saat içinde sınırsız aktarma yapabilirsin. <br><br>💡 <b>En güzel rota:</b> 11 numaralı otobüs (Fulham Broadway → Liverpool Street). Şehirdeki en turistik bölgelerden geçer – Westminster, Trafalgar Square, St. Paul’s Cathedral gibi."
+        },
+        {
+          "item": "Night Tube ve Gece Otobüsleri",
+          "description": "🌙 Cuma ve Cumartesi geceleri bazı metro hatları 24 saat çalışır. Özellikle Central, Victoria, Jubilee, Northern ve Piccadilly hatlarında bu hizmet bulunur. Diğer günlerde ise gece otobüsleri devreye girer (N ile başlayan numaralar). <br><br>💡 <b>İpucu:</b> Gece otobüsleri 24 saat işler, bu sayede taksiye gerek kalmadan şehirde istediğin yere ulaşabilirsin."
+        }
+      ],
+      "tip": "📱 <b>TfL Go</b> veya <b>Citymapper</b> uygulamasını mutlaka indir. Gerçek zamanlı hat bilgilerini, hat kesintilerini ve alternatif güzergahları anında gösterir. Bu uygulamalar Londra’yı bir yerliden bile daha iyi gezmeni sağlar!"
+    }, 
+    {
+      "id": "tip-3",
+      "icon": "fa-ticket-alt",
+      "title": "Bilet ve Tasarruf İpuçları",
+      "description": "Londra’da gezerken bilet ve tasarruf fırsatlarını bilmek bütçenizi korur. Ücretsiz müzelerden, indirimli kombin biletlerine kadar pek çok seçenek mevcut.",
+      "content": [
+        {
+          "item": "🏛️ Ücretsiz Müzeler",
+          "description": "British Museum, National Gallery, Tate Modern, Natural History Museum ve V&A Museum ücretsiz gezilebilir.<br><br>💡 <strong>İpucu:</strong> Popüler müzelerde sabah erken saatlerde gidin; hem kalabalık az olur hem de fotoğraf çekmek daha rahat."
+        },
+        {
+          "item": "🎫 London Pass",
+          "description": "80+ cazibe merkezi için geçerli kart. 1-10 günlük seçenekler £99-£249.<br><br>💡 <strong>İpucu:</strong> Çok sayıda turistik yere gidecekseniz kart almak zaman ve paradan tasarruf sağlar, önceden online satın alın."
+        },
+        {
+          "item": "2 for 1 Teklifleri",
+          "description": "Tren bileti ile bazı müze ve atraksiyonlarda ikinci kişi ücretsiz.<br><br>💡 <strong>İpucu:</strong> Tren biletinizi mutlaka saklayın ve girişte gösterin, özellikle hafta sonları yoğun oluyor."
+        },
+        {
+          "item": "⏱️ Önceden Rezervasyon",
+          "description": "Tower of London, London Eye gibi popüler yerlerde online önceden rezervasyon yapmak %15-20 indirim sağlar.<br><br>💡 <strong>İpucu:</strong> Saatlik biletlerde yoğunluk ve kuyruklardan kaçınmak için rezervasyon şart."
+        },
+        {
+          "item": "🎭 Matine Gösterileri",
+          "description": "West End tiyatrolarında öğleden sonra gösterileri genellikle daha ucuz.<br><br>💡 <strong>İpucu:</strong> Bilet fiyatlarını karşılaştırın, bazen son dakika teklifleri %30 indirim sunabiliyor."
+        }
+      ],
+      "tip": "🕒 Çarşamba günleri bazı müzeler geç saatlere kadar açık ve daha az kalabalık. Bu zamanlarda gezmek hem rahat hem keyifli."
+    },     
+    {
+      "id": "tip-4",
+      "icon": "fa-cloud-rain",
+      "title": "Hava Durumu ve Hazırlık",
+      "description": "Londra, meşhur yağmurları ve değişken havasıyla ünlüdür. Hava her an değişebilir; bu yüzden hazırlıklı olmak gezinizin keyfini artırır.",
+      "content": [
+        {
+          "item": "Şemsiye",
+          "description": "☔ Londra’da ani sağanaklar sık görülür. Küçük, katlanabilir bir şemsiye her zaman çantanızda bulunmalı. <br><br>💡 <strong>İpucu:</strong> Rüzgarlı günlerde şemsiye kullanmak zor olabilir; sağlam ve hafif modeller tercih edin."
+        },
+        {
+          "item": "Katmanlı Giyim",
+          "description": "🧥 Sabah serin, öğlen sıcak olabilir; Londra havası çok değişkendir. T-shirt üzerine hafif bir kazak veya ince mont, gerektiğinde çıkarabileceğiniz katmanlar idealdir. <br><br>💡 <strong>İpucu:</strong> Rüzgar ve yağmur riskine karşı su geçirmez üst katman ekleyin."
+        },
+        {
+          "item": "Rahat Ayakkabı",
+          "description": "👟 Şehirde yürüme mesafeleri uzundur, günde ortalama 15-20 km yürüyebilirsiniz. Su geçirmez ve rahat ayakkabılar tercih edin. <br><br>💡 <strong>İpucu:</strong> Esnek tabanlı spor ayakkabılar veya trekking tarzı ayakkabılar uzun yürüyüşler için uygundur."
+        },
+        {
+          "item": "Yağmurluk",
+          "description": "🧥 Rüzgarlı günlerde şemsiye yerine yağmurluk daha pratik olabilir. Hem çantanızda hafif yer kaplar hem de hareket özgürlüğü sağlar. <br><br>💡 <strong>İpucu:</strong> Kapüşonlu ve nefes alabilen modeller tercih edin, terlemeyi önler."
+        },
+        {
+          "item": "Güneş Kremi",
+          "description": "🌞 Yaz aylarında güneş Londra’da beklenmedik şekilde güçlü olabilir. Açık cilt tipleri için SPF 30+ önerilir. <br><br>💡 <strong>İpucu:</strong> Şemsiye veya şapka ile birlikte kullanmak ekstra koruma sağlar."
+        }
+      ],
+      "tip": "📱 <strong>Met Office</strong> veya <strong>WeatherPro</strong> uygulamalarını indirin. Gerçek zamanlı hava durumu ve yağmur tahminleri, gezi planınızı aksatmadan yapmanıza yardımcı olur."
+    },    
+    {
+      "id": "tip-5",
+      "icon": "fa-utensils",
+      "title": "Yemek ve İçecek Önerileri",
+      "description": "Londra, dünya mutfaklarını buluşturan bir şehir. Sokak lezzetlerinden Michelin yıldızlı restoranlara kadar her damağa uygun seçenek var. İşte deneyimleyebileceğiniz en popüler yemekler ve öneriler:",
+      "content": [
+        {
+          "item": "🍳 İngiliz Kahvaltısı",
+          "description": "<strong>Full English Breakfast:</strong> Sosis, pastırma, yumurta, fasulye ve mantardan oluşan klasik bir öğün. £8-15 civarında. <br><br>💡 <strong>İpucu:</strong> Daha otantik deneyim için küçük lokal kafelerde denemeye çalışın; zincir kahvaltılardan farklıdır."
+        },
+        {
+          "item": "☕ Afternoon Tea",
+          "description": "Geleneksel çay saati deneyimi; çay, mini sandviçler, scone ve tatlılar. £25-50 arası. <br><br>💡 <strong>İpucu:</strong> Ritz veya Claridge’s gibi klasik mekanlar pahalıdır; fakat Sketch veya lokal butik kafelerde de harika deneyim yaşayabilirsiniz."
+        },
+        {
+          "item": "🥕 Borough Market",
+          "description": "Taze ürünler, peynirler, ekmekler ve sokak lezzetleri ile ünlü. Her bütçeye uygun seçenekler bulunur. <br><br>💡 <strong>İpucu:</strong> Sabah saatlerinde gidin; hem taze hem de daha sakin."
+        },
+        {
+          "item": "🍺 Pub Yemekleri",
+          "description": "Fish & Chips, Sunday Roast gibi İngiliz klasiklerini deneyin. £12-18 civarında. <br><br>💡 <strong>İpucu:</strong> Lokal publarda yemek yemek, hem atmosferi hem de fiyatı deneyimlemek için en iyi yoldur."
+        },
+        {
+          "item": "🍛 Curry",
+          "description": "Brick Lane’de otantik Hint mutfağı, özellikle chicken tikka masala veya lamb korma önerilir. <br><br>💡 <strong>İpucu:</strong> Öğle menüleri daha uygun fiyatlıdır, akşam yoğun saatlerde yer bulmak zor olabilir."
+        },
+        {
+          "item": "🌮 Street Food",
+          "description": "Camden Market ve Southbank’te uygun fiyatlı, çeşitli dünya mutfakları mevcut. £5-10 civarında atıştırmalıklar bulabilirsiniz. <br><br>💡 <strong>İpucu:</strong> Pazar günleri kalabalık olur; erken gitmek taze ve hızlı servis almak için avantaj sağlar."
+        }
+      ],
+      "tip": "🍽️ Öğle yemeği menüleri akşam yemeğinden %30-40 daha ucuz. Hem bütçenizi korur hem de daha fazla lezzet deneyebilirsiniz."
+    },    
+    {
+      "id": "tip-6",
+      "icon": "fa-shield-alt",
+      "title": "Güvenlik ve Pratik Bilgiler",
+      "description": "Güvenli Bir Şehir: Londra genel olarak güvenli, ancak dikkatli olun.",
+      "content": [
+        {
+          "item": "Yankesicilik",
+          "description": "Kalabalık yerlerde (Oxford Street, Piccadilly) çantanıza dikkat edin"
+        },
+        {
+          "item": "Acil Durum",
+          "description": "999 veya 112 (Polis, Ambulans, İtfaiye)"
+        },
+        {
+          "item": "Elektrik",
+          "description": "230V, UK tipi fiş (3 pinli) - adaptör gerekli"
+        },
+        {
+          "item": "Para Birimi",
+          "description": "Pound Sterling (£). Kartlar her yerde geçerli"
+        },
+        {
+          "item": "Bahşiş",
+          "description": "Restoranlarda %10-12.5 (genelde hesaba dahil)"
+        },
+        {
+          "item": "Su",
+          "description": "Musluk suyu içilebilir ve ücretsiz"
+        },
+        {
+          "item": "WiFi",
+          "description": "Çoğu kafe, restoran ve metro istasyonlarında ücretsiz"
+        }
+      ],
+      "tip": "NHS (Sağlık Hizmetleri) acil durumlarda ücretsiz, ancak seyahat sigortası yaptırın."
+    },
+    {
+      "id": "tip-7",
+      "icon": "fa-map-marked-alt",
+      "title": "Gezi Rotası Önerileri",
+      "description": "Londra büyük ve keşfedilecek çok sayıda bölgeye sahip. Şehri daha rahat gezmek için rotanızı günlere bölmek faydalıdır. İşte önerilen günlük rota planı:",
+      "content": [
+        {
+          "day": "1. Gün - Klasik Londra",
+          "description": "🏛️ Big Ben ve Parlamento Binası ile gezinize başlayın.<br>⛪ Westminster Abbey’i ziyaret edin, tarihi atmosferi hissedin.<br>👑 Buckingham Palace’de nöbet değişimini izleyin (11:00 civarı).<br>🎨 Trafalgar Square ve çevresinde kısa bir yürüyüş yapın.<br><br>💡 <strong>İpucu:</strong> Popüler noktalar sabah erken saatlerde daha sakin; fotoğraf çekmek için ideal zaman 09:00-10:00 arasıdır."
+        },
+        {
+          "day": "2. Gün - Müzeler",
+          "description": "🏺 British Museum’da antik eserleri keşfedin (giriş ücretsiz).<br>🖼️ National Gallery’de başyapıtları görün.<br>🎭 Covent Garden’de sokak sanatçılarını izleyin ve küçük kafelerde mola verin.<br><br>💡 <strong>İpucu:</strong> Müzeler yoğun olabilir, erken gitmek veya biletinizi önceden almak beklemeyi azaltır."
+        },
+        {
+          "day": "3. Gün - Thames Kıyısı",
+          "description": "🌉 Tower Bridge’de fotoğraf çekin, köprüde yürüyüş yapın.<br>🏰 Tower of London’u ziyaret edin, tarih ve kraliyet hazineleri ile tanışın.<br>🥖 Borough Market’te öğle yemeği molası verin, taze sokak lezzetlerini deneyin.<br>🎨 Tate Modern’de çağdaş sanatı keşfedin.<br><br>💡 <strong>İpucu:</strong> Thames kıyısında yürüyüş yaparken hava koşullarına dikkat edin; rüzgarlı ve yağmurlu günlerde önceden plan yapın."
+        },
+        {
+          "day": "4. Gün - Parklar ve Alışveriş",
+          "description": "🌳 Hyde Park’ta yürüyüş ve piknik yapın.<br>🛍️ Harrods’ta lüks alışveriş deneyimi yaşayın.<br>🏙️ Oxford Street’te mağazaları gezin, dünyaca ünlü markaları görün.<br>🎪 Camden Market’te alternatif ürünler ve sokak yemeklerini keşfedin.<br><br>💡 <strong>İpucu:</strong> Alışveriş bölgelerinde kalabalık öğle saatlerinde artar, sabah erken veya akşamüstü gezin."
+        },
+        {
+          "day": "5. Gün - Alternatif Londra",
+          "description": "🎨 Notting Hill sokaklarında renkli evleri keşfedin.<br>🛒 Portobello Market’te antika ve vintage ürünleri inceleyin.<br>🎭 Shoreditch’de sokak sanatlarını ve kafeleri gezin.<br>🍛 Brick Lane’de otantik yemekler deneyin.<br><br>💡 <strong>İpucu:</strong> Alternatif bölgelerde yürüyüş rahat, ama pazar günleri çok kalabalık olabilir; erken gitmek avantaj sağlar."
+        }
+      ],
+      "tip": "⏰ Sabah erken başlayın; popüler turistik yerler 10:00’dan sonra yoğunlaşır. Rahat ayakkabı giyin ve suyunuzu yanınıza alın."
+    },
+    {
+      "id": "tip-8",
+      "icon": "fa-mobile-alt",
+      "title": "Faydalı Uygulamalar",
+      "description": "Londra’yı rahat gezmek için telefonunuzda bazı uygulamalar şart. Hem ulaşım hem de etkinlik takibi için bu araçlar hayat kurtarır.",
+      "content": [
+        {
+          "app": "Citymapper",
+          "description": "📍 Londra’nın en kapsamlı ulaşım planlama uygulaması. Metro, otobüs, tren ve yürüyüş rotalarını tek ekranda gösterir.<br><br>💡 <strong>İpucu:</strong> Trafik durumuna göre alternatif rotalar sunar, aceleniz varsa ideal."
+        },
+        {
+          "app": "TfL Go",
+          "description": "🚇 Transport for London’ın resmi uygulaması. Metro ve otobüs hatları, canlı sefer bilgisi ve kesinti uyarıları sunar.<br><br>💡 <strong>İpucu:</strong> Günlük ulaşım planınızı yaparken hat değişikliklerini önceden kontrol edin."
+        },
+        {
+          "app": "Google Maps",
+          "description": "🗺️ Haritalar ve navigasyon için vazgeçilmez. Offline haritaları indirerek internet bağlantısına gerek kalmadan gezin.<br><br>💡 <strong>İpucu:</strong> Sokak görünümü ve toplu taşıma seçeneklerini inceleyin; özellikle yürüyüş rotaları için faydalı."
+        },
+        {
+          "app": "Uber / Bolt",
+          "description": "🚖 Taksi alternatifi, genellikle daha uygun fiyatlı ve hızlı. Özellikle gece veya uzak bölgeler için pratik.<br><br>💡 <strong>İpucu:</strong> Trafiğin yoğun olduğu saatlerde uygulama fiyatları artabilir, önceden planlayın."
+        },
+        {
+          "app": "OpenTable",
+          "description": "🍽️ Restoran rezervasyonları için kullanışlı. Popüler mekanlar için önceden masa ayırtabilirsiniz.<br><br>💡 <strong>İpucu:</strong> Özellikle hafta sonu veya akşam yemeklerinde erken rezervasyon şart."
+        },
+        {
+          "app": "Time Out London",
+          "description": "🎭 Şehrin etkinlik ve aktivitelerini keşfetmek için ideal. Sergiler, konserler, festivaller ve yerel etkinlikleri gösterir.<br><br>💡 <strong>İpucu:</strong> Güncel etkinlikler için uygulama bildirimlerini açın."
+        },
+        {
+          "app": "Met Office",
+          "description": "☔ Londra’nın değişken havasını takip etmek için resmi hava durumu uygulaması. Günlük ve saatlik tahminler sunar.<br><br>💡 <strong>İpucu:</strong> Yağmurlu günlerde rotanızı önceden ayarlayın ve şemsiye/yağmurluk yanınıza alın."
+        }
+      ],
+      "tip": "📶 Havalimanında SIM kart alın veya eSIM kullanın. Londra’da veri paketi olmazsa navigasyon ve canlı güncellemelerden mahrum kalabilirsiniz!"
+    },
+    
+    {
+      "id": "tip-9",
+      "icon": "fa-camera",
+      "title": "Fotoğraf Çekimi İpuçları",
+      "description": "Londra, fotoğraf tutkunları için bir cennet. Şehirdeki ikonik noktaları ve doğru zamanı bilmek, mükemmel kareler yakalamanıza yardımcı olur.",
+      "content": [
+        {
+          "item": "🌉 Tower Bridge",
+          "description": "Gün doğumu veya gün batımında muhteşem görüntüler yakalayabilirsiniz.<br><br>💡 <strong>İpucu:</strong> Köprüden Thames Nehri manzarasını da ekleyerek simetrik kompozisyonlar oluşturun."
+        },
+        {
+          "item": "⏰ Big Ben",
+          "description": "Westminster Bridge’den en iyi açıları yakalayabilirsiniz.<br><br>💡 <strong>İpucu:</strong> Saat kulesi ve Parlamento Binası’nı aynı kareye almak için geniş açılı lens veya panorama modunu kullanın."
+        },
+        {
+          "item": "🎡 London Eye",
+          "description": "Akşam ışıkları için ideal; şehir ışıklarıyla dolu fotoğraflar çekebilirsiniz.<br><br>💡 <strong>İpucu:</strong> Long exposure ile ışık izleri ve Thames’in yansımasını yakalayabilirsiniz."
+        },
+        {
+          "item": "🌉 Millennium Bridge",
+          "description": "St. Paul's Cathedral ile birlikte harika perspektifler sunar.<br><br>💡 <strong>İpucu:</strong> Yürüyüş sırasında farklı açılardan simetrik fotoğraflar deneyin, sabah erken saatler daha sakin kareler verir."
+        }
+      ],
+      "tip": "📸 Altın saat (golden hour) en iyi ışık için ideal: gün doğumundan 1 saat sonra ve gün batımından 1 saat önce çekim yapın."
+    }
+    
+    
+  ]
+}

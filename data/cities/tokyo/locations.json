@@ -1,0 +1,74 @@
+{
+  "locations": [
+    {
+      "id": "t1",
+      "name": "Senso-ji Tapınağı",
+      "category": "historic",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 35.7147,
+        "lng": 139.7966
+      },
+      "description": "Asakusa'da bulunan, Tokyo'nun en eski ve en önemli Budist tapınağı.",
+      "info": "📍 Asakusa<br>🎫 Ücretsiz<br>⏰ Her zaman açık<br>🚃 Metro: Asakusa",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "t2",
+      "name": "Shibuya Yaya Geçidi",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 35.6595,
+        "lng": 139.7005
+      },
+      "description": "Dünyanın en yoğun yaya geçitlerinden biri, Tokyo'nun dinamik atmosferini deneyimlemek için ideal.",
+      "info": "📍 Shibuya<br>🎫 Ücretsiz<br>⏰ Her zaman açık<br>🚃 JR Metro: Shibuya",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "t3",
+      "name": "Meiji Tapınağı",
+      "category": "historic",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 35.6698,
+        "lng": 139.6994
+      },
+      "description": "Yoyogi Park'ın içinde yer alan, İmparator Meiji ve eşi İmparatoriçe Shoken'e adanmış Şinto tapınağı.",
+      "info": "📍 Shibuya, Yoyogi Park<br>🎫 Ücretsiz<br>⏰ Güneşin doğuşundan batışına<br>🚃 JR Metro: Harajuku",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "t4",
+      "name": "Tokyo Skytree",
+      "category": "attractions",
+      "icon": "fa-tower-broadcast",
+      "position": {
+        "lat": 35.7100,
+        "lng": 139.8107
+      },
+      "description": "634 metre uzunluğunda, tüm şehri ayaklarınızın altına seren devasa televizyon ve gözlem kulesi.",
+      "info": "📍 Oshiage<br>🎫 2,100 JPY<br>⏰ 10:00-21:00<br>🚃 Metro: Oshiage",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "t5",
+      "name": "Akihabara",
+      "category": "entertainment",
+      "icon": "fa-gamepad",
+      "position": {
+        "lat": 35.6992,
+        "lng": 139.7714
+      },
+      "description": "Anime, manga ve elektronik eşyaların kalbinin attığı, otaku kültürünün merkezi.",
+      "info": "📍 Chiyoda<br>🎫 Ücretsiz<br>⏰ 10:00-20:00+<br>🚃 JR Metro: Akihabara",
+      "isVisited": false,
+      "plannedDay": 0
+    }
+  ]
+}

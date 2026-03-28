@@ -1,0 +1,1152 @@
+{
+  "locations": [
+    {
+      "id": "lon-1",
+      "name": "British Museum",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 51.5194,
+        "lng": -0.127
+      },
+      "description": "Dünyanın en büyük ve en kapsamlı müzelerinden biri. Rosetta Taşı, Antik Mısır mumyaları, Yunan heykelleri ve 8 milyon eserden oluşan koleksiyon. Giriş tamamen ücretsiz.",
+      "info": "📍 Great Russell St, Bloomsbury<br>🎫 Ücretsiz<br>⏰ 10:00-17:00 (Cuma 20:30'a kadar)<br>🚇 Tottenham Court Road, Russell Square",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-2",
+      "name": "Natural History Museum",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 51.4967,
+        "lng": -0.1764
+      },
+      "description": "80 milyon doğa tarihi örneği barındıran muhteşem müze. Ünlü dinozor iskeletleri, Hope Diamond ve interaktif Dünya Galerisi. Victorian mimarisiyle de görülmeye değer.",
+      "info": "📍 Cromwell Rd, South Kensington<br>🎫 Ücretsiz<br>⏰ 10:00-17:50<br>🚇 South Kensington",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-3",
+      "name": "Tate Modern",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 51.5076,
+        "lng": -0.0994
+      },
+      "description": "Dünyanın en büyük modern sanat müzelerinden biri. Picasso, Warhol, Hockney eserlerini barındırır. Eski güç santralinde konumlanmış, Thames kıyısında muhteşem manzara.",
+      "info": "📍 Bankside, SE1<br>🎫 Ücretsiz (özel sergiler ücretli)<br>⏰ 10:00-18:00<br>🚇 Southwark, London Bridge",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-4",
+      "name": "Victoria and Albert Museum",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 51.4966,
+        "lng": -0.1722
+      },
+      "description": "Dünyanın en büyük sanat ve tasarım müzesi. 5000 yıllık insan yaratıcılığını kapsayan 2.3 milyon eser. Moda, mücevherler, heykel ve dekoratif sanatlar.",
+      "info": "📍 Cromwell Rd, South Kensington<br>🎫 Ücretsiz (özel sergiler ücretli)<br>⏰ 10:00-18:00 (Cuma 22:00'ye kadar)<br>🚇 South Kensington",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-5",
+      "name": "National Gallery",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 51.5089,
+        "lng": -0.1283
+      },
+      "description": "Avrupa resim sanatının en önemli koleksiyonlarından biri. Van Gogh'un Ayçiçekleri, Da Vinci, Monet ve Vermeer eserlerini içerir. Trafalgar Meydanı'na hakim konumda.",
+      "info": "📍 Trafalgar Square<br>🎫 Ücretsiz<br>⏰ 10:00-18:00 (Cuma 21:00'e kadar)<br>🚇 Charing Cross, Leicester Square",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-6",
+      "name": "Science Museum",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 51.4978,
+        "lng": -0.1745
+      },
+      "description": "Bilim ve teknoloji tarihinin en kapsamlı koleksiyonu. Apollo 10 komut modülü, ilk jet motoru ve interaktif galeriler. Çocuklar için ideal.",
+      "info": "📍 Exhibition Rd, South Kensington<br>🎫 Ücretsiz (özel sergiler ücretli)<br>⏰ 10:00-18:00<br>🚇 South Kensington",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-7",
+      "name": "Design Museum",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 51.4996,
+        "lng": -0.1764
+      },
+      "description": "Çağdaş tasarımın öncü müzesi. Ürün tasarımı, moda, mimari ve grafik tasarım sergilerini içerir. Kensington'daki yeni binası modern mimari harikası.",
+      "info": "📍 224-238 Kensington High St<br>🎫 £16 (öğrenci £8)<br>⏰ 10:00-18:00<br>🚇 High Street Kensington",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-8",
+      "name": "Mail Rail at The Postal Museum",
+      "category": "museums",
+      "icon": "fa-landmark",
+      "position": {
+        "lat": 51.5246,
+        "lng": -0.1132
+      },
+      "description": "100 yıllık yeraltı posta treni sistemini deneyimleyin. Dünyanın ilk yeraltı posta demiryolu, 15 dakikalık eşsiz yolculuk sunar.",
+      "info": "📍 15-20 Phoenix Pl, Clerkenwell<br>🎫 £19 (çocuk £17)<br>⏰ 10:00-17:00<br>🚇 Farringdon, Russell Square",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-9",
+      "name": "Tower Bridge",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5055,
+        "lng": -0.0754
+      },
+      "description": "Londra'nın en ikonik köprülerinden biri. Victorian mühendislik harikası olan köprünün cam zeminli üst geçidinden Thames'i izleyin ve tarihi makine dairelerini keşfedin.",
+      "info": "📍 Tower Bridge Rd<br>🎫 £12.30 (online daha ucuz)<br>⏰ 09:30-18:00<br>🚇 Tower Hill, London Bridge",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-10",
+      "name": "St Paul's Cathedral",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5138,
+        "lng": -0.0984
+      },
+      "description": "Christopher Wren'in Barok şaheseri. 300+ basamaklı kubbe tırmanışı Londra'nın en güzel manzaralarından birini sunar. Prens Charles ve Diana'nın düğün yeri.",
+      "info": "📍 St Paul's Churchyard<br>🎫 £25 (öğrenci £22)<br>⏰ 08:30-16:30<br>🚇 St Paul's",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-11",
+      "name": "Buckingham Palace",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5014,
+        "lng": -0.1419
+      },
+      "description": "Kraliçe'nin resmi Londra ikametgahı. Yaz aylarında State Rooms ziyarete açık. Nöbet değişimi töreni yılın belirli günlerinde gerçekleşir.",
+      "info": "📍 Westminster<br>🎫 State Rooms £33 (Temmuz-Ekim)<br>⏰ Nöbet değişimi: Çarşamba, Cumartesi, Pazar 11:00<br>🚇 Green Park, Victoria",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-12",
+      "name": "Big Ben",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5007,
+        "lng": -0.1246
+      },
+      "description": "Westminster Sarayı'nın ikonik saat kulesi. Restorasyon nedeniyle çanlar sınırlı çalıyor ancak dışarıdan görüntüleme mümkün. Houses of Parliament ile birlikte UNESCO Dünya Mirası.",
+      "info": "📍 Westminster<br>🎫 Dışarıdan ücretsiz<br>📸 Westminster Bridge'den en iyi fotoğraf<br>🚇 Westminster",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-13",
+      "name": "London Eye",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5033,
+        "lng": -0.1195
+      },
+      "description": "135 metre yüksekliğindeki dev dönme dolap. 30 dakikalık yolculukta Londra'nın 360 derece panoramik manzarası. Özellikle gün batımında muhteşem.",
+      "info": "📍 Riverside Building, County Hall<br>🎫 £27-32 (online daha ucuz)<br>⏰ 11:00-18:00<br>🚇 Waterloo, Westminster",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-14",
+      "name": "Tower of London",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5081,
+        "lng": -0.0759
+      },
+      "description": "1000 yıllık tarihi kale. Crown Jewels (Kraliyet mücevherleri), Yeoman Warders (Beefeaters) rehberliği ve efsanevi karakargalar. Anne Boleyn'in idam edildiği yer.",
+      "info": "📍 Tower Hill<br>🎫 £34.80 (online £31.30)<br>⏰ 09:00-17:30<br>🚇 Tower Hill",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-15",
+      "name": "Sky Garden",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5112,
+        "lng": -0.0835
+      },
+      "description": "Londra'nın en yüksek kamu bahçesi. 20 Fenchurch Street'in 35-37. katlarında, ücretsiz ancak rezervasyon zorunlu. 360 derece şehir manzarası.",
+      "info": "📍 20 Fenchurch St<br>🎫 Ücretsiz (rezervasyon gerekli)<br>⏰ 10:00-18:00 (Cuma-Cumartesi 21:00'e kadar)<br>🚇 Monument, Bank",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-16",
+      "name": "Trafalgar Square",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.508,
+        "lng": -0.1281
+      },
+      "description": "Londra'nın kalbi sayılan meydan. Nelson Sütunu, dört bronz aslan heykeli ve çevreleyen tarihi binalar. Yılbaşı kutlamaları ve etkinliklerin merkezi.",
+      "info": "📍 Westminster<br>🎫 Ücretsiz<br>⏰ Her zaman açık<br>🚇 Charing Cross, Leicester Square",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-17",
+      "name": "Piccadilly Circus",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5094,
+        "lng": -0.134
+      },
+      "description": "Neon tabelaları ve Shaftesbury Memorial Fountain (Eros) ile ünlü kavşak. Londra'nın Times Square'i olarak bilinir, tiyatro bölgesinin girişi.",
+      "info": "📍 West End<br>🎫 Ücretsiz<br>⏰ Her zaman açık<br>🚇 Piccadilly Circus",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-18",
+      "name": "Covent Garden",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5118,
+        "lng": -0.1226
+      },
+      "description": "Sokak sanatçıları, boutique mağazalar ve restoranlarla dolu tarihi pazar. Apple Market'te el sanatları, opera sanatçıları ve büyücüler performans sergiler.",
+      "info": "📍 Covent Garden<br>🎫 Ücretsiz<br>⏰ 10:00-20:00 (mağazalar)<br>🚇 Covent Garden",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-19",
+      "name": "Chinatown",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5112,
+        "lng": -0.1311
+      },
+      "description": "Soho'daki otantik Çin mahallesi. Gerrard Street'teki renkli fenerler, dim sum restoranları ve Çin Yeni Yılı kutlamaları. 40+ Çin restoranı.",
+      "info": "📍 Soho<br>💰 Yemek ££<br>⏰ Her zaman açık<br>🚇 Leicester Square, Piccadilly Circus",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-20",
+      "name": "Notting Hill",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.516,
+        "lng": -0.209
+      },
+      "description": "Renkli Victorian evleri ve Portobello Road antika pazarı ile ünlü. Hugh Grant filmi ile meşhur olan mahalle, cumartesi pazarı için ideal.",
+      "info": "📍 West London<br>🎫 Sokaklar ücretsiz<br>⏰ Portobello Pazarı: Cumartesi 09:00-19:00<br>🚇 Notting Hill Gate",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-21",
+      "name": "Canary Wharf",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.5054,
+        "lng": -0.0235
+      },
+      "description": "Londra'nın modern finans bölgesi. Gökdelenler, alışveriş merkezleri ve çağdaş mimarinin sergilendiği alan. Jubilee Park'tan Thames manzarası.",
+      "info": "📍 Isle of Dogs<br>🎫 Ücretsiz<br>⏰ Her zaman açık<br>🚇 Canary Wharf",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-22",
+      "name": "Greenwich",
+      "category": "attractions",
+      "icon": "fa-star",
+      "position": {
+        "lat": 51.4769,
+        "lng": -0.0005
+      },
+      "description": "Sıfır meridyeni (Prime Meridian), Royal Observatory ve National Maritime Museum'un bulunduğu UNESCO Dünya Mirası bölgesi. Şehrin panoramik manzarası.",
+      "info": "📍 Greenwich<br>🎫 Park ücretsiz, müzeler ücretli<br>⏰ 06:00-22:00<br>🚇 Cutty Sark DLR",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-23",
+      "name": "Hyde Park",
+      "category": "parks",
+      "icon": "fa-tree",
+      "position": {
+        "lat": 51.5073,
+        "lng": -0.1657
+      },
+      "description": "Londra'nın en büyük Royal Park'ı. Serpentine Lake, Diana Memorial, Speaker's Corner ve Hyde Park Corner. Pedal bot kiralama ve at binme mümkün.",
+      "info": "📍 Central London<br>🎫 Ücretsiz<br>⏰ 05:00-24:00<br>🚇 Hyde Park Corner, Marble Arch, Lancaster Gate",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-24",
+      "name": "Regent's Park",
+      "category": "parks",
+      "icon": "fa-tree",
+      "position": {
+        "lat": 51.5313,
+        "lng": -0.1563
+      },
+      "description": "Queen Mary's Gardens'taki 12.000 gül çeşidi, London Zoo ve açık hava tiyatrosu. Primrose Hill'den Londra'nın en güzel manzaralarından biri.",
+      "info": "📍 Marylebone<br>🎫 Ücretsiz (zoo ücretli)<br>⏰ 05:00-21:00<br>🚇 Regent's Park, Baker Street",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-25",
+      "name": "St. James's Park",
+      "category": "parks",
+      "icon": "fa-tree",
+      "position": {
+        "lat": 51.5045,
+        "lng": -0.1339
+      },
+      "description": "Royal Park'ların en eski ve en küçüğü. Duck Lake'teki pelikanlar (günde 2 kez beslenir), Buckingham Palace manzarası ve çiçek bordürleri.",
+      "info": "📍 Westminster<br>🎫 Ücretsiz<br>⏰ 05:00-24:00<br>🚇 St James's Park, Green Park",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-26",
+      "name": "Brewers Lane",
+      "category": "attractions",
+      "icon": "fa-map-marker-alt",
+      "position": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "description": "Tarihi sokak ve bira üretim alanı. Londra'nın endüstriyel mirasını keşfedin.",
+      "info": "📍 London<br>💰 Ücretsiz<br>⏰ 24 saat<br>🚇 Yakın metro",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-27",
+      "name": "Horizon 22",
+      "category": "attractions",
+      "icon": "fa-building",
+      "position": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "description": "Modern gökdelen ve panoramik şehir manzarası. 22. kattan Londra'yı izleyin.",
+      "info": "📍 London<br>💰 £15-25<br>⏰ 10:00-22:00<br>🚇 Yakın metro",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-28",
+      "name": "St Katharine Docks",
+      "category": "attractions",
+      "icon": "fa-anchor",
+      "position": {
+        "lat": 51.5061,
+        "lng": -0.0713
+      },
+      "description": "Tarihi marina ve yat limanı. Thames nehrinde tekne turları ve waterfront dining.",
+      "info": "📍 Tower Bridge yakını<br>💰 Ücretsiz giriş<br>⏰ 24 saat<br>🚇 Tower Hill",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-29",
+      "name": "IFS Cloud Cable Car",
+      "category": "attractions",
+      "icon": "fa-cable-car",
+      "position": {
+        "lat": 51.5008,
+        "lng": 0.0081
+      },
+      "description": "Thames üzerinden Greenwich'e teleferik yolculuğu. Panoramik Londra manzarası.",
+      "info": "📍 Greenwich Peninsula<br>💰 £4.50-6<br>⏰ 07:00-21:00<br>🚇 North Greenwich",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-30",
+      "name": "Greenwich Foot Tunnel",
+      "category": "attractions",
+      "icon": "fa-route",
+      "position": {
+        "lat": 51.4826,
+        "lng": -0.0106
+      },
+      "description": "Victorian dönem yeraltı tüneli. Thames'in altından Isle of Dogs'a yürüyüş.",
+      "info": "📍 Greenwich<br>💰 Ücretsiz<br>⏰ 24 saat<br>🚇 Cutty Sark",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-31",
+      "name": "HERE at Outernet",
+      "category": "attractions",
+      "icon": "fa-tv",
+      "position": {
+        "lat": 51.5171,
+        "lng": -0.131
+      },
+      "description": "İmmersive dijital deneyim merkezi. 360° ekranlar ve interaktif teknoloji.",
+      "info": "📍 Tottenham Court Road<br>💰 £15-30<br>⏰ 10:00-22:00<br>🚇 Tottenham Court Road",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-32",
+      "name": "Oxford",
+      "category": "attractions",
+      "icon": "fa-university",
+      "position": {
+        "lat": 51.752,
+        "lng": -1.2577
+      },
+      "description": "Ünlü üniversite şehri. Tarihi binalar, kütüphaneler ve akademik atmosfer.",
+      "info": "📍 Oxford<br>💰 Çeşitli<br>⏰ Çeşitli<br>🚇 Oxford (trenle 1 saat)",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-33",
+      "name": "Kensington",
+      "category": "attractions",
+      "icon": "fa-crown",
+      "position": {
+        "lat": 51.4994,
+        "lng": -0.1746
+      },
+      "description": "Kraliyet bölgesi. Saraylar, müzeler ve lüks alışveriş alanları.",
+      "info": "📍 Kensington<br>💰 Çeşitli<br>⏰ Çeşitli<br>🚇 Kensington",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-34",
+      "name": "Royal Opera House",
+      "category": "attractions",
+      "icon": "fa-theater-masks",
+      "position": {
+        "lat": 51.5129,
+        "lng": -0.1223
+      },
+      "description": "Dünyaca ünlü opera ve bale merkezi. Covent Garden'da prestijli sanat deneyimi.",
+      "info": "📍 Covent Garden<br>💰 £15-200<br>⏰ Gösteri takvimi<br>🚇 Covent Garden",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-35",
+      "name": "Dover",
+      "category": "attractions",
+      "icon": "fa-mountain",
+      "position": {
+        "lat": 51.1279,
+        "lng": 1.3134
+      },
+      "description": "Beyaz kayalıklar ve tarihi kale. İngiliz Kanalı manzarası ve Kıta Avrupası'na geçiş.",
+      "info": "📍 Dover<br>💰 Çeşitli<br>⏰ Çeşitli<br>🚇 Dover (trenle 1.5 saat)",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-36",
+      "name": "Canterbury",
+      "category": "attractions",
+      "icon": "fa-church",
+      "position": {
+        "lat": 51.2802,
+        "lng": 1.0789
+      },
+      "description": "Tarihi katedral şehri. UNESCO Dünya Mirası ve Chaucer'ın Canterbury Hikayeleri.",
+      "info": "📍 Canterbury<br>💰 £12-15<br>⏰ 09:00-17:00<br>🚇 Canterbury (trenle 1 saat)",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-37",
+      "name": "Greenwich Park",
+      "category": "parks",
+      "icon": "fa-tree",
+      "position": {
+        "lat": 51.4769,
+        "lng": -0.0005
+      },
+      "description": "Royal Observatory'nin bulunduğu park. Tepenin zirvesinden Londra'nın en güzel panoramik manzarası, 13. yüzyıldan kalma geyik sürüsü.",
+      "info": "📍 Greenwich<br>🎫 Ücretsiz<br>⏰ 06:00-22:00<br>🚇 Cutty Sark DLR",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-38",
+      "name": "Barbican Conservatory",
+      "category": "parks",
+      "icon": "fa-tree",
+      "position": {
+        "lat": 51.52,
+        "lng": -0.0932
+      },
+      "description": "Londra'nın ikinci büyük kapalı tropikal sera bahçesi. 2000'den fazla tropik bitki ve balık türü. Sadece hafta sonları açık.",
+      "info": "📍 Barbican Centre<br>🎫 Ücretsiz<br>⏰ Sadece hafta sonları 12:00-17:00<br>🚇 Barbican",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-39",
+      "name": "Kew Gardens - Treetop Walkway",
+      "category": "parks",
+      "icon": "fa-tree",
+      "position": {
+        "lat": 51.4756,
+        "lng": -0.2973
+      },
+      "description": "200 yaşındaki ağaçların tepesinde 18 metre yükseklikte yürüyüş yolu. 40.000 bitki türü olan Kew Gardens'ın özel deneyimi.",
+      "info": "📍 Royal Botanic Gardens, Kew<br>🎫 £19 (online £17)<br>⏰ 10:00-18:00<br>🚇 Kew Gardens",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-40",
+      "name": "Dagon Yolu",
+      "category": "parks",
+      "icon": "fa-tree",
+      "position": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "description": "Şehir merkezinde doğal yürüyüş parkuru. Sakin atmosfer ve yeşil alanlar.",
+      "info": "📍 London<br>💰 Ücretsiz<br>⏰ 06:00-20:00<br>🚇 Yakın metro",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-41",
+      "name": "Dishoom Covent Garden",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5123,
+        "lng": -0.1232
+      },
+      "description": "1960'lar Bombay irani kafelerinden ilham alan restoran. Ünlü black daal, house chai ve bacon naan. Çok popüler, rezervasyon öneriliyor.",
+      "info": "📍 12 Upper St Martin's Ln, Covent Garden<br>💰 Ana yemek £12-18<br>⏰ 08:00-23:00<br>🚇 Leicester Square",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-42",
+      "name": "Borough Market",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5055,
+        "lng": -0.0909
+      },
+      "description": "1000 yıllık Londra'nın en eski gıda pazarı. Artisan peynirler, taze deniz ürünleri, sokak yemekleri ve dünya mutfakları. 100+ satıcı.",
+      "info": "📍 8 Southwark St<br>💰 £3-15 arası<br>⏰ Çar-Cum 10:00-17:00, Cum-Cts 10:00-18:00<br>🚇 London Bridge",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-43",
+      "name": "Sketch (The Pink Room)",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5138,
+        "lng": -0.1407
+      },
+      "description": "Instagram fenomeni pembe afternoon tea salonu. Michelin yıldızlı, surreal tasarım ve ünlü egg pod tuvaletleri. Rezervasyon zorunlu.",
+      "info": "📍 9 Conduit St, Mayfair<br>💰 Afternoon tea £59-89<br>⏰ 12:00-01:30<br>🚇 Oxford Circus",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-44",
+      "name": "Flat Iron",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5142,
+        "lng": -0.127
+      },
+      "description": "Sadece flat iron steak sunan özel konsept. £12'ye kaliteli biftek, sınırsız salatalar ve friendly service. Kuyruk beklemeye değer.",
+      "info": "📍 17 Beak St, Soho<br>💰 Steak £12<br>⏰ 12:00-23:00<br>🚇 Oxford Circus, Piccadilly Circus",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-45",
+      "name": "Hakkasan Mayfair",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5102,
+        "lng": -0.145
+      },
+      "description": "Michelin yıldızlı Cantonese restoran. Sofistike dim sum, Peking ördeği ve premium Çin mutfağı. Gece kulübü atmosferiyle lüks deneyim.",
+      "info": "📍 17 Bruton St, Mayfair<br>💰 Ana yemek £25-45<br>⏰ 12:00-23:30<br>🚇 Green Park, Bond Street",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-46",
+      "name": "Hoppers Soho",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5128,
+        "lng": -0.1083
+      },
+      "description": "Sri Lanka sokak yemekleri. Ünlü hoppers (bowl shaped pancakes), kottu roti ve coconut sambol. Rezervasyon yok, kuyruk normal.",
+      "info": "📍 49 Frith St, Soho<br>💰 Ana yemek £8-15<br>⏰ 12:00-14:30, 17:30-22:30<br>🚇 Tottenham Court Road",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-47",
+      "name": "Granger & Co. Clerkenwell",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5238,
+        "lng": -0.1053
+      },
+      "description": "Bill Granger'ın Avustralya tarzı brunch konsepti. Ünlü ricotta hotcakes, scrambled eggs ve avokado tostu. Hafta sonu yoğun.",
+      "info": "📍 50 Sekforde St, Clerkenwell<br>💰 Brunch £8-16<br>⏰ 07:00-17:00<br>🚇 Farringdon",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-48",
+      "name": "The Breakfast Club Soho",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.514,
+        "lng": -0.134
+      },
+      "description": "80'ler temalı Amerikan diner. Full English breakfast, pancakes ve milkshakes. Retro müzik ve nostaljik dekor.",
+      "info": "📍 33 D'Arblay St, Soho<br>💰 Kahvaltı £7-13<br>⏰ 07:00-19:00<br>🚇 Oxford Circus",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-49",
+      "name": "Padella",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5055,
+        "lng": -0.0909
+      },
+      "description": "Borough Market'te taze el yapımı pasta uzmanı. Sadece 6 çeşit pasta, günlük taze yapım. Genellikle 30+ dakika kuyruk.",
+      "info": "📍 6 Southwark St, Borough Market<br>💰 Pasta £6-9<br>⏰ 12:00-16:00<br>🚇 London Bridge",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-50",
+      "name": "Cobblers Cafe",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "description": "Rahat ve samimi atmosferde kahve ve hafif yemekler. Yerel halkın sıkça tercih ettiği dostane cafe.",
+      "info": "📍 London<br>💰 £5-15<br>⏰ 07:00-18:00<br>🚇 Yakın metro",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-51",
+      "name": "The ELAN Deli & Bakery - Covent Garden",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5118,
+        "lng": -0.1233
+      },
+      "description": "Covent Garden'da taze fırın ürünleri ve deli lezzetleri. Kaliteli malzemeler ve ev yapımı tatlar.",
+      "info": "📍 Covent Garden<br>💰 £8-20<br>⏰ 08:00-19:00<br>🚇 Covent Garden",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-52",
+      "name": "Le Pain Quotidien Venise Entrecote - Marylebone",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5154,
+        "lng": -0.1544
+      },
+      "description": "Paris merkezli et ve patates ile meşhur olan bir mekan. Kaliteli entrecote ve özel patates preparasyonları.",
+      "info": "📍 Marylebone<br>💰 £15-35<br>⏰ 12:00-22:00<br>🚇 Marylebone",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-53",
+      "name": "Granger & Co. Chelsea",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.4927,
+        "lng": -0.1629
+      },
+      "description": "Avustralya tarzı modern kahvaltı ve brunch. Taze malzemeler ve yaratıcı tatlar.",
+      "info": "📍 Chelsea<br>💰 £12-25<br>⏰ 08:00-18:00<br>🚇 Sloane Square",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-54",
+      "name": "Krispy Kreme",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "description": "Dünyaca ünlü taze donut zinciri. Sıcak, şekerli ve çeşitli soslarla servis edilen donutlar.",
+      "info": "📍 London<br>💰 £2-8<br>⏰ 06:00-23:00<br>🚇 Çeşitli lokasyonlar",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-55",
+      "name": "Five Guys Burgers and Fries Tottenham Court Road",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5171,
+        "lng": -0.131
+      },
+      "description": "Amerika kökenli premium burger zinciri. Taze malzemeler, el yapımı patates kızartması.",
+      "info": "📍 Tottenham Court Road<br>💰 £8-15<br>⏰ 11:00-23:00<br>🚇 Tottenham Court Road",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-56",
+      "name": "Bleecker Burger Seven Dials Market",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.514,
+        "lng": -0.1265
+      },
+      "description": "Londra'nın en iyi burger yerlerinden biri. Kaliteli et ve el yapımı soslarla meşhur.",
+      "info": "📍 Seven Dials Market<br>💰 £10-18<br>⏰ 12:00-22:00<br>🚇 Covent Garden",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-57",
+      "name": "Granger & Co. Marylebone",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5154,
+        "lng": -0.1544
+      },
+      "description": "Avustralya tarzı modern kahvaltı ve brunch. Taze malzemeler ve yaratıcı tatlar.",
+      "info": "📍 Marylebone<br>💰 £12-25<br>⏰ 08:00-18:00<br>🚇 Marylebone",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-58",
+      "name": "Fortitude Bakehouse",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "description": "Artisan fırın ve cafe. El yapımı ekmekler, pastalar ve specialty kahve.",
+      "info": "📍 London<br>💰 £6-18<br>⏰ 07:00-18:00<br>🚇 Yakın metro",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-59",
+      "name": "GAIL's Bakery Bloomsbury",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.52,
+        "lng": -0.1289
+      },
+      "description": "Londra'nın sevilen fırın zinciri. Taze ekmek, pastry ve kaliteli kahve.",
+      "info": "📍 Bloomsbury<br>💰 £4-12<br>⏰ 07:00-19:00<br>🚇 Russell Square",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-60",
+      "name": "JOE & THE JUICE",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "description": "Danimarka kökenli sağlıklı yiyecek zinciri. Taze meyve suları, smoothie ve sandviçler.",
+      "info": "📍 London<br>💰 £5-15<br>⏰ 07:00-21:00<br>🚇 Çeşitli lokasyonlar",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-61",
+      "name": "Ben's Cookies",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "description": "Oxford kökenli taze kurabiye dükkanı. Sıcak, yumuşak ve çeşitli lezzetlerde kurabiyeler.",
+      "info": "📍 London<br>💰 £2-8<br>⏰ 08:00-20:00<br>🚇 Çeşitli lokasyonlar",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-62",
+      "name": "Supernova",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "description": "Modern mutfak ve yaratıcı yemekler. Kozmopolit atmosfer ve inovatif lezzetler.",
+      "info": "📍 London<br>💰 £15-35<br>⏰ 18:00-24:00<br>🚇 Yakın metro",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-63",
+      "name": "The Garden at 120",
+      "category": "restaurants",
+      "icon": "fa-utensils",
+      "position": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "description": "Şehir merkezinde bahçe temalı restoran. Doğal atmosfer ve mevsimlik menü.",
+      "info": "📍 London<br>💰 £20-40<br>⏰ 12:00-22:00<br>🚇 Yakın metro",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-64",
+      "name": "Peggy Jean at Riverside Green",
+      "category": "restaurants",
+      "icon": "fa-utensil-spoon",
+      "position": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "description": "Nehir kenarında rahat dining deneyimi. Taze malzemeler ve açık hava yemek alanı.",
+      "info": "📍 Riverside Green<br>💰 £18-35<br>⏰ 11:00-22:00<br>🚇 Yakın metro",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-65",
+      "name": "Monmouth Coffee Company",
+      "category": "cafes",
+      "icon": "fa-coffee",
+      "position": {
+        "lat": 51.5139,
+        "lng": -0.1279
+      },
+      "description": "1978'den beri Londra'nın en iyi kahve kavurcusu. Kendi kavurdukları çekirdeklerden taze demlenmiş kahve. Sadece ayakta içim.",
+      "info": "📍 27 Monmouth St, Covent Garden<br>💰 Kahve £2-4<br>⏰ 08:00-18:30<br>🚇 Covent Garden",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-66",
+      "name": "Workshop Coffee",
+      "category": "cafes",
+      "icon": "fa-coffee",
+      "position": {
+        "lat": 51.5151,
+        "lng": -0.1445
+      },
+      "description": "Specialty coffee pioneer. V60, chemex ve espresso seçenekleri. Kahve workshops ve cupping sessions düzenler.",
+      "info": "📍 27 Clerkenwell Rd<br>💰 Kahve £3-5<br>⏰ 07:00-18:00<br>🚇 Farringdon",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-67",
+      "name": "Princi Bakery",
+      "category": "cafes",
+      "icon": "fa-coffee",
+      "position": {
+        "lat": 51.5151,
+        "lng": -0.1404
+      },
+      "description": "İtalyan fırın zinciri. Taze focaccia, sourdough ekmeği ve İtalyan pastalar. Milano tarzı otantik atmosfer.",
+      "info": "📍 135 Wardour St, Soho<br>💰 Pasta £3-8<br>⏰ 08:00-20:00<br>🚇 Tottenham Court Road",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-68",
+      "name": "Nostos Coffee",
+      "category": "cafes",
+      "icon": "fa-coffee",
+      "position": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "description": "Specialty coffee ve artisan pastries. Sakin atmosfer ve kaliteli kahve çekirdekleri.",
+      "info": "📍 London<br>💰 £3-8<br>⏰ 07:00-18:00<br>🚇 Yakın metro",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-69",
+      "name": "Fernandez & Wells",
+      "category": "cafes",
+      "icon": "fa-coffee",
+      "position": {
+        "lat": 51.514,
+        "lng": -0.132
+      },
+      "description": "Soho'da küçük kahve dükkanı. Kaliteli espresso, taze sandviçler ve Continental breakfast. Minimal tasarım.",
+      "info": "📍 43 Lexington St, Soho<br>💰 Kahve £2-4<br>⏰ 07:30-17:00<br>🚇 Oxford Circus",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-70",
+      "name": "Harrods",
+      "category": "shopping",
+      "icon": "fa-shopping-bag",
+      "position": {
+        "lat": 51.4994,
+        "lng": -0.1634
+      },
+      "description": "Dünyanın en ünlü lüks mağazası. 330 departman, food hall ve Egyptian Escalator. Mohamed Al-Fayed döneminin ihtişamı devam ediyor.",
+      "info": "📍 87-135 Brompton Rd, Knightsbridge<br>💰 £££<br>⏰ 10:00-21:00 (Pazar 11:30-18:00)<br>🚇 Knightsbridge",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-71",
+      "name": "Oxford Street",
+      "category": "shopping",
+      "icon": "fa-shopping-bag",
+      "position": {
+        "lat": 51.5152,
+        "lng": -0.1419
+      },
+      "description": "Avrupa'nın en yoğun alışveriş caddesi. Oxford Circus'tan Marble Arch'a 300+ mağaza. Selfridges, John Lewis ve flagship store'lar.",
+      "info": "📍 Oxford Street<br>💰 £-£££<br>⏰ 10:00-21:00 (Pazar 12:00-18:00)<br>🚇 Oxford Circus, Bond Street",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-72",
+      "name": "Camden Market",
+      "category": "shopping",
+      "icon": "fa-shopping-bag",
+      "position": {
+        "lat": 51.5417,
+        "lng": -0.1461
+      },
+      "description": "Alternatif kültürün kalbi. Vintage kıyafetler, handmade takılar, sokak sanatı ve dünya mutfakları. 1000+ stall ve dükkan.",
+      "info": "📍 Camden High St<br>💰 £-££<br>⏰ 10:00-18:00<br>🚇 Camden Town",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-73",
+      "name": "Regent Street",
+      "category": "shopping",
+      "icon": "fa-shopping-bag",
+      "position": {
+        "lat": 51.5125,
+        "lng": -0.1402
+      },
+      "description": "Zarif curved Georgian mimarisi. Apple Store, Hamley's oyuncak mağazası, Liberty ve lüks markalar. Christmas lights ile ünlü.",
+      "info": "📍 Regent Street<br>💰 ££-£££<br>⏰ 10:00-20:00<br>🚇 Oxford Circus, Piccadilly Circus ",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-74",
+      "name": "Westfield London",
+      "category": "shopping",
+      "icon": "fa-shopping-bag",
+      "position": {
+        "lat": 51.5077,
+        "lng": -0.2197
+      },
+      "description": "Avrupa'nın en büyük alışveriş merkezlerinden biri. 300+ mağaza, cinema, restaurant ve lüks markalar. White City'de modern kompleks.",
+      "info": "📍 Ariel Way, Shepherd's Bush<br>💰 £-£££<br>⏰ 10:00-22:00 (Pazar 12:00-18:00)<br>🚇 Shepherd's Bush",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-75",
+      "name": "Portobello Road Market",
+      "category": "shopping",
+      "icon": "fa-shopping-bag",
+      "position": {
+        "lat": 51.5158,
+        "lng": -0.2058
+      },
+      "description": "Dünyanın en büyük antika pazarı. Cumartesi günleri 2000+ satıcı, vintage kıyafetler, antikalar ve sokak yemekleri. Film lokasyonu.",
+      "info": "📍 Portobello Rd, Notting Hill<br>💰 £-£££<br>⏰ Cumartesi 09:00-19:00 (antika), her gün (diğer)<br>🚇 Notting Hill Gate",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-76",
+      "name": "Redchurch Street",
+      "category": "shopping",
+      "icon": "fa-shopping-bag",
+      "position": {
+        "lat": 51.5266,
+        "lng": -0.077
+      },
+      "description": "Shoreditch'te trendy butikler ve vintage mağazalar. Bağımsız tasarımcı dükkanları.",
+      "info": "📍 Shoreditch<br>💰 Çeşitli<br>⏰ 10:00-19:00<br>🚇 Liverpool Street",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-77",
+      "name": "Columbia Road Flower Market",
+      "category": "shopping",
+      "icon": "fa-seedling",
+      "position": {
+        "lat": 51.5305,
+        "lng": -0.0691
+      },
+      "description": "Pazar günleri çiçek pazarı. Taze çiçekler, bitkiler ve vintage eşyalar.",
+      "info": "📍 Bethnal Green<br>💰 £2-20<br>⏰ Pazar 08:00-15:00<br>🚇 Bethnal Green",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-78",
+      "name": "Marylebone",
+      "category": "shopping",
+      "icon": "fa-shopping-bag",
+      "position": {
+        "lat": 51.5154,
+        "lng": -0.1544
+      },
+      "description": "Lüks alışveriş bölgesi. High Street mağazalar ve butik dükkanlar.",
+      "info": "📍 Marylebone<br>💰 Çeşitli<br>⏰ 09:00-20:00<br>🚇 Marylebone",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-79",
+      "name": "Knightsbridge",
+      "category": "shopping",
+      "icon": "fa-gem",
+      "position": {
+        "lat": 51.4994,
+        "lng": -0.1746
+      },
+      "description": "Lüks alışveriş merkezi. Harrods, Harvey Nichols ve designer mağazalar.",
+      "info": "📍 Knightsbridge<br>💰 Premium<br>⏰ 10:00-20:00<br>🚇 Knightsbridge",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-80",
+      "name": "The O2",
+      "category": "shopping",
+      "icon": "fa-shopping-center",
+      "position": {
+        "lat": 51.5032,
+        "lng": 0.0031
+      },
+      "description": "Eğlence ve alışveriş kompleksi. Mağazalar, restoranlar ve etkinlik alanları.",
+      "info": "📍 Greenwich Peninsula<br>💰 Çeşitli<br>⏰ 10:00-23:00<br>🚇 North Greenwich",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-81",
+      "name": "Bicester Village",
+      "category": "shopping",
+      "icon": "fa-percentage",
+      "position": {
+        "lat": 51.8998,
+        "lng": -1.1503
+      },
+      "description": "Lüks outlet alışveriş köyü. Designer markalarda %70'e kadar indirim.",
+      "info": "📍 Bicester<br>💰 Outlet fiyatları<br>⏰ 09:00-20:00<br>🚇 Bicester Village (trenle 1 saat)",
+      "isVisited": false,
+      "plannedDay": 0
+    },
+    {
+      "id": "lon-82",
+      "name": "Stratford Centre",
+      "category": "shopping",
+      "icon": "fa-shopping-cart",
+      "position": {
+        "lat": 51.5416,
+        "lng": -0.0042
+      },
+      "description": "Modern alışveriş merkezi. High street mağazalar ve food court.",
+      "info": "📍 Stratford<br>💰 Orta segment<br>⏰ 09:00-22:00<br>🚇 Stratford",
+      "isVisited": false,
+      "plannedDay": 0
+    }
+  ]
+}
