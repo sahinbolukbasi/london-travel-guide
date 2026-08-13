@@ -8,13 +8,17 @@
     <meta name="author" content="Dünya Gezi Rehberi">
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Gezi Rehberi">
+    <meta property="og:title" content="Gezi Rehberi | World Travel Guide">
     <meta property="og:description" content="Gezilecek en güzel yerler ve önerilen rotalar">
+    <meta property="og:url" content="https://worldtravelguid.uk/city.html">
     
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Gezi Rehberi">
+    <meta property="twitter:title" content="Gezi Rehberi | World Travel Guide">
+    <meta property="twitter:url" content="https://worldtravelguid.uk/city.html">
     
-    <title>Gezi Rehberi</title>
+    <link rel="canonical" href="https://worldtravelguid.uk/city.html">
+    
+    <title>Gezi Rehberi | World Travel Guide</title>
     
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🗺️</text></svg>">
     
@@ -45,6 +49,14 @@
                     <h1 id="cityTitle">Gezi Rehberi</h1>
                 </div>
                 <div class="header-actions" id="headerActions">
+                    <button class="nav-link-btn city-nav-link" id="cloudArchBtn">
+                        <i class="fas fa-cloud"></i>
+                        <span data-i18n="nav_cloud">Bulut Mimarisi & AWS</span>
+                    </button>
+                    <button class="nav-link-btn city-nav-link" id="aboutNavBtn">
+                        <i class="fas fa-circle-info"></i>
+                        <span data-i18n="nav_about">Hakkımızda</span>
+                    </button>
                     <div class="lang-switcher" id="langSwitcher">
                         <button data-lang="tr" class="active">TR</button>
                         <button data-lang="en">EN</button>
@@ -195,8 +207,6 @@
                         </div>
                     </div>
                 </div>
-                </div>
-
             </div>
 
             <!-- Detailed Tips Section -->
@@ -215,6 +225,198 @@
             </div>
         </div>
     </main>
+
+    <!-- AWS Cloud Architecture Modal -->
+    <div class="modal" id="cloudArchModal">
+        <div class="modal-content modal-content-wide dark-modal" style="background: #0f172a; color: #f8fafc; border: 1px solid rgba(255,255,255,0.15);">
+            <div class="modal-header" style="border-bottom-color: rgba(255,255,255,0.1);">
+                <h3 style="color: #ffffff;"><i class="fas fa-cloud" style="color: #38bdf8;"></i> <span data-i18n="cloud_modal_title">Platform & AWS Bulut Mimarisi</span></h3>
+                <button class="modal-close" id="closeCloudArchModal" style="color: #ffffff;"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" style="padding: 1.5rem;">
+                <div class="modal-hero-banner">
+                    <div class="aws-badge-header">
+                        <i class="fab fa-aws"></i> AWS ACTIVATE READY
+                    </div>
+                    <h3 data-i18n="cloud_hero_title">İnteraktif Coğrafi Seyahat Rehberi Platformu</h3>
+                    <p data-i18n="cloud_hero_desc">Platformumuz, kullanıcıların dünya genelindeki şehirleri 3D küre ve vektörel haritalar üzerinde keşfetmelerini, kişiselleştirilmiş seyahat rotaları oluşturmalarını ve veri analitiği ile gezilerini planlamalarını sağlayan bulut tabanlı bir sistemdir.</p>
+                </div>
+
+                <h4 style="margin-bottom: 1rem; color: #38bdf8; font-size: 1.1rem;" data-i18n="cloud_stack_title">AWS Bulut Altyapısı & Servis Mimarisi</h4>
+                
+                <div class="aws-grid">
+                    <div class="aws-card">
+                        <div class="aws-card-header">
+                            <div class="aws-icon orange"><i class="fab fa-aws"></i></div>
+                            <div>
+                                <div class="aws-card-title">Amazon CloudFront & S3</div>
+                                <div class="aws-card-service">Global Content Delivery</div>
+                            </div>
+                        </div>
+                        <div class="aws-card-desc" data-i18n="aws_s3_desc">3D küre kaplamaları, yüksek çözünürlüklü vektör harita karoları ve medya varlıklarının dünya genelinde düşük gecikmeyle (edge location) dağıtılması.</div>
+                        <div class="aws-card-tags">
+                            <span class="aws-tag">CDN</span>
+                            <span class="aws-tag">Low Latency</span>
+                            <span class="aws-tag">Global Cache</span>
+                        </div>
+                    </div>
+
+                    <div class="aws-card">
+                        <div class="aws-card-header">
+                            <div class="aws-icon green"><i class="fas fa-server"></i></div>
+                            <div>
+                                <div class="aws-card-title">AWS Lambda & API Gateway</div>
+                                <div class="aws-card-service">Serverless Microservices</div>
+                            </div>
+                        </div>
+                        <div class="aws-card-desc" data-i18n="aws_lambda_desc">Sunucusuz (serverless) mimari ile dinamik lokasyon aramaları, rota hesaplama algoritmaları ve kullanıcı geri bildirim mikro-servislerinin yürütülmesi.</div>
+                        <div class="aws-card-tags">
+                            <span class="aws-tag">Serverless</span>
+                            <span class="aws-tag">Auto-Scale</span>
+                            <span class="aws-tag">REST API</span>
+                        </div>
+                    </div>
+
+                    <div class="aws-card">
+                        <div class="aws-card-header">
+                            <div class="aws-icon purple"><i class="fas fa-database"></i></div>
+                            <div>
+                                <div class="aws-card-title">Amazon DynamoDB</div>
+                                <div class="aws-card-service">NoSQL Geospatial Data</div>
+                            </div>
+                        </div>
+                        <div class="aws-card-desc" data-i18n="aws_dynamo_desc">Global şehir POI (Points of Interest) verilerinin, kullanıcı favori listelerinin ve anlık seyahat analitiğinin milisaniye düzeyinde erişimle saklanması.</div>
+                        <div class="aws-card-tags">
+                            <span class="aws-tag">NoSQL</span>
+                            <span class="aws-tag">Geo-Indexing</span>
+                            <span class="aws-tag">High Throughput</span>
+                        </div>
+                    </div>
+
+                    <div class="aws-card">
+                        <div class="aws-card-header">
+                            <div class="aws-icon"><i class="fas fa-shield-halved"></i></div>
+                            <div>
+                                <div class="aws-card-title">Amazon CloudWatch & Route 53</div>
+                                <div class="aws-card-service">Monitoring & Global DNS</div>
+                            </div>
+                        </div>
+                        <div class="aws-card-desc" data-i18n="aws_watch_desc">Gerçek zamanlı sistem sağlık metriği izleme, otomatik SSL/TLS sertifika yönetimi ve DNS yönlendirme güvenliği.</div>
+                        <div class="aws-card-tags">
+                            <span class="aws-tag">Telemetry</span>
+                            <span class="aws-tag">Route 53 DNS</span>
+                            <span class="aws-tag">HTTPS SSL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; background: rgba(255,255,255,0.05); padding: 1.2rem; border-radius: 10px; border-left: 4px solid #38bdf8;">
+                    <h5 style="color: #ffffff; font-size: 0.95rem; margin-bottom: 0.5rem;" data-i18n="cloud_purpose_heading">🎯 Projenin Amacı ve Hedefleri</h5>
+                    <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.6;" data-i18n="cloud_purpose_text">Bu platform, gezginlere sıradan rehberlerin ötesinde interaktif 3D haritalar, kategori tabanlı akıllı filtreleme ve kişiselleştirilmiş rota günlükleri sunarak seyahat deneyimini dijitalleştirmeyi amaçlar. Bulut altyapımız, hızlı ölçeklenme ve yüksek kullanılabilirlik için tasarlanmıştır.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Modal -->
+    <div class="modal" id="aboutModal">
+        <div class="modal-content modal-content-wide">
+            <div class="modal-header">
+                <h3><i class="fas fa-circle-info" style="color: var(--secondary-color);"></i> <span data-i18n="about_modal_title">Hakkımızda</span></h3>
+                <button class="modal-close" id="closeAboutModal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" style="line-height: 1.7; color: var(--text-dark);">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class="fas fa-globe-americas" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 0.5rem;"></i>
+                    <h2 style="font-size: 1.5rem; font-weight: 700;" data-i18n="about_heading">Dünya Gezi Rehberi</h2>
+                    <p style="color: var(--text-light); font-size: 0.95rem;" data-i18n="about_tagline">Dijital Çağın İnteraktif Coğrafi Keşif Platformu</p>
+                </div>
+
+                <p data-i18n="about_p1">Dünya Gezi Rehberi, modern seyahat tutkunlarının şehirleri detaylı, etkileşimli ve görsel bir biçimde keşfetmelerini sağlamak amacıyla geliştirilmiş yenilikçi bir rehber platformudur.</p>
+
+                <h4 style="margin-top: 1.2rem; margin-bottom: 0.5rem; color: var(--primary-color);" data-i18n="about_features_title">Öne Çıkan Özellikler:</h4>
+                <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; font-size: 0.92rem;">
+                    <li data-i18n="about_f1"><strong>3D Küre Deneyimi:</strong> Dünya genelindeki popüler destinasyonları Canvas tabanlı 3D küre üzerinde görün.</li>
+                    <li data-i18n="about_f2"><strong>İnteraktif Şehir Haritaları:</strong> Müzelerden restoranlara, parklardan tarihi mekanlara kadar kategori odaklı filtreleme.</li>
+                    <li data-i18n="about_f3"><strong>Kişisel Seyahat Analitiği:</strong> Gidilen yerleri işaretleyin, günlük rotanızı ve seyahat ilerlemenizi takip edin.</li>
+                    <li data-i18n="about_f4"><strong>Çoklu Dil Desteği:</strong> Türkçe ve İngilizce dil seçenekleriyle küresel erişim.</li>
+                </ul>
+
+                <div style="background: var(--bg-gray); padding: 1rem; border-radius: 8px; font-size: 0.88rem; margin-top: 1.5rem;">
+                    <strong><i class="fas fa-code"></i> Developer:</strong> Şahin Bölükbaşı<br>
+                    <strong><i class="fas fa-layer-group"></i> Architecture:</strong> HTML5, Vanilla JS, Canvas 3D, Google Maps Spatial API, AWS Infrastructure
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Legal Modal (Privacy & Terms) -->
+    <div class="modal" id="legalModal">
+        <div class="modal-content modal-content-wide">
+            <div class="modal-header">
+                <h3><i class="fas fa-shield-halved" style="color: var(--secondary-color);"></i> <span data-i18n="legal_modal_title">Gizlilik & Şartlar</span></h3>
+                <button class="modal-close" id="closeLegalModal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="legal-tabs">
+                    <button class="legal-tab-btn active" id="tabPrivacyBtn" data-i18n="tab_privacy">Gizlilik Politikası</button>
+                    <button class="legal-tab-btn" id="tabTermsBtn" data-i18n="tab_terms">Kullanım Koşulları</button>
+                </div>
+                
+                <!-- Privacy Tab -->
+                <div class="legal-tab-content active" id="privacyTabContent">
+                    <h4 data-i18n="privacy_h1">1. Kişisel Verilerin Korunması ve Gizlilik</h4>
+                    <p data-i18n="privacy_p1">Dünya Gezi Rehberi olarak kullanıcılarımızın gizliliğine büyük önem veriyoruz. Sitemizi ziyaret ettiğinizde varsayılan olarak herhangi bir kişisel veriniz (ad, soyad, TC No vb.) kayıt altına alınmaz.</p>
+
+                    <h4 data-i18n="privacy_h2">2. Çerezler (Cookies) ve Yerel Depolama</h4>
+                    <p data-i18n="privacy_p2">Sitemiz, dil tercihleriniz (TR/EN) ve gezdiğiniz yerleri hatırlamak için tarayıcınızın yerel depolamasını (localStorage) kullanır. Bu veriler tamamen sizin cihazınızda tutulur ve üçüncü taraflarla paylaşılmaz.</p>
+
+                    <h4 data-i18n="privacy_h3">3. Analitik Takibi</h4>
+                    <p data-i18n="privacy_p3">Performans ve kullanıcı deneyimini iyileştirmek amacıyla anonymized (anonimleştirilmiş) Google Analytics verileri toplanmaktadır.</p>
+                </div>
+
+                <!-- Terms Tab -->
+                <div class="legal-tab-content" id="termsTabContent">
+                    <h4 data-i18n="terms_h1">1. Hizmet Kullanım Şartları</h4>
+                    <p data-i18n="terms_p1">Bu web sitesindeki harita, rehber ve lokasyon bilgileri bilgilendirme amacıyla sunulmaktadır. Bilgilerin güncelliği ve doğruluğu konusunda azami özen gösterilmekle birlikte resmi kurum bilgilerinin teyit edilmesi önerilir.</p>
+
+                    <h4 data-i18n="terms_h2">2. Fikri Mülkiyet Hakları</h4>
+                    <p data-i18n="terms_p2">Web sitesinde yer alan tasarım, 3D küre algoritması, kod yapısı ve özgün içerikler Dünya Gezi Rehberi'ne aittir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content" style="max-width: 550px;">
+            <div class="modal-header">
+                <h3><i class="fas fa-envelope" style="color: var(--secondary-color);"></i> <span data-i18n="contact_modal_title">İletişim</span></h3>
+                <button class="modal-close" id="closeContactModal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1.2rem;" data-i18n="contact_desc">Projeyle ilgili sorularınız, iş birliği teklifleriniz veya teknik destek için doğrudan bizimle iletişime geçebilirsiniz.</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 12px; background: var(--bg-gray); padding: 0.9rem 1.2rem; border-radius: 8px;">
+                        <i class="fas fa-at" style="color: var(--secondary-color); font-size: 1.2rem;"></i>
+                        <div>
+                            <small style="color: var(--text-light); display: block;">E-Posta</small>
+                            <strong style="color: var(--text-dark);">contact@worldtravelguid.uk</strong>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 12px; background: var(--bg-gray); padding: 0.9rem 1.2rem; border-radius: 8px;">
+                        <i class="fab fa-github" style="color: var(--primary-color); font-size: 1.2rem;"></i>
+                        <div>
+                            <small style="color: var(--text-light); display: block;">Developer</small>
+                            <strong style="color: var(--text-dark);">Şahin Bölükbaşı</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Share Modal -->
     <div class="modal" id="shareModal">
@@ -338,10 +540,39 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p>Designed by <strong>Şahin Bölükbaşı</strong></p>
+    <!-- Enhanced Rich Footer -->
+    <footer class="rich-footer">
+        <div class="rich-footer-container">
+            <div class="footer-brand">
+                <h3><i class="fas fa-globe-americas" style="color: #38bdf8;"></i> <span data-i18n="world_title">Dünya Gezi Rehberi</span></h3>
+                <p data-i18n="footer_desc">Dünyanın en popüler şehirlerini interaktif 3D haritalar, kategori bazlı rehberler ve özelleştirilmiş seyahat rotaları ile keşfedin.</p>
+                <div class="aws-powered-badge">
+                    <i class="fab fa-aws"></i> Powered by AWS Cloud Infrastructure
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4 data-i18n="footer_nav">Navigasyon</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" data-i18n="footer_link_globe">🌍 3D Dünya Haritası</a></li>
+                    <li><a id="footerLinkCloud" data-i18n="nav_cloud">⚡ Bulut Mimarisi & AWS</a></li>
+                    <li><a id="footerLinkAbout" data-i18n="nav_about">ℹ️ Hakkımızda</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 data-i18n="footer_legal">Kurumsal & Yasal</h4>
+                <ul class="footer-links">
+                    <li><a id="footerLinkPrivacy" data-i18n="tab_privacy">🛡️ Gizlilik Politikası</a></li>
+                    <li><a id="footerLinkTerms" data-i18n="tab_terms">📄 Kullanım Koşulları</a></li>
+                    <li><a id="footerLinkContact" data-i18n="nav_contact">📩 İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Dünya Gezi Rehberi (World Travel Guide). All rights reserved.</p>
+            <p><span data-i18n="footer_designed">Designed by</span> <strong>Şahin Bölükbaşı</strong></p>
         </div>
     </footer>
 
@@ -349,3 +580,4 @@
     <script src="city-map.js"></script>
 </body>
 </html>
+

@@ -94,7 +94,7 @@ git push -u origin main
 
 Siteniz şu adreste yayınlanacak:
 ```
-https://KULLANICI_ADINIZ.github.io/london-travel-guid/
+https://worldtravelguid.uk/
 ```
 
 ## 📊 Analytics ve Takip
